@@ -1,0 +1,121 @@
+// SASS variables are information about icon's compiled state, stored under its original file name
+//
+// .icon-home
+//   width: $icon-home-width
+//
+// The large array-like variables contain all information about a single icon
+// $icon-home: x y offset_x offset_y width height total_width total_height image_path
+//
+// At the bottom of this section, we provide information about the spritesheet itself
+// $spritesheet: width height image $spritesheet-sprites
+$fa-user-1-name: 'fa-user-1'
+$fa-user-1-x: 0px
+$fa-user-1-y: 29px
+$fa-user-1-offset-x: 0px
+$fa-user-1-offset-y: -29px
+$fa-user-1-width: 12px
+$fa-user-1-height: 13px
+$fa-user-1-total-width: 43px
+$fa-user-1-total-height: 42px
+$fa-user-1-image: '../img/sprite.png'
+$fa-user-1: (0px, 29px, 0px, -29px, 12px, 13px, 43px, 42px, '../img/sprite.png', 'fa-user-1', )
+$fa-user-name: 'fa-user'
+$fa-user-x: 17px
+$fa-user-y: 0px
+$fa-user-offset-x: -17px
+$fa-user-offset-y: 0px
+$fa-user-width: 13px
+$fa-user-height: 13px
+$fa-user-total-width: 43px
+$fa-user-total-height: 42px
+$fa-user-image: '../img/sprite.png'
+$fa-user: (17px, 0px, -17px, 0px, 13px, 13px, 43px, 42px, '../img/sprite.png', 'fa-user', )
+$fa-vk-name: 'fa-vk'
+$fa-vk-x: 0px
+$fa-vk-y: 19px
+$fa-vk-offset-x: 0px
+$fa-vk-offset-y: -19px
+$fa-vk-width: 16px
+$fa-vk-height: 10px
+$fa-vk-total-width: 43px
+$fa-vk-total-height: 42px
+$fa-vk-image: '../img/sprite.png'
+$fa-vk: (0px, 19px, 0px, -19px, 16px, 10px, 43px, 42px, '../img/sprite.png', 'fa-vk', )
+$header-mail-name: 'header_mail'
+$header-mail-x: 0px
+$header-mail-y: 0px
+$header-mail-offset-x: 0px
+$header-mail-offset-y: 0px
+$header-mail-width: 17px
+$header-mail-height: 19px
+$header-mail-total-width: 43px
+$header-mail-total-height: 42px
+$header-mail-image: '../img/sprite.png'
+$header-mail: (0px, 0px, 0px, 0px, 17px, 19px, 43px, 42px, '../img/sprite.png', 'header_mail', )
+$question-name: 'question'
+$question-x: 30px
+$question-y: 0px
+$question-offset-x: -30px
+$question-offset-y: 0px
+$question-width: 13px
+$question-height: 13px
+$question-total-width: 43px
+$question-total-height: 42px
+$question-image: '../img/sprite.png'
+$question: (30px, 0px, -30px, 0px, 13px, 13px, 43px, 42px, '../img/sprite.png', 'question', )
+$spritesheet-width: 43px
+$spritesheet-height: 42px
+$spritesheet-image: '../img/sprite.png'
+$spritesheet-sprites: ($fa-user-1, $fa-user, $fa-vk, $header-mail, $question, )
+$spritesheet: (43px, 42px, '../img/sprite.png', $spritesheet-sprites, )
+
+// The provided mixins are intended to be used with the array-like variables
+//
+// .icon-home
+//   @include sprite-width($icon-home)
+//
+// .icon-email
+//   @include sprite($icon-email)
+//
+// Example usage in HTML:
+//   `display: block` sprite:
+//   <div class="icon-home"></div>
+//
+// To change `display` (e.g. `display: inline-block;`), we suggest using a common CSS class:
+//   // CSS
+//   .icon {
+//     display: inline-block;
+//   }
+//
+//   // HTML
+//   <i class="icon icon-home"></i>
+@mixin sprite-width($sprite)
+  width: nth($sprite, 5)
+
+@mixin sprite-height($sprite)
+  height: nth($sprite, 6)
+
+@mixin sprite-position($sprite)
+  $sprite-offset-x: nth($sprite, 3)
+  $sprite-offset-y: nth($sprite, 4)
+  background-position: $sprite-offset-x  $sprite-offset-y
+
+@mixin sprite-image($sprite)
+  $sprite-image: nth($sprite, 9)
+  background-image: url(#{$sprite-image})
+
+@mixin sprite($sprite)
+  @include sprite-image($sprite)
+  @include sprite-position($sprite)
+  @include sprite-width($sprite)
+  @include sprite-height($sprite)
+
+// The `sprites` mixin generates identical output to the CSS template
+//   but can be overridden inside of SASS
+//
+// @include sprites($spritesheet-sprites)
+@mixin sprites($sprites)
+  @each $sprite in $sprites
+    $sprite-name: nth($sprite, 10)
+    .#{$sprite-name}
+      @include sprite($sprite)

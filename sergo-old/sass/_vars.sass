@@ -1,0 +1,62 @@
+@import "bourbon"
+
+//main_color: #78c4fd
+//main_txt_color: #262626
+//main_bg_color: #fff
+//auxiliary_txt_color: #443133
+//font_OpenSansBold: "OpenSansBold", Arial, sans-serif
+//font_OpenSansLight: "OpenSansLight", Arial, sans-serif
+//font_OpenSansRegular: "OpenSansRegular", Arial, sans-serif
+
+$main_color: #78c4fd
+$auxiliary_txt_color:  #a69f9f
+$main_txt_color: #151817
+$main_bg_color: #fff
+
+
+$font_OpenSansBold: "OpenSansBold", Arial, sans-serif
+$font_OpenSansLight: "OpenSansLight", Arial, sans-serif
+$font_OpenSansRegular: "OpenSansRegular", Arial, sans-serif
+
+
+
+@mixin font($color, $fz, $ff, $lh: 1.6)
+	color: $color
+	font: $fz $ff
+	line-height: $lh
+
+
+%main_btn
+	width: 272px
+	height: 49px
+	background-color: #FD5233
+	-moz-border-radius: 5px
+	border: none
+	text-transform: uppercase
+	-webkit-border-radius: 5px
+	border-radius: 5px
+	-moz-box-shadow: 0 1px 0 #FDB10D
+	-webkit-box-shadow: 0 1px 0 #FDB10D
+	box-shadow: 0 1px 0 #FDB10D
+	@include font(#fff, 17px, $font_OpenSansRegular) 
+%main_btn_hover
+	background-color: #FD2233
+%main_btn_active
+	background-color: #FD2233
+%main_btn_focus
+	background-color: #FD2233
+	outline: 0	
+
+
+
+%flex 
+	display: flex
+	align-items: center
+	justify-content: center
+
+	
+			
+
+
+
+
