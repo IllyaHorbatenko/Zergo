@@ -1,5 +1,6 @@
 .owl-carousel,.owl-carousel .owl-item{-webkit-tap-highlight-color:transparent;position:relative}
-.fa-fw,.fa-li,.fa-stack-1x,.fa-stack-2x,.intermediate,.main_content,.our_advantages .our_advantages_item .our_advantages_item_img,.our_advantages .our_advantages_item p,.our_advantages h2{text-align:center}
+.content-section .form-wrap .form .search .search-btn:active,.content-section .form-wrap .form .search .search-btn:focus,.content-section .form-wrap .form .search .search-btn:hover,.content-section .form-wrap .form input:active,.content-section .form-wrap .form input:focus,.content-section .form-wrap .form input:hover,.content-section .form-wrap .form select:active,.content-section .form-wrap .form select:focus,.content-section .form-wrap .form select:hover,.content-section .main-content .wrap .item .btn:active,.content-section .main-content .wrap .item .btn:focus{text-decoration:none;outline:0}
+.content-section .aside-wrap,.fa-fw,.fa-li,.fa-stack-1x,.fa-stack-2x,.intermediate,.main_content,.our_advantages .our_advantages_item .our_advantages_item_img,.our_advantages .our_advantages_item p,.our_advantages h2{text-align:center}
 .animated{-webkit-animation-duration:1s;animation-duration:1s;-webkit-animation-fill-mode:both;animation-fill-mode:both}
 .animated.infinite{-webkit-animation-iteration-count:infinite;animation-iteration-count:infinite}
 .animated.hinge{-webkit-animation-duration:2s;animation-duration:2s}
@@ -1392,11 +1393,36 @@ body input:focus:required:invalid,body input:required:valid,body textarea:focus:
 .intermediate .intermediate_wrap .intermediate_item input::-moz-placeholder{color:#43637f}
 .intermediate .intermediate_wrap .intermediate_item input:-ms-input-placeholder{color:#43637f}
 .intermediate .intermediate_wrap .intermediate_item input[type=submit]{background:#052243;color:#fff}
-.content-section .form-wrap{margin-top:28px}
-.content-section .form-wrap .form input,.content-section .form-wrap .form select{width:100%;min-height:40px;display:block;padding-left:20px}
-.content-section .form-wrap .form input:active,.content-section .form-wrap .form input:focus,.content-section .form-wrap .form input:hover,.content-section .form-wrap .form select:active,.content-section .form-wrap .form select:focus,.content-section .form-wrap .form select:hover{text-decoration:none;outline:0}
+.content-section .form-wrap{margin-top:33px;margin-bottom:30px}
+.content-section .form-wrap .form input,.content-section .form-wrap .form select{width:100%;min-height:43px;display:block;padding-left:40px}
 .content-section .form-wrap .form input[type=submit]{background:#ccc;padding:0;color:#fff;font-size:14px;border:none;-webkit-transition:.2s;transition:.2s}
 .content-section .form-wrap .form input[type=submit]:hover{background:#fff;color:#000;border:1px solid #a2b6c9}
+.content-section .form-wrap .form input[type=text]::-webkit-input-placeholder{color:#000}
+.content-section .form-wrap .form input[type=text]:-moz-placeholder{color:#000}
+.content-section .form-wrap .form input[type=text]::-moz-placeholder{color:#000}
+.content-section .form-wrap .form input[type=text]:-ms-input-placeholder{color:#000}
+.content-section .form-wrap .form .submit-container{padding-right:0;width:285px;float:left;margin-left:15px}
+.content-section .form-wrap .form .select-container{width:270px;float:left;margin:0 15px}
+.content-section .form-wrap .form .search{position:relative;margin-right:15px;width:580px;float:left}
+.content-section .form-wrap .form .search .search-btn{position:absolute;background:0 0;width:40px;height:40px;border:none}
+.content-section .form-wrap .form .search .search-btn .icon{display:inline-block;top:13px;left:20px;background-image:url(../img/sprite.png);background-position:-17px 0;width:14px;height:14px}
+.content-section .main-content{margin-bottom:30px}
+.content-section .main-content table{width:100%}
+.content-section .main-content table tr:last-child td{border-bottom:1px solid #ccc;border-top:1px solid #ccc}
+.content-section .main-content table tr td{border:1px solid #ccc;border-right:0;border-bottom:0;cursor:pointer}
+.content-section .main-content table tr td:last-child{border-right:1px solid #ccc}
+.content-section .main-content table tr td:hover{border-color:#fb0018;border-right:1px solid #fb0018;border-bottom:1px solid #fb0018}
+.content-section .main-content td{padding:14px;width:25%;-webkit-transition:.1s;transition:.1s}
+.content-section .main-content .wrap{position:relative}
+.content-section .main-content .wrap .item{display:inline-block;vertical-align:top;max-width:185px}
+.content-section .main-content .wrap .item .btn{width:15px;height:15px;background:#818181;border:none;-webkit-transition:.1s;transition:.1s;position:absolute;right:0;bottom:0}
+.content-section .main-content .wrap .item .btn .icon{position:absolute;top:3px;left:3px;display:inline-block;background-image:url(../img/sprite.png);background-position:-44px -13px;width:9px;height:9px}
+.content-section .main-content .wrap .item .btn:hover{text-decoration:none;background:#fb0018}
+.content-section .main-content .wrap .item .title{font-size:14px;margin:0;display:inline-block;font-weight:700}
+.content-section .main-content .wrap .item .lang{color:#ccc;position:relative;top:-4px;font-size:14px;left:7px}
+.content-section .main-content .wrap .item .list{padding:0;margin:0;display:inline-block;font-size:12px}
+.content-section .main-content .wrap .item.image{margin-right:11px;width:auto}
+.content-section .aside-wrap{font-size:16px;background:#f8f8f8;padding:40px 0;color:#000;margin-bottom:40px}
 @media only screen and (max-width:1200px){.header_modal{margin-top:20px}
 .intermediate .intermediate_wrap{margin-bottom:20px}
 .intermediate .intermediate_wrap .intermediate_item{display:block;margin:30px auto}

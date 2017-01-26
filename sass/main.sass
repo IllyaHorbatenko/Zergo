@@ -107,14 +107,15 @@ body textarea:required:valid
 
 .content-section
 	.form-wrap
-		margin-top: 28px
+		margin-top: 33px
+		margin-bottom: 30px
 		.form
 			input,
 			select
 				width: 100%
-				min-height: 40px
+				min-height: 43px
 				display: block
-				padding-left: 20px
+				padding-left: 40px
 				&:hover
 					text-decoration: none
 					outline: none
@@ -135,9 +136,132 @@ body textarea:required:valid
 					background: #fff
 					color: #000
 					border: 1px solid #a2b6c9
-
-
-
+			input[type=text]
+				&::-webkit-input-placeholder
+					color: #000
+				&:-moz-placeholder
+					color: #000
+				&::-moz-placeholder
+					color: #000
+				&:-ms-input-placeholder
+					color: #000
+			.submit-container
+				padding-right: 0
+				width: 285px
+				float: left
+				margin-left: 15px
+			.select-container
+				width: 270px
+				float: left
+				margin: 0 15px
+			.search
+				position: relative
+				margin-right: 15px
+				width: 580px
+				float: left
+				.search-btn
+					position: absolute
+					background: transparent
+					width: 40px
+					height: 40px
+					border: none
+					&:hover
+						text-decoration: none
+						outline: none
+					&:active
+						text-decoration: none
+						outline: none
+					&:focus
+						text-decoration: none
+						outline: none
+					.icon
+						display: inline-block
+						top: 13px
+						left: 20px
+						@include sprite($search)
+	.main-content
+		margin-bottom: 30px
+		table
+			width: 100%
+			tr
+				&:last-child
+					td
+						border-bottom: 1px solid #ccc
+						border-top: 1px solid #ccc
+				td
+					border: 1px solid #ccc
+					border-right: 0
+					border-bottom: 0
+					cursor: pointer
+					&:last-child
+						border-right: 1px solid #ccc
+					&:hover
+						border-color: #fb0018
+						border-right: 1px solid #fb0018
+						border-bottom: 1px solid #fb0018
+		td
+			padding: 14px
+			width: 25%
+			transition: .1s
+		.wrap
+			position: relative
+			.item
+				display: inline-block
+				vertical-align: top
+				max-width: 185px
+				.btn
+					width: 15px
+					height: 15px
+					position: relative
+					background: #818181
+					border: none
+					transition: .1s
+					position: absolute
+					right: 0px
+					bottom: 0px
+					.icon
+						position: absolute
+						top: 3px
+						left: 3px
+						display: inline-block
+						@include sprite($plus)
+					&:hover
+						text-decoration: none
+						background: #fb0018
+					&:active
+						text-decoration: none
+						outline: none
+					&:focus
+						text-decoration: none
+						outline: none
+				.title
+					font-size: 14px
+					margin: 0
+					display: inline-block
+					font-weight: 700
+				.lang
+					color: #ccc
+					position: relative
+					top: -4px
+					font-size: 14px
+					left: 7px
+				.list
+					padding: 0
+					margin: 0
+					display: inline-block
+					font-size: 12px
+				&.image
+					margin-right: 11px
+					width: auto
+	.aside-wrap
+		font-size: 16px
+		background: #f8f8f8
+		padding: 40px 0
+		text-align: center
+		color: #000
+		margin-bottom: 40px
+	.parners-company
+		.logo-list
 //	Секция 
 //	Секция
 //	Секция
