@@ -4,7 +4,7 @@
 
 $(document).ready( function () {
 
-    $('.select-2').click( () => {
+    $('.select-2').click( function() {
         $(this).find('.select-list').toggle("drop", {direction: "up"}, 200);
     });
 

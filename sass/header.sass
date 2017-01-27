@@ -225,6 +225,7 @@ p
 		border-top: none
 		display: none
 		position: absolute
+		background: #fff
 		top: 50px
 		left: 0
 		right: 0
@@ -352,6 +353,7 @@ p
 	.logo-container
 		padding: 56px 0 27px
 	.top-panel
+		margin-bottom: 7px
 		a
 			color: #000
 			transition: .1s
@@ -371,13 +373,11 @@ p
 				padding-left: 15px
 				padding-right: 16px
 				padding-bottom: 3px
-			.help
-				display: inline-block
-				&:before
-					content: ""
-					display: inline-block
-					@include sprite($question)
+				.fa
+					color: #fb0018
 					margin-right: 5px
+			.num
+				padding-left: 10px
 
 			.select-list
 				display: none
@@ -400,6 +400,9 @@ p
 			float: right
 			font-size: 14px
 			margin-right: 22px
+			.fa
+				color: #fb0018
+				margin-right: 5px
 			a
 				color: #000
 				transition: 0.1s

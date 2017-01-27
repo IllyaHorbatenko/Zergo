@@ -4,10 +4,9 @@
 
 
 $(document).ready(function () {
-    var _this = this;
 
     $('.select-2').click(function () {
-        $(_this).find('.select-list').toggle("drop", { direction: "up" }, 200);
+        $(this).find('.select-list').toggle("drop", { direction: "up" }, 200);
     });
 
     // для инициализации tooltips

@@ -5,9 +5,12 @@
 /* Large Devices, Wide Screens */
 @media only screen and (max-width : 1200px)
 	/**/
-	// для фиксированного сайта
-	// body
-	// 	width: 1200px
+	//для фиксированного сайта
+
+	body
+	 	width: 1200px
+	.header
+		display: inline-block
 	.header_modal
 		margin-top: 20px
 	.intermediate
@@ -19,72 +22,72 @@
 			.modal_form_input_wrap
 				display: inline-block
 
-/* Medium Devices, Desktops */
+	/* Medium Devices, Desktops */
 @media only screen and (max-width : 992px)
 	/**/
-	.header_nav
-		display: none
-	.header_logo
-		display: block
-	.header_modal
-		margin-top: 40px
-	nav[canvas]
-		display: block		
+	//.header_nav
+	//	display: none
+	//.header_logo
+	//	display: block
+	//.header_modal
+	//	margin-top: 40px
+	//nav[canvas]
+	//	display: block
 /* Small Devices, Tablets */
 @media only screen and (max-width : 768px)
 	
 	/*Disable Animation on Mobile Devices*/
-	.animated
-		/*CSS transitions*/
-		-o-transition-property: none !important
-		-moz-transition-property: none !important
-		-ms-transition-property: none !important
-		-webkit-transition-property: none !important
-		transition-property: none !important
-		/*CSS transforms*/
-		-o-transform: none !important
-		-moz-transform: none !important
-		-ms-transform: none !important
-		-webkit-transform: none !important
-		transform: none !important
-		/*CSS animations*/
-		-webkit-animation: none !important
-		-moz-animation: none !important
-		-o-animation: none !important
-		-ms-animation: none !important
-		animation: none !important
-	
-	.header_title
-		h1
-			font-size: 30px
-			margin-top: 40px
-	.header_modal
-		margin-top: 40px
-	[off-canvas*=left]
-		width: 255px
+	//.animated
+	//	/*CSS transitions*/
+	//	-o-transition-property: none !important
+	//	-moz-transition-property: none !important
+	//	-ms-transition-property: none !important
+	//	-webkit-transition-property: none !important
+	//	transition-property: none !important
+	//	/*CSS transforms*/
+	//	-o-transform: none !important
+	//	-moz-transform: none !important
+	//	-ms-transform: none !important
+	//	-webkit-transform: none !important
+	//	transform: none !important
+	//	/*CSS animations*/
+	//	-webkit-animation: none !important
+	//	-moz-animation: none !important
+	//	-o-animation: none !important
+	//	-ms-animation: none !important
+	//	animation: none !important
+	//
+	//.header_title
+	//	h1
+	//		font-size: 30px
+	//		margin-top: 40px
+	//.header_modal
+	//	margin-top: 40px
+	//[off-canvas*=left]
+	//	width: 255px
 
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 520px)
 	/**/
 		
-	.dm-modal
-		width: 100%
-	.dm-modal
-		input[type=submit]
-			width: 100%
+	//.dm-modal
+	//	width: 100%
+	//.dm-modal
+	//	input[type=submit]
+	//		width: 100%
 @media only screen and (max-width : 480px)
 	/**/
 
-	.header_title
-		h1
-			font-size: 26px
-	.modal_form_input_wrap
-		.modal_input_error
-			right: 0px
-	.intermediate
-		.intermediate_title
-			h3
-				font-size: 20px
+	//.header_title
+	//	h1
+	//		font-size: 26px
+	//.modal_form_input_wrap
+	//	.modal_input_error
+	//		right: 0px
+	//.intermediate
+	//	.intermediate_title
+	//		h3
+	//			font-size: 20px
 
 /* Custom, iPhone Retina */
 @media only screen and (max-width : 320px)
