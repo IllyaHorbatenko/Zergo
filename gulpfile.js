@@ -77,7 +77,9 @@ gulp.task('libs', function() {
 		'app/libs/owl.carousel/owl.carousel.min.js',
 		'app/libs/owl.carousel/jquery.mousewheel.min.js',
 		'app/libs/matchMedia/matchMedia.js',
-		'app/libs/matchMedia/matchMedia.addListener.js'
+		'app/libs/matchMedia/matchMedia.addListener.js',
+		'app/libs/inputmask/inputmask.js',
+		'app/libs/scroll-style/jquery.scrollbar.min.js'
 		])
 		.pipe(concat('libs.js'))
 		// .pipe(uglify()) //Minify libs.js

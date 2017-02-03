@@ -9,7 +9,7 @@
 	<meta name="viewport"
 		  content="width=device-width">
 	<meta property="og:image" content="path/to/image.jpg">
-	<link rel="shortcut icon" href="img/favicon/favicon.png" type="image/x-icon">
+	<link rel="shortcut icon" href="img/favicon/favicon.ico" type="image/x-icon">
 	<link rel="apple-touch-icon" href="img/favicon/apple-touch-icon.png">
 	<link rel="apple-touch-icon" sizes="72x72" href="img/favicon/apple-touch-icon-72x72.png">
 	<link rel="apple-touch-icon" sizes="114x114" href="img/favicon/apple-touch-icon-114x114.png">
@@ -1745,36 +1745,53 @@
 		<div class="dm-cell">
 			<div class="dm-modal">
 				<a href="#" class="close">
-					<span class="left"></span>
-					<span class="right"></span>
 				</a>
 				<p class='success_mail'>Спасибо! Ваша заявка уже обрабатывается менеджером и в ближайшее время он с вами
 					свяжется.</p>
-				<h3>Улучшить сайт</h3>
-				<p class="modal-text">Как и любой гарант-сервис, FunPay гарантирует лишь процесс
-					сделки. Вопросы блокировок покупателям следует обсуждать
-					с каждым продавцом отдельно - все продавцы разные.</p>
 				<form id="form">
 					<div>
+						<label>Введите своё имя</label>
 						<div class="modal_form_input_wrap">
 							<div class="modal_input_error">Заполните поле
 								<div class="modal_error_triangle"></div>
 								<div class="modal_error_chest_img"></div>
 							</div>
-							<input name="name" class="modal_form_input" type="text" placeholder="Имя">
+							<input name="name" class="modal_form_input" type="text">
 						</div>
 					</div>
 					<div>
+						<label>Введите свой телефон</label>
 						<div class="modal_form_input_wrap">
 							<div class="modal_input_error">Заполните поле
 								<div class="modal_error_triangle"></div>
 								<div class="modal_error_chest_img"></div>
 							</div>
-							<input name="phone" class="modal_form_phone" type="text" placeholder="E-mail">
+							<input name="phone" class="modal_form_phone" type="text">
 						</div>
 					</div>
 					<div>
-						<textarea name="textarea" placeholder="Ввести сообщение"></textarea>
+						<label>Введите свой e-mail</label>
+						<div class="modal_form_input_wrap">
+							<div class="modal_input_error">Заполните поле
+								<div class="modal_error_triangle"></div>
+								<div class="modal_error_chest_img"></div>
+							</div>
+							<input name="email" class="modal_form_email" type="text">
+						</div>
+					</div>
+					<div>
+						<div class="select">
+							<div class="slct_arrow">
+								<i class="fa fa-angle-down"></i>
+							</div>
+							<a href="#" class="slct">Выбор заголовков:</a>
+							<ul class="drop">
+								<li>Вы крутые</li>
+								<li>Я в Вас влюбился</li>
+								<li>Быстрей Вас только Флеш</li>
+							</ul>
+							<input type="hidden" id="select" name="services">
+						</div>
 					</div>
 					<input type="hidden" name="form_name" value="">
 					<input type="hidden" name="form_type" value="modal">
@@ -1815,7 +1832,7 @@
 					</ul>
 				</div>
 				<div class="api-nav">
-					<a href="#" class="wrap modal" data-modal="modal-1"><i class="fa fa-globe"></i>Улучшить сайт</a>
+					<a href="#" class="wrap"><i class="fa fa-globe"></i>Улучшить сайт</a>
 					<div class="wrap">
 						<a href="" class="login"><i class="fa fa-user "></i>Войти</a> / <a href="" class="check">Регистация</a>
 					</div>
@@ -1829,60 +1846,162 @@
 <section class="content-section">
 	<div class="container">
 		<div class="row">
-			<div class="main-content login main_content clearfix">
-				<div class="main_content_wrap login1">
-					<h4>Регистрация</h4>
-					<div class="main_conten_form_wrap">
-						<form>
-							<div>
-								<input class="input-mask" name="email" type="text"
-									   placeholder="Ваш Email:">
-								<p>Введите корректный адрес электронной почты.</p>
+			<div class="main-content">
+				<div class="my-lots-container">
+					<div class="inform-wrap clearfix">
+						<h2 class="title-name">
+							<span class="name">Latinos1Rus</span>
+							<span class="status">online</span>
+						</h2>
+						<a href="#" class="avatar">
+							<img src="img/avtar.jpg" alt="">
+						</a>
+						<div class="contacts-user">
+							<h3>Данные пользователя</h3>
+							<table>
+								<tbody>
+								<tr>
+									<td>Дата регистрации:</td>
+									<td>2016-12-20 14:16:16</td>
+								</tr>
+								<tr>
+									<td>Положительных отзывов:</td>
+									<td>+1</td>
+								</tr>
+								<tr>
+									<td>Отрицательных отзывов:</td>
+									<td>0</td>
+								</tr>
+								<tr>
+									<td>Выполненных заказов:</td>
+									<td>0</td>
+								</tr>
+								</tbody>
+							</table>
+						</div>
+						<div class="buttons-wrap">
+							<a href="#">Редактировать профиль</a>
+							<a href="#">Продать игровую валюту</a>
+						</div>
+					</div>
+					<div class="tabs-container">
+						<div class="tabs-item-conatiner">
+							<a href="/" data-tab="1" class="tabs-item active">
+								<p>Список валют</p>
+							</a>
+							<a href="/" data-tab="2" class="tabs-item">
+								<p>Отзывы</p>
+							</a>
+						</div>
+						<div class="tabs-wrap-container">
+							<div class="tabs-wrap active" data-tab="1">
+								<table>
+									<thead>
+									<tr>
+										<td>Игра</td>
+										<td>Сервер</td>
+										<td>Сторона</td>
+										<td><span>В наличии</span>
+											<a href="#" class="button top"></a>
+											<a href="#" class="button bottom"></a>
+										</td>
+										<td>Действие</td>
+									</tr>
+									</thead>
+									<tbody>
+									<tr>
+										<td><span>Aion Free</span></td>
+										<td><span>Церера</span></td>
+										<td><span>Асмодиане</span></td>
+										<td><span>324 кк</span></td>
+										<td>
+											<button class="button"><i class="fa fa-pencil"></i><span>ред.</span>
+											</button>
+											<button class="button"><i class="fa fa-times"></i><span>Удалить</span>
+											</button>
+										</td>
+									</tr>
+									<tr>
+										<td><span>Aion Free</span></td>
+										<td><span>Церера</span></td>
+										<td><span>Асмодиане</span></td>
+										<td><span>324 кк</span></td>
+										<td>
+											<button class="button"><i class="fa fa-pencil"></i><span>ред.</span>
+											</button>
+											<button class="button"><i class="fa fa-times"></i><span>Удалить</span>
+											</button>
+										</td>
+									</tr>
+									<tr>
+										<td><span>Aion Free</span></td>
+										<td><span>Церера</span></td>
+										<td><span>Асмодиане</span></td>
+										<td><span>324 кк</span></td>
+										<td>
+											<button class="button"><i class="fa fa-pencil"></i><span>ред.</span>
+											</button>
+											<button class="button"><i class="fa fa-times"></i><span>Удалить</span>
+											</button>
+										</td>
+									</tr>
+									<tr>
+										<td><span>Aion Free</span></td>
+										<td><span>Церера</span></td>
+										<td><span>Асмодиане</span></td>
+										<td><span>324 кк</span></td>
+										<td>
+											<button class="button"><i class="fa fa-pencil"></i><span>ред.</span>
+											</button>
+											<button class="button"><i class="fa fa-times"></i><span>Удалить</span>
+											</button>
+										</td>
+									</tr>
+									<tr>
+										<td><span>Aion Free</span></td>
+										<td><span>Церера</span></td>
+										<td><span>Асмодиане</span></td>
+										<td><span>324 кк</span></td>
+										<td>
+											<button class="button"><i class="fa fa-pencil"></i><span>ред.</span>
+											</button>
+											<button class="button"><i class="fa fa-times"></i><span>Удалить</span>
+											</button>
+										</td>
+									</tr>
+									<tr>
+										<td><span>Aion Free</span></td>
+										<td><span>Церера</span></td>
+										<td><span>Асмодиане</span></td>
+										<td><span>324 кк</span></td>
+										<td>
+											<button class="button"><i class="fa fa-pencil"></i><span>ред.</span>
+											</button>
+											<button class="button"><i class="fa fa-times"></i><span>Удалить</span>
+											</button>
+										</td>
+									</tr>
+									</tbody>
+								</table>
 							</div>
-							<input type="submit" value="Зарегистрироваться">
-						</form>
-						<div class="back"><a href="#">Вернуться на главную</a></div>
-					</div>
-					<div class="txt_block">
-						<p>Уже регистрировались раньше?</p>
-						<a href="#">Войдите сейчас</a>
-						<p>Забыли или не знаете пароль?</p>
-						<a href="#">Восстановите доступ тут</a>
-					</div>
-				</div>
-				<div class="clearfix"></div>
+							<div class="tabs-wrap wallets" data-tab="2">
+								2
+							</div>
+							<div class="tabs-wrap" data-tab="3">
+								3
+							</div>
+						</div>
 
-				<div class="main_content_wrap login2">
-					<div class="title-wrap">
-						<h3>Вы успешно зарегистрированы!</h3>
-						<p>На почту dortmundk2@mail.ru выслан пароль, для<br/>
-							повторной авторизации. Сохраните его в надежном месте.</p></div>
-					<div class="main_conten_form_wrap">
-						<form>
-							<h4>Остался 1 шаг</h4>
-							<div>
-								<input class="input-mask" name="phone" type="text"
-									   placeholder="+38 (___) __-__-___">
-								<p>Оставьте корректный номер телефона</p>
-							</div>
-							<div>
-								<input name="name" type="text" placeholder="Введите ваше имя:">
-							</div>
-							<input type="submit" value="Зарегистрироваться">
-						</form>
-						<div class="back"><a href="#">Вернуться на главную</a></div>
 					</div>
-
 				</div>
 
 
 			</div>
 		</div>
 	</div>
-
-
 	<div class="aside-wrap">
-		<p><b>ОТКАЗ</b>: Registered names and trademarks are the copyright and property of their respective owners. </p>
+		<p><b>ОТКАЗ</b>: Registered names and trademarks are the copyright and property of their respective owners.
+		</p>
 		<p>Use of this Web site constitutes acceptance of the Terms of use and Privacy Policy.</p>
 	</div>
 	<div class="parners-company">

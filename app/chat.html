@@ -9,7 +9,7 @@
 	<meta name="viewport"
 		  content="width=device-width">
 	<meta property="og:image" content="path/to/image.jpg">
-	<link rel="shortcut icon" href="img/favicon/favicon.png" type="image/x-icon">
+	<link rel="shortcut icon" href="img/favicon/favicon.ico" type="image/x-icon">
 	<link rel="apple-touch-icon" href="img/favicon/apple-touch-icon.png">
 	<link rel="apple-touch-icon" sizes="72x72" href="img/favicon/apple-touch-icon-72x72.png">
 	<link rel="apple-touch-icon" sizes="114x114" href="img/favicon/apple-touch-icon-114x114.png">
@@ -1745,36 +1745,53 @@
 		<div class="dm-cell">
 			<div class="dm-modal">
 				<a href="#" class="close">
-					<span class="left"></span>
-					<span class="right"></span>
 				</a>
 				<p class='success_mail'>Спасибо! Ваша заявка уже обрабатывается менеджером и в ближайшее время он с вами
 					свяжется.</p>
-				<h3>Улучшить сайт</h3>
-				<p class="modal-text">Как и любой гарант-сервис, FunPay гарантирует лишь процесс
-					сделки. Вопросы блокировок покупателям следует обсуждать
-					с каждым продавцом отдельно - все продавцы разные.</p>
 				<form id="form">
 					<div>
+						<label>Введите своё имя</label>
 						<div class="modal_form_input_wrap">
 							<div class="modal_input_error">Заполните поле
 								<div class="modal_error_triangle"></div>
 								<div class="modal_error_chest_img"></div>
 							</div>
-							<input name="name" class="modal_form_input" type="text" placeholder="Имя">
+							<input name="name" class="modal_form_input" type="text">
 						</div>
 					</div>
 					<div>
+						<label>Введите свой телефон</label>
 						<div class="modal_form_input_wrap">
 							<div class="modal_input_error">Заполните поле
 								<div class="modal_error_triangle"></div>
 								<div class="modal_error_chest_img"></div>
 							</div>
-							<input name="phone" class="modal_form_phone" type="text" placeholder="E-mail">
+							<input name="phone" class="modal_form_phone" type="text">
 						</div>
 					</div>
 					<div>
-						<textarea name="textarea" placeholder="Ввести сообщение"></textarea>
+						<label>Введите свой e-mail</label>
+						<div class="modal_form_input_wrap">
+							<div class="modal_input_error">Заполните поле
+								<div class="modal_error_triangle"></div>
+								<div class="modal_error_chest_img"></div>
+							</div>
+							<input name="email" class="modal_form_email" type="text">
+						</div>
+					</div>
+					<div>
+						<div class="select">
+							<div class="slct_arrow">
+								<i class="fa fa-angle-down"></i>
+							</div>
+							<a href="#" class="slct">Выбор заголовков:</a>
+							<ul class="drop">
+								<li>Вы крутые</li>
+								<li>Выбор заголовков:</li>
+								<li>Выбор заголовков:</li>
+							</ul>
+							<input type="hidden" id="select" name="services">
+						</div>
 					</div>
 					<input type="hidden" name="form_name" value="">
 					<input type="hidden" name="form_type" value="modal">
@@ -1815,7 +1832,7 @@
 					</ul>
 				</div>
 				<div class="api-nav">
-					<a href="#" class="wrap modal" data-modal="modal-1"><i class="fa fa-globe"></i>Улучшить сайт</a>
+					<a href="#" class="wrap"><i class="fa fa-globe"></i>Улучшить сайт</a>
 					<div class="wrap">
 						<a href="" class="login"><i class="fa fa-user "></i>Войти</a> / <a href="" class="check">Регистация</a>
 					</div>
@@ -1829,53 +1846,101 @@
 <section class="content-section">
 	<div class="container">
 		<div class="row">
-			<div class="main-content login main_content clearfix">
-				<div class="main_content_wrap login1">
-					<h4>Регистрация</h4>
-					<div class="main_conten_form_wrap">
-						<form>
-							<div>
-								<input class="input-mask" name="email" type="text"
-									   placeholder="Ваш Email:">
-								<p>Введите корректный адрес электронной почты.</p>
-							</div>
-							<input type="submit" value="Зарегистрироваться">
-						</form>
-						<div class="back"><a href="#">Вернуться на главную</a></div>
+			<div class="chat-main-title-wrap">
+				<article class="main-article">
+					<h3 class="title">Сообщения</h3>
+					<p>Этот текст для всех страниц с диалогами</p>
+				</article>
+				<div class="chat-container clearfix">
+					<div class="setting-wrap">
+						<h4 class="title-state">Последние сообщения</h4>
+						<table>
+							<tr>
+								<td><span>myName</span></td>
+								<td><span class="color-num">0</span></td>
+							</tr>
+							<tr>
+								<td><span>Librety</span></td>
+								<td><span class="color-num">3</span></td>
+							</tr>
+							<tr>
+								<td><span>Simona</span></td>
+								<td><span class="color-num">0</span></td>
+							</tr>
+							<tr>
+								<td><span>K2D2</span></td>
+								<td><span class="color-num">0</span></td>
+							</tr>
+						</table>
 					</div>
-					<div class="txt_block">
-						<p>Уже регистрировались раньше?</p>
-						<a href="#">Войдите сейчас</a>
-						<p>Забыли или не знаете пароль?</p>
-						<a href="#">Восстановите доступ тут</a>
+					<div class="chat-wrap ">
+						<h4 class="title-state">Чат</h4>
+						<div class="chat scrollbar-inner ">
+							<div class="clearfix message">
+								<div class="item left yellow-wrap">
+									<h4 class="name-date">
+										<span class="color">Администрация!</span>
+										<span class="date">2016-12-26 17:05:38</span>
+									</h4>
+									<p>Прошу обратить внемание на время передачи данных</p>
+								</div>
+							</div>
+							<div class="clearfix message">
+								<div class="item right yellow-wrap">
+									<h4 class="name-date">
+										<span class="color">Администрация!</span>
+										<span class="date">2016-12-26 17:05:38</span>
+									</h4>
+									<p>Прошу обратить внемание на время передачи данных</p>
+								</div>
+							</div>
+
+							<div class="clearfix message">
+								<div class="item left blue-wrap">
+									<h4 class="name-date">
+										<span>Паша</span>
+										<span class="date">2016-12-26 17:05:38</span>
+									</h4>
+									<p>Прошу обратить внемание на время передачи данных</p>
+								</div>
+							</div>
+							<div class="clearfix message">
+								<div class="item left important">
+									<h4 class="name-date">
+										<span class="color">Zergo:</span>
+										<span class="date">2016-12-26 17:05:38</span>
+									</h4>
+									<p>Прошу обратить внемание на время передачи данных</p>
+								</div>
+							</div>
+							<div class="clearfix message">
+								<div class="item right green-wrap">
+									<h4 class="name-date">
+										<span>Евгений</span>
+										<span class="date">2016-12-26 17:05:38</span>
+									</h4>
+									<p>Прошу обратить внемание на время передачи данных</p>
+								</div>
+							</div>
+							<div class="clearfix message">
+								<div class="item left green-wrap">
+									<h4 class="name-date">
+										<span>Евгений</span>
+										<span class="date">2016-12-26 17:05:38</span>
+									</h4>
+									<p>Прошу обратить внемание на время передачи данных</p>
+								</div>
+							</div>
+
+						</div>
+						<form class="text-message">
+							<textarea name="" id="" cols="30" rows="10"></textarea>
+							<div class="input">
+								<input type="submit">
+							</div>
+						</form>
 					</div>
 				</div>
-				<div class="clearfix"></div>
-
-				<div class="main_content_wrap login2">
-					<div class="title-wrap">
-						<h3>Вы успешно зарегистрированы!</h3>
-						<p>На почту dortmundk2@mail.ru выслан пароль, для<br/>
-							повторной авторизации. Сохраните его в надежном месте.</p></div>
-					<div class="main_conten_form_wrap">
-						<form>
-							<h4>Остался 1 шаг</h4>
-							<div>
-								<input class="input-mask" name="phone" type="text"
-									   placeholder="+38 (___) __-__-___">
-								<p>Оставьте корректный номер телефона</p>
-							</div>
-							<div>
-								<input name="name" type="text" placeholder="Введите ваше имя:">
-							</div>
-							<input type="submit" value="Зарегистрироваться">
-						</form>
-						<div class="back"><a href="#">Вернуться на главную</a></div>
-					</div>
-
-				</div>
-
-
 			</div>
 		</div>
 	</div>

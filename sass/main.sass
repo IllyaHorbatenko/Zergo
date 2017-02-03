@@ -9,20 +9,24 @@
 @import "../app/libs/slidebars/slidebars.min"
 
 *::-webkit-input-placeholder
-	color: #666
+	color: #000
 	opacity: 1
+	font-size: 14px
 
 *:-moz-placeholder
-	color: #666
+	color: #000
 	opacity: 1
+	font-size: 14px
 
 *::-moz-placeholder
-	color: #666
+	color: #000
 	opacity: 1
+	font-size: 14px
 
 *:-ms-input-placeholder
-	color: #666
+	color: #000
 	opacity: 1
+	font-size: 14px
 
 body input:focus:required:invalid,
 body textarea:focus:required:invalid
@@ -181,7 +185,11 @@ body textarea:required:valid
 						@include sprite($search)
 	.main-content
 		margin-bottom: 30px
-		table
+		position: relative
+		&.login
+			overflow: hidden
+			min-height: 530px
+		.table-eff
 			width: 100%
 			tr
 				&:last-child
@@ -200,10 +208,10 @@ body textarea:required:valid
 						border-color: #fb0018
 						border-right: 1px solid #fb0018
 						border-bottom: 1px solid #fb0018
-		td
-			padding: 14px
-			width: 25%
-			transition: .1s
+			td
+				padding: 14px
+				width: 25%
+				transition: .1s
 		.wrap
 			position: relative
 			.item
@@ -294,30 +302,51 @@ body textarea:required:valid
 			.cb
 				@include sprite($cb)
 	.main_content_wrap
-		width: 690px
-		padding: 50px 0
-		margin: auto
-		text-align: center
+		width: 661px
+		padding: 55px 0 70px
+		float: right
+		margin-right: 155px
+		text-align: left
+		&.login2
+			float: none
+			margin: auto
+			text-align: center
+			input[type=submit]
+				margin-top: 20px
+		&.login1
+			position: absolute
+			left: 0
+			right: 0
+			margin: auto
+			top: calc(50% - 207px)
 		h4
-			margin-bottom: 13px
+			margin: 0
+			margin-bottom: 5px
 			text-align: left
-			padding-left: 30px
 			color: #000
 			font-weight: bold
 			font-size: 24px
 			span
 				padding-left: 10px
 				padding-right: 10px
-
+		.title-wrap
+			text-align: center
+			margin-bottom: 40px
+			h3
+				margin: 0
+				font-weight: 500
+				margin-bottom: 5px
 		.main_conten_form_wrap
-			width: 406px
+			width: 375px
 			display: inline-block
 			transition: height 2s
 			&.active
 				height: 500px
+			.back
+				margin-top: 20px
+				text-align: center
 		form
-			width: 406px
-			height: 342px
+			width: 373px
 			background-color: rgb(255, 255, 255)
 			border-radius: 5px
 			transition: 2s
@@ -326,19 +355,21 @@ body textarea:required:valid
 			label
 				margin-bottom: 10px
 				display: block
-
+			.recovery-color
+				color: #818181
 			.divider
 				width: 100%
 				height: 1px
 				margin-top: 30px
 				background-color: rgb(197, 198, 203)
 			p
-				margin-bottom: 20px
-
+				margin-bottom: 16px
+				margin-top: 2px
+				font-size: 14px
 			input
 				width: 100%
-				height: 46px
-				padding-left: 15px
+				height: 47px
+				padding-left: 17px
 				background-color: rgb(255, 255, 255)
 				border: 1px solid rgb(166, 159, 159)
 				transition: 1s
@@ -367,6 +398,8 @@ body textarea:required:valid
 				color: #fff
 				transition: all .3s linear
 				font-size: 14px
+				margin-bottom: 4px
+				margin-top: 10px
 		a
 			display: inline-block
 			text-decoration: none
@@ -388,7 +421,7 @@ body textarea:required:valid
 				&:before
 					transform: scaleX(0)
 		.txt_block
-			width: 232px
+			width: 250px
 			float: right
 			text-align: left
 			p
@@ -399,6 +432,7 @@ body textarea:required:valid
 			p
 				margin-top: 10px
 				margin-bottom: 0
+				margin-right: 17px
 				display: inline-block
 			ul
 				display: inline-block
@@ -408,7 +442,7 @@ body textarea:required:valid
 					list-style: none
 					display: inline-block
 					vertical-align: middle
-					margin-right: 5px
+					margin-right: 12px
 					&:last-of-type
 						margin-right: 0
 					a
@@ -416,7 +450,7 @@ body textarea:required:valid
 						transition: 0.3s
 						text-align: center
 						width: 33px
-						height: 34px
+						height: 33px
 						background: #818181
 						border-radius: 50%
 						&:before
@@ -484,177 +518,617 @@ body textarea:required:valid
 			&:hover
 				background: #fb0018
 				
+.FAQ-content
+	padding: 80px 0
+	.accordion_content
+		display: none
+		font-size: 1.8rem
+		color: #000
+		p
+			margin: 0
+			padding-left: 30px
+			padding-top: 10px
+			padding-bottom: 10px
+	.accordion
+		background-color: #fff
+		text-align: left
+		margin-bottom: 11px
+	.accordion_title
+		transition: all 0.2s ease
+		height: 50px
+		line-height: 30px
+		font-size: 18px
+		padding: 7px 45px 7px 20px
+		cursor: pointer
+		background-color: #f8f8f8
+		position: relative
+		color: #000
+		span
+			color: #646464
+			position: absolute
+			top: 17px
+			right: 24px
+			width: 0
+			height: 0
+			display: inline-block
+			border: 6px solid transparent
+			border-top: 6px solid
+			border-bottom: 0
+			transition: .6s
+			&.active
+				transform: rotate(180deg)
 
+.balance-container
+	.title
+		font-size: 24px
+		font-weight: 500
+	.tabs-item
+		display: inline-block
+		padding: 10px
+		color: #000000
+		border: 1px solid transparent
+		border-bottom: 1px solid #000
+		margin-bottom: -1px
+		font-size: 0
+		p
+			font-size: 18px
+			line-height: 1.2
+		&:hover
+			text-decoration: none
+		&:active
+			text-decoration: none
+		&:focus
+			text-decoration: none
+		&.active
+			border: 1px solid #000000
+			border-bottom: 1px solid #fff
 
-
-// Секция reg
-//.main_content
-	&.reg_in
-		.main_content_wrap
-			height: 440px
-			.main_conten_form_wrap
-				form
-					&.form_reg_in
-						display: none
-					&.form_reg
-						height: 248px
-			.hidden_txt_block
-				display: none
-	&.reg
-		min-height: 680px
-		.main_content_wrap
-			height: 680px
-			&.form_reg_in
-				h1
-					display: none
-				.txt_block
-					display: none
-				.main_conten_form_wrap
-					margin-left: 0
-				.hidden_txt_block
-					display: block
-			.hidden_txt_block
-				display: none
-				width: 345px
-				margin: auto
-				text-align: left
+			
+	.tabs-wrap
+		display: none
+		justify-content: space-between
+		flex-wrap: wrap
+		&.active
+			display: flex
+	.tabs-item-conatiner
+		margin-bottom: 10px
+		border-bottom: 1px solid #000
+	.tabs-container
+		padding: 0 0px 0 14px
+	.tabs-wrap-container
+		padding: 10px 0 20px
+	.table
+		width: 100%
+		tr
+			border: none
+			td
+				font-size: 14px
+				border: none
+				width: auto
+				padding: 15px
+				&:last-child
+					padding-right: 0
+				&:hover
+					border: none
+		.td-title
+			font-weight: 900
+		.td-number
+			color: #fb0018
+			font-weight: 900
+		.td-bill
+			font-weight: 900
+	.balance-form
+		width: 100%
+		input
+			width: 100%
+			height: 43px
+		input[type=text]
+			padding-left: 15px
+			width: 209px
+		input[type=submit]
+			width: 285px
+			background: #fb0018
+			border: 0px
+			color: #fff
+			transition: .2s
+			&:hover
+				background: #cccccc
+		.select
+			width: 170px
+			height: 43px
+			.slct
+				padding: 0
+				text-align: center
+				font-size: 14px
+				font-weight: 900
 				p
-					margin-bottom: 15px
-					& + p
-						margin-bottom: 55px
-			.main_conten_form_wrap
+					margin-right: 20px
+			.drop
+				font-weight: 900
+			.arrow
+				right: 15px
+	.table-state
+		width: 100%
+		thead
+			font-weight: 900
+			font-size: 18px
+			td
+				padding: 14px
+		tbody
+			font-size: 18px
+			tr
+				border-top: 1px solid #cccccc
+				border-bottom: 1px solid #cccccc
+				td
+					padding: 14px
+				&:first-child
+					background: #f8f8f8
+				.blue
+					color: #6dcff6
+				.yellow
+					color: #fcb60f
+				.red
+					color: #fc384a
+				.green
+					color: #00be92
+	.title-state
+		width: 100%
+		padding: 15px
+		font-weight: 500
+		display: block
+		background: #f8f8f8
+		font-size: 18px
+	.wallets
+		form
+			.td-bill
+				width: 655px
 
-				form
-					height: 248px
-					&.form_reg
-						display: none
-					&.form_reg_in
-						display: block
-						height: 425px
-						h2
-							margin-top: -15px
-							margin-bottom: 10px
+.back-lote-container
+	padding: 40px 0
+	.title
+		font-size: 24px
+		margin: 0
+		margin-bottom: 20px
+	.main-article
+		font-size: 18px
+		margin-bottom: 30px
+	.form-container
+		form
+			padding: 30px 0
+			margin-bottom: 30px
+			border-bottom: 1px solid #cccccc
+			border-top: 1px solid #cccccc
+		input
+			height: 45px
+			font-size: 14px
+			width: 285px
+		lable
+			padding-left: 15px
+			display: block
+			font-size: 18px
+		input[type=text]
+			padding-left: 15px
+		input[type=submit]
+			background: #cccccc
+			border: 0px
+			color: #fff
+			transition: .2s
+			&:hover
+				background: #fb0018
+		.another-input
+			text-align: right
+			margin-bottom: 15px
+			input
+				width: 277px
+		.input-wrap
+			margin-bottom: 15px
+			margin-right: 30px
+			width: 277px
+			&:last-child
+				margin-right: 0
+			&.item
+				float: left
+			&.specific
+				input[type=text]
+					width: 209px
+				.button
+					width: 44px
+					vertical-align: bottom
+					height: 46px
+					background: #cccccc
+					border: 0
+					margin-left: 20px
+					position: relative
+					transition: .2s
+					&:hover
+						background: #fb0018
+					span
+						width: 25px
+						height: 3px
+						background: #fff
+						position: absolute
+						left: 0
+						right: 0
+						margin: auto
+						&.f
+							transform: rotate(90deg)
+	.auction-wrap
+		text-align: center
+		.auction-link
+			font-size: 14px
+			padding: 11px 63px
+			background: #cccccc
+			transition: .2s
+			display: inline-block
+			color: #fff
+			&:hover
+				text-decoration: none
+				background: #fb0018
+			&:active
+				text-decoration: none
+			&:focus
+				text-decoration: none
+.chat-main-title-wrap
+	padding: 40px 0
+	font-size: 18px
+	.main-article
+		border-bottom: 1px solid #ccc
+		padding-bottom: 15px
+		margin-bottom: 30px
+		.title
+			font-size: 24px
+			margin: 0
+			margin-bottom: 20px
+	.title-state
+		width: 100%
+		padding: 15px
+		font-weight: 500
+		display: block
+		background: #f8f8f8
+		font-size: 18px
+	.chat-container
+		.setting-wrap
+			width: 385px
+			float: left
+			margin-right: 30px
+			table
+				width: 100%
+				tr
+					border-bottom: 1px solid #ccc
+					td
+						padding: 15px
+					&:nth-child(2)
+						background: #f8f8f8
+				.color-num
+					color: #fb0018
+		.chat-wrap
+			width: 785px
+			float: left
 
-						p
-							margin-bottom: 5px
+			.title-state
+				text-align: center
+				font-weight: 900
+			.chat
+				overflow: auto
+				height: 590px
+				.message
+					margin-bottom: 20px
+				.item
+					width: 470px
+					padding: 13px
+					border-radius: 15px
+					position: relative
+					&:before
+						content: ''
+						width: 0
+						display: inline-block
+						height: 0
+						border: 10px solid transparent
+						border-right: 20px solid #6dcff6
+						border-left: 0
+						position: absolute
+					&.yellow-wrap
+						border: 3px solid #fcb60f
+						display: inline-block
+						.color
+							color: #fcb60f
+							margin-right: 3px
+						&:before
+							content: ''
+							border-right-color: #fcb60f
+							border-left-color: #fcb60f
+					&.blue-wrap
+						border: 3px solid #6dcff6
+						display: inline-block
+						.color
+							color: #fcb60f
+							margin-right: 3px
+						&:before
+							content: ''
+							border-left-color: #6dcff6
+							border-right-color: #6dcff6
+					&.green-wrap
+						border: 3px solid #82ca9c
+						display: inline-block
+						&:before
+							content: ''
+							border-left-color: #82ca9c
+							border-right-color: #82ca9c
+					&.left
+						float: left
+						margin-left: 23px
+						&:before
+							left: -20px
+							top: 45px
+					&.right
+						float: right
+						margin-right: 23px
+						.color
+							color: #fcb60f
+							margin-right: 3px
+						&:before
+							right: -20px
+							top: 45px
+							transform: rotate(180deg)
+					&.important
+						&:before
+							content: ''
+							border: 0
+							height: calc(100% - 26px)
+							width: 3px
+							background: #fb0018
+							top: 20px
+						.color
+							color: #fb0018
+					.name-date
+						margin: 0
+						margin-bottom: 3px
+						.date
+							font-weight: 300
+			.text-message
+				.input
+					text-align: right
+					margin-top: 20px
+				input
+					height: 45px
+					font-size: 14px
+					width: 285px
+				input[type=submit]
+					background: #cccccc
+					border: 0px
+					color: #fff
+					transition: .2s
+					&:hover
+						background: #fb0018
+				textarea
+					max-width: 100%
+					min-width: 100%
+					border: 1px solid #ccc
+					max-height: 107px
+					min-height: 107px
+					resize: none
+.history-orders
+	.table-state
+		width: 1200px
+		thead
+			font-weight: 900
+			font-size: 18px
+			td
+				padding: 15px
+				border-bottom: 1px solid #cccccc
+		tbody
+			font-size: 18px
+			tr
 
-						div > p
-							margin-bottom: 20px
-
-						input[name=phone]
-							padding-left: 60px
-							position: relative
-						input[name=name]
-							margin-bottom: 30px
-						.main_conten_form_flag
-							position: relative
-							.select
-								position: relative
-								text-align: left
-							.slct_arrow
-								position: absolute
-								top: 24px
-								right: 44px
-								&.active
-
-							.drop
-								margin: 0 auto
-								padding: 0
-								width: 326px
-								background-color: #FFF
-								-moz-border-radius: 5px
-								-webkit-border-radius: 5px
-								border-top: none
-								display: none
-								position: absolute
-								top: 40px
-								left: 0
-								right: 0
-								background-color: #fff
-								-moz-border-radius: 5px
-								-webkit-border-radius: 5px
-								border-radius: 5px
-								z-index: 10
-								li
-									list-style: none
-									border: 1px solid #C8C8C8
-									border-bottom: none
-									border-top: none
-									cursor: pointer
-									display: block
-									color: #000
-									padding: 4px 15px 4px 30px
-									&:first-child
-										border-top: 1px solid #C8C8C8
-										-moz-border-top-right-radius: 5px
-										-webkit-border-top-right-radius: 5px
-										border-top-right-radius: 5px
-										-moz-border-top-left-radius: 5px
-										-webkit-border-top-left-radius: 5px
-										border-top-left-radius: 5px
-									&:last-child
-										border-bottom: 1px solid #C8C8C8
-										-moz-border-bottom-right-radius: 5px
-										-webkit-border-bottom-right-radius: 5px
-										border-bottom-right-radius: 5px
-										border-bottom-left-radius: 5px
-										-moz-border-bottom-left-radius: 5px
-										-webkit-border-bottom-left-radius: 5px
-									&:hover
-										background-color: #d1eef7
-										color: #000
-										outline: 0
-									a
-										padding-left: 40px
-										text-decoration: none
-										&:focus
-											text-decoration: none
-											outline: 0
-										&:active
-											text-decoration: none
-											outline: 0
-										&:hover
-											text-decoration: none
-											outline: 0
-									img
-										position: relative
-										top: -1px
-										left: -16px
-
-							.slct
-								width: 50px
-								height: 35px
-								display: block
-								position: absolute
-								top: 2px
-								left: 5px
-
+				border-bottom: 1px solid #cccccc
+				width: auto
+				td
+					padding: 15px
+				.blue
+					color: #6dcff6
+				.yellow
+					color: #fcb60f
+				.red
+					color: #fc384a
+				.green
+					color: #00be92
+	.title-state
+		width: 100%
+		padding: 15px
+		font-weight: 500
+		margin-bottom: 0
+		display: block
+		font-size: 18px
+	.pagination-wrap
+		text-align: center
+		margin-top: 20px
+		button
+			display: inline-block
+			vertical-align: super
+			transition: .1s
+			&:hover
+				text-decoration: none
+				outline: none
+			&:active
+				text-decoration: none
+				outline: none
+			&:focus
+				text-decoration: none
+				outline: none
+		.prev
+			width: 0
+			height: 0
+			background: transparent
+			border: 5px solid transparent
+			border-right: 10px solid #000
+			border-left: 0
+			&:hover
+				border-right-color: #fb0018
+		.next
+			width: 0
+			height: 0
+			background: transparent
+			border: 5px solid transparent
+			border-left: 10px solid #000
+			border-right: 0
+			&:hover
+				border-left-color: #fb0018
+		.pagination
+			display: inline-block
+			margin: 0 10px
+			transition: .1s
+			a
+				color: #000
+				display: inline-block
+				padding: 0 2px
+				&.active
+					background: #fb0018
+					color: #fff
+					&:hover
+						color: #fff
+				&:hover
+					text-decoration: none
+					color: #fb0018
+				&:active
+					text-decoration: none
+				&:focus
+					text-decoration: none
+			.points
+				margin-left: -6px
+.my-lots-container
+	.tabs-item
+		display: inline-block
+		padding: 10px
+		color: #000000
+		border: 1px solid transparent
+		border-bottom: 1px solid #ccc
+		margin-bottom: -1px
+		font-size: 0
+		p
+			font-size: 18px
+			line-height: 1.2
+		&:hover
+			text-decoration: none
+		&:active
+			text-decoration: none
+		&:focus
+			text-decoration: none
+		&.active
+			border: 1px solid #ccc
+			border-bottom: 1px solid #fff
+	.tabs-wrap
+		display: none
+		&.active
+			display: flex
+	.tabs-item-conatiner
+		border-bottom: 1px solid #ccc
+	.tabs-container
+		padding: 0 0px 0 14px
+	.tabs-wrap-container
+		padding: 0 0 20px
+	.inform-wrap
+		margin-bottom: 50px
+		margin-left: 14px
+		.title-name
+			padding-left: 14px
+			.name
+				font-size: 24px
+				padding-right: 20px
+			.status
+				font-size: 14px
+				&:before
+					content: ''
+					display: inline-block
+					width: 10px
+					height: 10px
+					margin-right: 5px
+					border-radius: 50%
+					background: #00be92
+		.avatar
+			display: block
+			float: left
+			border: 14px solid #f8f8f8
+			margin-right: 30px
+		.contacts-user
+			float: left
+			table
+				width: 340px
+				font-size: 14px
+				tr
+					&:first-child
+						td
+							&:last-child
 								color: #000
-								line-height: 40px
-								overflow: hidden
-								white-space: nowrap
-								text-overflow: ellipsis
-								-o-text-overflow: ellipsis
-								text-decoration: none
-								z-index: 1
-								img
-									margin-top: -6px
-									margin-left: 10px
+					td
+						&:first-child
+							font-weight: 900
+						&:last-child
+							color: #fb0018
+					&:last-child
+						td
+							font-weight: 500
+		.buttons-wrap
+			float: right
+			a
+				display: block
+				margin-bottom: 20px
+				padding: 9px 50px
+				background: #fb0018
+				border: 0px
+				color: #fff
+				transition: .2s
+				&:hover
+					text-decoration: none
+					background: #cccccc
+				&:active
+					text-decoration: none
+				&:focus
+					text-decoration: none
+	.tabs-wrap-container
+		.tabs-wrap
+			table
+				width: 100%
+				border-collapse: collapse
+				border-spacing: 0
+				thead
+					font-weight: 900
+					td
+						position: relative
+						padding: 15px
+						border-bottom: 1px solid #ccc
 
-								&:before
-									display: none
-								&.active
-									border-radius: 5px
-									text-decoration: none
-									outline: none
-								&:focus
-									text-decoration: none
-									outline: none
-								&:hover
-									text-decoration: none
-									outline: none
+					.button
+						width: 0
+						height: 0
+						display: inline-block
+						border: 6px solid transparent
+						background: transparent
+						position: absolute
+						margin-left: 10px
+						&.bottom
+							border-top-color: #000
+							top: 30px
+						&.top
+							border-bottom-color: #000
+							top: 15px
+				tbody
+					.button
+						display: inline-block
+						background: transparent
+						border: 0
+						transition: .1s
+						&:hover
+							color: #fb0018
+						.fa
+							margin-right: 5px
+							color: #fb0018
+					td
+						padding: 15px
+						border-bottom: 1px solid #ccc
+						&:last-child
+							width: 20%
 
-//	Секция 
+
 //	Секция
 //	Секция
 //	Секция 
