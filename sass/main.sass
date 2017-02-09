@@ -64,7 +64,7 @@ body textarea:required:valid
 				color: #00b6f4
 // Секция main_content
 .main_content
-	text-align: center 
+	text-align: center
 // Секция 
 .intermediate
 	text-align: center
@@ -72,15 +72,15 @@ body textarea:required:valid
 	background-color: #00b6f4
 	.intermediate_title
 		max-width: 650px
-		margin: auto		
+		margin: auto
 		color: #052243
 		h3
 			margin: 30px 30px
 			text-transform: uppercase
 			font-size: 24px
 			color: #052243
-			
-			
+
+
 
 	.intermediate_wrap
 		margin-top: 40px
@@ -89,7 +89,7 @@ body textarea:required:valid
 			display: inline-block
 			input
 				width: 100%
-				display: inline-block	
+				display: inline-block
 				border: 1px solid #a2b6c9
 				background: #fff
 				color: #43637f
@@ -110,6 +110,7 @@ body textarea:required:valid
 
 
 .content-section
+	padding-top: 202px
 	.form-wrap
 		margin-top: 33px
 		margin-bottom: 30px
@@ -136,9 +137,9 @@ body textarea:required:valid
 				font-size: 14px
 				border: none
 				transition: 0.2s
+				padding: 0
 				&:hover
-					background: #fff
-					color: #000
+					background: #fb0018
 					border: 1px solid #a2b6c9
 			input[type=text]
 				&::-webkit-input-placeholder
@@ -167,7 +168,9 @@ body textarea:required:valid
 					position: absolute
 					background: transparent
 					width: 40px
-					height: 40px
+					height: 100%
+					font-size: 14px
+					color: #818181
 					border: none
 					&:hover
 						text-decoration: none
@@ -188,7 +191,7 @@ body textarea:required:valid
 		position: relative
 		&.login
 			overflow: hidden
-			min-height: 530px
+			min-height: 540px
 		.table-eff
 			width: 100%
 			tr
@@ -200,7 +203,6 @@ body textarea:required:valid
 					border: 1px solid #ccc
 					border-right: 0
 					border-bottom: 0
-					cursor: pointer
 					height: 99px
 					&:last-child
 						border-right: 1px solid #ccc
@@ -211,7 +213,7 @@ body textarea:required:valid
 			td
 				padding: 14px
 				width: 25%
-				transition: .1s
+				transition: .3s
 		.wrap
 			position: relative
 			.item
@@ -224,14 +226,14 @@ body textarea:required:valid
 					position: relative
 					background: #818181
 					border: none
-					transition: .1s
+					transition: .3s
 					position: absolute
 					right: 0px
 					bottom: 0px
 					.icon
 						position: absolute
 						top: 4px
-						left: 4px
+						left: 3px
 						display: inline-block
 						@include sprite($plus)
 					&:hover
@@ -259,6 +261,16 @@ body textarea:required:valid
 					margin: 0
 					display: inline-block
 					font-size: 12px
+					a
+						color: #000000
+						transition: .3s
+						&:hover
+							text-decoration: none
+							color: #fb0018
+						&:active
+							text-decoration: none
+						&:focus
+							text-decoration: none
 				&.image
 					margin-right: 11px
 					width: auto
@@ -342,9 +354,72 @@ body textarea:required:valid
 			transition: height 2s
 			&.active
 				height: 500px
-			.back
+			.back-link
 				margin-top: 20px
 				text-align: center
+			.select
+				display: inline-block
+				height: 47px
+				vertical-align: top
+				margin-right: 10px
+				.slct
+					padding: 0
+					border: 0
+					border: 1px solid #a69f9f
+					height: 100%
+					display: block
+					padding: 0 17px
+					span
+						font-size: 14px
+						color: #000
+					&:hover
+						background: transparent
+					&:before
+						content: none
+				.icon
+					display: inline-block
+					vertical-align: middle
+					margin-right: 25px
+
+					&.UA
+						@include sprite($ukranian)
+					&.US
+						@include sprite($catry1)
+					&.UY
+						@include sprite($catry2)
+					&.UZ
+						@include sprite($catry3)
+					&.VA
+						@include sprite($catry4)
+						margin-right: 35px
+					&.VC
+						@include sprite($catry5)
+					&.VE
+						@include sprite($catry6)
+					&.VG
+						@include sprite($catry7)
+					&.VI
+						@include sprite($catry8)
+					&.VN
+						@include sprite($catry10)
+				.drop
+					width: 268px
+					border: 1px solid #a69f9f
+					padding: 10px
+					top: 55px
+					height: 250px
+					max-height: inherit
+					li
+						padding: 0
+						margin-bottom: 10px
+						&:last-child
+							margin-bottom: 0
+						.country
+							padding-left: 40px
+						&:hover
+							background: transparent
+							color: #fc2035
+
 		form
 			width: 373px
 			background-color: rgb(255, 255, 255)
@@ -388,6 +463,8 @@ body textarea:required:valid
 				&:-ms-input-placeholder
 					color: #000
 					font-size: 14px
+				&.phone
+					width: 244px
 
 			input[type=submit]
 				width: 100%
@@ -400,6 +477,8 @@ body textarea:required:valid
 				font-size: 14px
 				margin-bottom: 4px
 				margin-top: 10px
+				&:hover
+					background: #ccc
 		a
 			display: inline-block
 			text-decoration: none
@@ -416,10 +495,10 @@ body textarea:required:valid
 				bottom: 7px
 				right: 0
 				transition: all 0.35s ease-in-out 0s
-				transform: scaleX(1)
+				transform: scaleX(0)
 			&:hover
 				&:before
-					transform: scaleX(0)
+					transform: scaleX(1)
 		.txt_block
 			width: 250px
 			float: right
@@ -517,7 +596,7 @@ body textarea:required:valid
 			text-align: center
 			&:hover
 				background: #fb0018
-				
+
 .FAQ-content
 	padding: 80px 0
 	.accordion_content
@@ -546,7 +625,7 @@ body textarea:required:valid
 		span
 			color: #646464
 			position: absolute
-			top: 17px
+			top: calc(50% - 3px)
 			right: 24px
 			width: 0
 			height: 0
@@ -562,6 +641,7 @@ body textarea:required:valid
 	.title
 		font-size: 24px
 		font-weight: 500
+		padding-left: 24px
 	.tabs-item
 		display: inline-block
 		padding: 10px
@@ -583,7 +663,7 @@ body textarea:required:valid
 			border: 1px solid #000000
 			border-bottom: 1px solid #fff
 
-			
+
 	.tabs-wrap
 		display: none
 		justify-content: space-between
@@ -630,7 +710,7 @@ body textarea:required:valid
 			background: #fb0018
 			border: 0px
 			color: #fff
-			transition: .2s
+			transition: .3s
 			&:hover
 				background: #cccccc
 		.select
@@ -659,9 +739,11 @@ body textarea:required:valid
 			tr
 				border-top: 1px solid #cccccc
 				border-bottom: 1px solid #cccccc
+				transition: .3s
+				cursor: pointer
 				td
 					padding: 14px
-				&:first-child
+				&:hover
 					background: #f8f8f8
 				.blue
 					color: #6dcff6
@@ -674,7 +756,7 @@ body textarea:required:valid
 	.title-state
 		width: 100%
 		padding: 15px
-		font-weight: 500
+		font-weight: 900
 		display: block
 		background: #f8f8f8
 		font-size: 18px
@@ -688,7 +770,7 @@ body textarea:required:valid
 	.title
 		font-size: 24px
 		margin: 0
-		margin-bottom: 20px
+		margin-bottom: 10px
 	.main-article
 		font-size: 18px
 		margin-bottom: 30px
@@ -712,7 +794,7 @@ body textarea:required:valid
 			background: #cccccc
 			border: 0px
 			color: #fff
-			transition: .2s
+			transition: .3s
 			&:hover
 				background: #fb0018
 		.another-input
@@ -739,7 +821,7 @@ body textarea:required:valid
 					border: 0
 					margin-left: 20px
 					position: relative
-					transition: .2s
+					transition: .3s
 					&:hover
 						background: #fb0018
 					span
@@ -758,7 +840,7 @@ body textarea:required:valid
 			font-size: 14px
 			padding: 11px 63px
 			background: #cccccc
-			transition: .2s
+			transition: .3s
 			display: inline-block
 			color: #fff
 			&:hover
@@ -794,10 +876,12 @@ body textarea:required:valid
 			table
 				width: 100%
 				tr
+					transition: .3s
+					cursor: pointer
 					border-bottom: 1px solid #ccc
 					td
 						padding: 15px
-					&:nth-child(2)
+					&:hover
 						background: #f8f8f8
 				.color-num
 					color: #fb0018
@@ -811,6 +895,7 @@ body textarea:required:valid
 			.chat
 				overflow: auto
 				height: 590px
+				padding: 0 10px
 				.message
 					margin-bottom: 20px
 				.item
@@ -860,6 +945,28 @@ body textarea:required:valid
 						&:before
 							left: -20px
 							top: 45px
+						.warning
+							position: absolute
+							right: 12px
+							top: 9px
+							color: #cccccc
+							transition: .3s
+							p
+								position: absolute
+								display: none
+								font-size: 12px
+								color: #000
+								width: 155px
+								background: #fff
+								left: 23px
+								top: -8px
+								border: 1px solid #fb0018
+								padding: 4px 6px
+								border-radius: 5px
+							&:hover
+								color: #fb0018
+								p
+									display: block
 					&.right
 						float: right
 						margin-right: 23px
@@ -882,7 +989,6 @@ body textarea:required:valid
 							color: #fb0018
 					.name-date
 						margin: 0
-						margin-bottom: 3px
 						.date
 							font-weight: 300
 			.text-message
@@ -897,12 +1003,13 @@ body textarea:required:valid
 					background: #cccccc
 					border: 0px
 					color: #fff
-					transition: .2s
+					transition: .3s
 					&:hover
 						background: #fb0018
 				textarea
 					max-width: 100%
 					min-width: 100%
+					padding: 6px 17px
 					border: 1px solid #ccc
 					max-height: 107px
 					min-height: 107px
@@ -938,14 +1045,17 @@ body textarea:required:valid
 		font-weight: 500
 		margin-bottom: 0
 		display: block
-		font-size: 18px
+		font-size: 24px
+		font-weight: 900
 	.pagination-wrap
 		text-align: center
 		margin-top: 20px
 		button
 			display: inline-block
 			vertical-align: super
-			transition: .1s
+			transition: .3s
+			padding: 0
+			border-radius: 8px
 			&:hover
 				text-decoration: none
 				outline: none
@@ -959,8 +1069,8 @@ body textarea:required:valid
 			width: 0
 			height: 0
 			background: transparent
-			border: 5px solid transparent
-			border-right: 10px solid #000
+			border: 9px solid transparent
+			border-right: 9px solid #000
 			border-left: 0
 			&:hover
 				border-right-color: #fb0018
@@ -968,15 +1078,15 @@ body textarea:required:valid
 			width: 0
 			height: 0
 			background: transparent
-			border: 5px solid transparent
-			border-left: 10px solid #000
+			border: 9px solid transparent
+			border-left: 9px solid #000
 			border-right: 0
 			&:hover
 				border-left-color: #fb0018
 		.pagination
 			display: inline-block
 			margin: 0 10px
-			transition: .1s
+			transition: .3s
 			a
 				color: #000
 				display: inline-block
@@ -1019,7 +1129,7 @@ body textarea:required:valid
 	.tabs-wrap
 		display: none
 		&.active
-			display: flex
+			display: block
 	.tabs-item-conatiner
 		border-bottom: 1px solid #ccc
 	.tabs-container
@@ -1043,7 +1153,12 @@ body textarea:required:valid
 					height: 10px
 					margin-right: 5px
 					border-radius: 50%
-					background: #00be92
+				&.online
+					&:before
+						background: #00be92
+				&.offline
+					&:before
+						background: #fb0018
 		.avatar
 			display: block
 			float: left
@@ -1076,7 +1191,7 @@ body textarea:required:valid
 				background: #fb0018
 				border: 0px
 				color: #fff
-				transition: .2s
+				transition: .3s
 				&:hover
 					text-decoration: none
 					background: #cccccc
@@ -1084,6 +1199,10 @@ body textarea:required:valid
 					text-decoration: none
 				&:focus
 					text-decoration: none
+				&.redatction
+					background: #cccccc
+					&:hover
+						background: #fb0018
 	.tabs-wrap-container
 		.tabs-wrap
 			table
@@ -1105,18 +1224,23 @@ body textarea:required:valid
 						background: transparent
 						position: absolute
 						margin-left: 10px
+						transition: .3s
 						&.bottom
 							border-top-color: #000
 							top: 30px
+							&:hover
+								border-top-color: #fb0018
 						&.top
 							border-bottom-color: #000
 							top: 15px
+							&:hover
+								border-bottom-color: #fb0018
 				tbody
 					.button
 						display: inline-block
 						background: transparent
 						border: 0
-						transition: .1s
+						transition: .3s
 						&:hover
 							color: #fb0018
 						.fa
@@ -1127,6 +1251,959 @@ body textarea:required:valid
 						border-bottom: 1px solid #ccc
 						&:last-child
 							width: 20%
+		.commets-container
+			.comments-item
+				display: none
+				&.active
+					display: block
+			.commets-links
+				border-bottom: 1px solid #cccccc
+				display: block
+				font-size: 18px
+				padding: 25px 15px
+				a
+					padding-bottom: 6px
+					border-bottom: 1px solid transparent
+					transition: .2s
+					opacity: .5
+					&:hover
+						text-decoration: none
+					&:active
+						text-decoration: none
+					&:focus
+						text-decoration: none
+					&.active
+						border-bottom: 1px solid
+						opacity: 1
+				.positiv
+					color: #82ca9c
+					margin-right: 65px
+				.negative
+					color: #fb0018
+			.comments-wrap
+				padding: 20px 0 20px 105px
+				position: relative
+				min-height: 75px
+				border-bottom: 1px solid #cccccc
+				.commets-img
+					position: absolute
+					left: 0px
+					top: 35px
+			.title-name
+				margin: 0
+				.name
+					font-size: 18px
+					padding-right: 20px
+				.status
+					font-size: 14px
+					padding-right: 20px
+					font-weight: 100
+					&:before
+						content: ''
+						display: inline-block
+						width: 10px
+						height: 10px
+						margin-right: 5px
+						border-radius: 50%
+					&.online
+						&:before
+							background: #00be92
+					&.offline
+						&:before
+							background: #fb0018
+				.date
+					font-size: 18px
+					font-weight: 500
+
+
+.user-profile
+	.tabs-item
+		display: inline-block
+		padding: 10px
+		color: #000000
+		border: 1px solid transparent
+		border-bottom: 1px solid #ccc
+		margin-bottom: -1px
+		font-size: 0
+		p
+			font-size: 18px
+			line-height: 1.2
+		&:hover
+			text-decoration: none
+		&:active
+			text-decoration: none
+		&:focus
+			text-decoration: none
+		&.active
+			border: 1px solid #ccc
+			border-bottom: 1px solid #fff
+	.tabs-wrap
+		display: none
+		&.active
+			display: block
+	.tabs-item-conatiner
+		border-bottom: 1px solid #ccc
+	.tabs-container
+		padding: 0 0px 0 14px
+	.tabs-wrap-container
+		padding: 0 0 20px
+	.comments-item
+		display: none
+		&.active
+			display: block
+	.inform-wrap
+		margin-bottom: 50px
+		margin-left: 14px
+		.title-name
+			padding-left: 14px
+			.name
+				font-size: 24px
+				padding-right: 20px
+			.status
+				font-size: 14px
+				&:before
+					content: ''
+					display: inline-block
+					width: 10px
+					height: 10px
+					margin-right: 5px
+					border-radius: 50%
+				&.online
+					&:before
+						background: #00be92
+				&.offline
+					&:before
+						background: #fb0018
+		.avatar
+			display: block
+			float: left
+			border: 14px solid #f8f8f8
+			margin-right: 30px
+		.contacts-user
+			float: left
+			table
+				width: 340px
+				font-size: 14px
+				tr
+					&:first-child
+						td
+							&:last-child
+								color: #000
+					td
+						&:first-child
+							font-weight: 900
+						&:last-child
+							color: #fb0018
+					&:last-child
+						td
+							font-weight: 500
+		.buttons-wrap
+			float: right
+			a
+				display: block
+				margin-bottom: 20px
+				padding: 9px 50px
+				background: #fb0018
+				border: 0px
+				color: #fff
+				transition: .3s
+				position: relative
+				&:hover
+					text-decoration: none
+					background: #cccccc
+					.flag
+						background: #00be92
+						i
+							&.icon
+								@include sprite($fa-check)
+				&:active
+					text-decoration: none
+				&:focus
+					text-decoration: none
+				.flag
+					display: inline-block
+					width: 40px
+					height: 100%
+					position: absolute
+					background: #cccccc
+					right: 0
+					top: 0
+					transition: .3s
+					text-align: center
+					i
+						position: absolute
+						left: 0
+						right: 0
+						margin: auto
+						text-align: center
+						top: calc(50% - 7px)
+						&.icon
+							@include sprite($fa-close)
+
+
+	.tabs-wrap-container
+		.tabs-wrap
+			table
+				width: 100%
+				border-collapse: collapse
+				border-spacing: 0
+				thead
+					font-weight: 900
+					border-bottom: 1px solid #ccc
+					td
+						position: relative
+						padding: 15px
+
+					.button
+						width: 0
+						height: 0
+						display: inline-block
+						border: 6px solid transparent
+						background: transparent
+						position: absolute
+						margin-left: 10px
+						&.bottom
+							border-top-color: #000
+							top: 30px
+						&.top
+							border-bottom-color: #000
+							top: 15px
+				tbody
+					.button
+						display: inline-block
+						border: 0
+						width: 100%
+						background: #ccc
+						height: 36px
+						color: #fff
+						font-size: 14px
+						transition: .3s
+						&:hover
+							background: #fb0018
+
+					td
+						padding: 15px
+						border-bottom: 1px solid #ccc
+						&:last-child
+							width: 20%
+		.commets-container
+			.commets-links
+				border-bottom: 1px solid #cccccc
+				display: block
+				font-size: 18px
+				padding: 25px 15px
+				a
+					opacity: 0.5
+					padding-bottom: 6px
+					transition: .3s
+					border-bottom: 1px solid transparent
+					&:hover
+						text-decoration: none
+					&:active
+						text-decoration: none
+					&:focus
+						text-decoration: none
+					&.active
+						opacity: 1
+						border-bottom: 1px solid
+				.positiv
+					color: #82ca9c
+					margin-right: 65px
+				.negative
+					color: #fb0018
+			.comments-wrap
+				padding: 20px 0 20px 105px
+				position: relative
+				min-height: 75px
+				cursor: pointer
+				border-bottom: 1px solid #cccccc
+				.commets-img
+					position: absolute
+					left: 0px
+					top: 35px
+			.title-name
+				margin: 0
+				.name
+					font-size: 18px
+					padding-right: 20px
+				.status
+					font-size: 14px
+					padding-right: 20px
+					font-weight: 100
+					&:before
+						content: ''
+						display: inline-block
+						width: 10px
+						height: 10px
+						margin-right: 5px
+						border-radius: 50%
+					&.online
+						&:before
+							background: #00be92
+					&.offline
+						&:before
+							background: #fb0018
+				.date
+					font-size: 18px
+					font-weight: 500
+input[type=submit]
+	color: #fff
+	transition: .3s
+	&:hover
+		background: #fb0018
+.login-steps-container
+	.title
+		font-size: 24px
+		padding: 0 15px
+	.tabs-item
+		display: inline-block
+		padding: 10px
+		color: #000000
+		border: 1px solid transparent
+		border-bottom: 1px solid #ccc
+		margin-bottom: -1px
+		font-size: 0
+		p
+			font-size: 18px
+			line-height: 1.2
+		&:hover
+			text-decoration: none
+		&:active
+			text-decoration: none
+		&:focus
+			text-decoration: none
+		&.active
+			border: 1px solid #ccc
+			border-bottom: 1px solid #fff
+	.tabs-wrap
+		display: none
+		&.active
+			display: block
+	.tabs-item-conatiner
+		border-bottom: 1px solid #ccc
+		margin-bottom: 15px
+	.tabs-wrap-container
+		padding: 12px 0
+		min-height: 500px
+	.form-container
+		width: 388px
+		input
+			width: 100%
+			height: 100%
+			min-height: 44px
+			border: 1px solid #cccccc
+			display: inline-block
+			padding-left: 15px
+			padding-right: 42px
+		input[type=submit]
+			padding: 0
+		.input-item
+			height: 44px
+			margin-bottom: 30px
+			position: relative
+			.status
+				width: 42px
+				cursor: pointer
+				position: absolute
+				height: 44px
+				top: 0
+				right: 0
+				display: inline-block
+				background: #cccccc
+				transition: .3s
+				&:before
+					content: ''
+					display: inline-block
+					@include sprite($fa-close)
+					position: absolute
+					left: 0
+					right: 0
+					margin: auto
+					top: calc(50% - 7px)
+				&:hover
+					background: #fb0018
+				&.active
+					background: #00be92
+					&:before
+						@include sprite($fa-check)
+					&:hover
+						background: #00be92
+	.add-avatar
+		.ava-item,
+		.form-item
+			float: left
+		.ava-item
+			margin-right: 30px
+			img
+				border: 15px solid #f8f8f8
+		.form-item
+			h3
+				margin: 0
+				margin-bottom: 18px
+		form
+			display: inline-block
+			input[type=submit]
+				border: 0
+				padding: 12px 0
+				width: 170px
+				margin-bottom: 15px
+				&.save
+					background: #fb0018
+					&:hover
+						background: #ccc
+			.img-src
+				lable
+					margin-left: 30px
+					font-size: 18px
+	.warning-container
+		.warning
+			.check
+				padding-left: 25px
+				cursor: pointer
+				position: relative
+				display: inline-block
+				.fa
+					//display: non
+					display: inline-block
+					width: 14px
+					height: 14px
+					position: absolute
+					top: 4px
+					left: 0
+					border: 1px solid #000
+					border-radius: 1px
+				.fa-check
+					&:before
+						position: absolute
+						top: -2px
+				&.active
+					.fa
+						display: block
+				input[type=checkbox]
+					position: absolute
+					left: -10000px
+			input[type=submit]
+				margin-top: 25px
+				padding: 12px 0
+				width: 385px
+				border: 0
+	.liked-container
+		.status
+			font-size: 14px
+			padding-right: 20px
+			font-weight: 100
+			&:before
+				content: ''
+				display: inline-block
+				width: 10px
+				height: 10px
+				margin-right: 5px
+				border-radius: 50%
+			&.online
+				&:before
+					background: #00be92
+			&.offline
+				&:before
+					background: #fb0018
+		table
+			width: 100%
+			border-collapse: collapse
+			border-spacing: 0
+			thead
+				font-weight: 900
+				border-bottom: 1px solid #ccc
+				td
+					position: relative
+					padding: 15px
+			tbody
+				td
+					padding: 15px
+					border-bottom: 1px solid #ccc
+					cursor: pointer
+					&:first-child
+						width: 20%
+					&:last-child
+						width: 6%
+					.lots-status
+						.fa
+							padding-right: 10px
+							color: #ccc
+							transition: .3s
+					.button
+						background: transparent
+						transition: .3s
+						width: 100%
+						height: 100%
+						border: 0
+						.fa
+							color: #fb0018
+				tr
+					&.delete
+						background: #f8f8f8
+						.fa
+							color: #00be92
+						&:after
+							content: ''
+							width: 93%
+							left: 0
+							margin-top: 30px
+							position: absolute
+							height: 1px
+							background: #fb0018
+						&:hover
+							.button
+								.fa
+									color: #00be92
+					&:hover
+						.lots-status
+							.fa
+								color: #00be92
+						.button
+							.fa
+								color: #ccc
+.scroll-header-container
+	.status
+		font-size: 14px
+		padding-right: 20px
+		font-weight: 100
+		&:before
+			content: ''
+			display: inline-block
+			width: 10px
+			height: 10px
+			margin-right: 5px
+			border-radius: 50%
+		&.online
+			&:before
+				background: #00be92
+		&.offline
+			&:before
+				background: #fb0018
+	table
+		width: 100%
+		border-collapse: collapse
+		border-spacing: 0
+		thead
+			font-weight: 900
+			border-bottom: 1px solid #ccc
+			td
+				position: relative
+				padding: 15px
+		tbody
+			td
+				padding: 15px
+				border-bottom: 1px solid #ccc
+				cursor: pointer
+				&:first-child
+					width: 15%
+				&:last-child
+					width: 10%
+				&.name-item
+					width: 18%
+			tr
+				transition: .3s
+				&:hover
+					background: #f8f8f8
+				a
+					color: #000000
+					transition: .3s
+					&:hover
+						text-decoration: none
+						color: #fb0018
+					&:active
+						text-decoration: none
+					&:focus
+						text-decoration: none
+				span
+					display: inline-block
+					&.index
+						font-size: 14px
+						padding-right: 6px
+					&.index + a
+						font-size: 14px
+.conditions-contaienr
+	padding: 25px 0 80px
+	font-size: 14px
+	.title
+		font-size: 24px
+		display: inline
+		margin-bottom: 10px
+	.wrap
+		margin: 0px
+		padding: 0
+		margin-bottom: 30px
+		li
+			list-style-type: none
+	.item
+		border-bottom: 1px solid #ccc
+		padding-bottom: 18px
+		padding-top: 25px
+		&:first-child
+			padding-top: 0
+	.article
+		width:  655px
+		display: inline-block
+		margin-right: 10px
+		font-weight: 900
+	.aside
+		vertical-align: top
+		display: inline-block
+		position: relative
+		padding-left: 25px
+		font-weight: 900
+		.fa
+			position: absolute
+			left: 2px
+			top: 3px
+			color: #fb0018
+	.button-item
+		text-align: center
+		.button
+			color: #fff
+			display: inline-block
+			padding: 17px 125px
+			background: #fb0018
+			transition: .3s
+			&:hover
+				text-decoration: none
+				background: #ccc
+			&:active
+				text-decoration: none
+			&:focus
+				text-decoration: none
+
+
+
+.service-container
+	margin-top: 40px
+	.title
+		font-size: 24px
+		margin-top: 0
+		padding: 0 15px
+
+	.article
+		font-size: 18px
+		padding: 0 15px 20px
+		border-bottom: 1px solid #ccc
+		margin-bottom: 50px
+	.tabs-item
+		display: inline-block
+		padding: 10px
+		color: #000000
+		border: 1px solid transparent
+		border-bottom: 1px solid #ccc
+		margin-bottom: -1px
+		font-size: 0
+		p
+			font-size: 18px
+			line-height: 1.2
+		&:hover
+			text-decoration: none
+		&:active
+			text-decoration: none
+		&:focus
+			text-decoration: none
+		&.active
+			border: 1px solid #ccc
+			border-bottom: 1px solid #fff
+	.tabs-wrap
+		display: none
+		&.active
+			display: block
+	.tabs-item-conatiner
+		border-bottom: 1px solid #ccc
+		margin-bottom: 15px
+		.filter-select
+			display: inline-block
+			float: right
+			width: 290px
+			position: relative
+			bottom: 10px
+	.tabs-wrap-container
+		padding: 12px 0
+		min-height: 500px
+	.intermediate-container
+		margin-bottom: 40px
+		.select
+			display: inline-block
+			width: 285px
+			margin-right: 30px
+		.checkbox
+			display: inline-block
+			vertical-align: top
+			margin-top: 10px
+			.check
+				padding-left: 25px
+				cursor: pointer
+				position: relative
+				display: inline-block
+				.fa
+					display: inline-block
+					width: 14px
+					height: 14px
+					position: absolute
+					top: 4px
+					left: 0
+					border: 1px solid #000
+					border-radius: 1px
+				.fa-check
+					&:before
+						position: absolute
+						top: -2px
+				&.active
+					.fa
+						display: block
+				input[type=checkbox]
+					position: absolute
+					left: -10000px
+		.button
+			color: #fff
+			font-size: 14px
+			display: inline-block
+			padding: 10px 59px
+			background: #fb0018
+			vertical-align: top
+			margin-left: 97px
+			transition: .3s
+			&:hover
+				text-decoration: none
+				background: #ccc
+			&:active
+				text-decoration: none
+			&:focus
+				text-decoration: none
+
+	.status
+		font-size: 14px
+		margin-left: 8px
+		&:before
+			content: ''
+			display: inline-block
+			width: 10px
+			height: 10px
+			margin-right: 5px
+			border-radius: 50%
+			vertical-align: middle
+		&.online
+			&:before
+				background: #00be92
+		&.offline
+			&:before
+				background: #fb0018
+	table
+		width: 100%
+		border-collapse: collapse
+		border-spacing: 0
+		thead
+			font-weight: 900
+			border-bottom: 1px solid #ccc
+			td
+				position: relative
+				padding: 15px
+			.button
+				width: 0
+				height: 0
+				display: inline-block
+				border: 6px solid transparent
+				background: transparent
+				position: absolute
+				margin-left: 10px
+				transition: .3s
+				&.bottom
+					border-top-color: #000
+					top: 30px
+					&:hover
+						border-top-color: #fb0018
+				&.top
+					border-bottom-color: #000
+					top: 15px
+					&:hover
+						border-bottom-color: #fb0018
+		tbody
+			td
+				padding: 15px
+				border-bottom: 1px solid #ccc
+				cursor: pointer
+				&:last-child
+					width: 10%
+				&.name-item
+					width: 23%
+			tr
+				transition: .3s
+				&:hover
+					background: #f8f8f8
+				a
+					color: #000000
+					transition: .3s
+					&:hover
+						text-decoration: none
+						color: #fb0018
+					&:active
+						text-decoration: none
+					&:focus
+						text-decoration: none
+				span
+					display: inline-block
+					&.index
+						font-size: 14px
+						padding-right: 6px
+					&.index + a
+						font-size: 14px
+	.pagination-wrap
+		text-align: center
+		margin-top: 20px
+		margin-bottom: 10px
+		button
+			display: inline-block
+			vertical-align: super
+			transition: .3s
+			&:hover
+				text-decoration: none
+				outline: none
+			&:active
+				text-decoration: none
+				outline: none
+			&:focus
+				text-decoration: none
+				outline: none
+		.prev
+			width: 0
+			height: 0
+			background: transparent
+			border: 5px solid transparent
+			border-right: 10px solid #000
+			border-left: 0
+			&:hover
+				border-right-color: #fb0018
+		.next
+			width: 0
+			height: 0
+			background: transparent
+			border: 5px solid transparent
+			border-left: 10px solid #000
+			border-right: 0
+			&:hover
+				border-left-color: #fb0018
+		.pagination
+			display: inline-block
+			margin: 0 10px
+			transition: .3s
+			a
+				color: #000
+				display: inline-block
+				padding: 0 2px
+				&.active
+					background: #fb0018
+					color: #fff
+					&:hover
+						color: #fff
+				&:hover
+					text-decoration: none
+					color: #fb0018
+				&:active
+					text-decoration: none
+				&:focus
+					text-decoration: none
+			.points
+				margin-left: -6px
+		.match
+			float: left
+	.article-wrap
+		img
+			margin-top: 60px
+		.aritcle
+			width: 785px
+			float: left
+			h3
+				margin-top: 0
+			.text
+				margin-bottom: 25px
+			li
+				padding-left: 10px
+			.number
+				li
+					list-style-type: decimal
+
+.error-contaienr
+	padding: 40px 0
+	.title-wrap
+		margin-bottom: 40px
+		h3
+			font-size: 24px
+			font-weight: 100
+			padding: 10px 25px
+
+			border: 1px solid #fb0018
+		.text
+			padding-left: 30px
+	.intermediate-wrap
+		padding: 45px 0
+		text-align: center
+		&.border
+			border-bottom: 1px solid #cccccc
+			border-top: 1px solid #cccccc
+	.button
+		color: #fff
+		font-size: 14px
+		display: inline-block
+		padding: 10px 59px
+		background: #ccc
+		vertical-align: top
+		margin: 0 15px
+		transition: .3s
+		min-width: 270px
+		&:hover
+			text-decoration: none
+			background: #fb0018
+		&:active
+			text-decoration: none
+		&:focus
+			text-decoration: none
+
+@keyframes barberpole
+	from
+		background-position: 0 0
+	to
+		background-position: 122px 61px
+
+
+
+.loading-contaienr
+	min-height: 500px
+	padding: 50px 0
+	.wrap
+		height: 50px
+		padding: 3px
+		background: #eff1f1
+		border-radius: 28px
+		text-align: center
+		p
+			margin-top: 20px
+		.mask
+			background: #fcedf0
+			height: 100%
+			border-radius: 28px
+			.level
+				height: 100%
+				width: 90%
+				border-radius: 28px
+				background: #fb0018
+				overflow: hidden
+				position: relative
+				background-size: 61px 61px
+				background-image: linear-gradient(45deg,rgba(#eff1f1, 0.3) 23%,transparent 25%,transparent 50%, rgba(#eff1f1, 0.3) 50%,rgba(#eff1f1, 0.3) 75%,transparent 75%,transparent)
+				animation: barberpole 0.5s linear infinite
+				.decor
+					height: 60px
+					width: 25px
+					margin-left: 20px
+					background: #000
+					//background: #eff1f1
+					display: inline-block
+					opacity: .2
+					transform: rotate(22deg)
+					position: absolute
+					top: -7px
 
 
 //	Секция

@@ -100,6 +100,65 @@ p
 				a
 					font-size: 30px
 					color: #fff
+	&.pop2
+		.warning
+			border-bottom: 1px solid #cccccc
+			padding-bottom: 10px
+		.modal-text
+			padding-bottom: 10px
+			border-bottom: 1px solid #cccccc
+			a
+				color: #fb0018
+				&:hover
+					text-decoration: none
+					color: #fb0018
+				&:active
+					text-decoration: none
+				&:focus
+					text-decoration: none
+		.button-wrap
+			text-align: right
+			.button
+				color: #fff
+				font-size: 14px
+				display: inline-block
+				padding: 10px 20px
+				background: #ccc
+				vertical-align: top
+				margin: 0 10px
+				text-align: center
+				transition: .2s
+				min-width: 170px
+				&:hover
+					text-decoration: none
+					background: #fb0018
+				&:active
+					text-decoration: none
+				&:focus
+					text-decoration: none
+	&.pop4
+		h3
+			margin-bottom: 0
+		table
+			width: 100%
+			tr
+				&:first-child
+					td
+						border-top: 1px solid #cccccc
+						padding-top: 15px
+				&:last-child
+					td
+						border-bottom: 1px solid #cccccc
+						padding-bottom: 15px
+				td
+					padding: 5px
+					a
+						color: #fb0018
+						text-decoration: underline
+					.yellow
+						color: #fdc84b
+					&:first-child
+						font-weight: 900
 .dm-table
 	display: table
 	width: 100%
@@ -121,7 +180,7 @@ p
 	width: 630px
 	max-width: 50em
 	display: inline-block
-	padding: 30px 25px
+	padding: 30px
 	text-align: left
 	position: relative	
 	animation: fade .8s
@@ -129,7 +188,7 @@ p
 	z-index: 1002
 	h3
 		margin: 0px
-		margin-bottom: 15px
+		margin-bottom: 5px
 		font-size: 24px
 		font-weight: 300
 	.modal-text
@@ -207,7 +266,7 @@ p
 		max-height: 200px
 		padding-left: 14px
 		border: 1px solid #cccccc
-
+		resize: none
 	.success_mail
 		display: none
 		color: $main_color
@@ -234,6 +293,13 @@ p
 .select
 	position: relative
 	text-align: left
+	&:hover
+		.slct
+			color: #fff
+			background: #ccc
+		.arrow
+			&:before
+				color: #fff
 	.drop
 		width: 100%
 		max-height: 200px
@@ -276,18 +342,16 @@ p
 		-o-text-overflow: ellipsis
 		text-decoration: none
 		position: relative
-		transition: .2s
+		transition: .3s
 		color: #000
 		&.active
 			color: #000
-		&:hover
-			color: #fff
-			background: #ccc
 	.arrow
 		position: absolute
-		top: 5px
+		top: calc(50% - 13px)
 		right: 10px
 		z-index: 1
+		transition: .3s
 		color: #ccc
 		&:before
 			content: ""
@@ -297,6 +361,7 @@ p
 			border: 6px solid transparent
 			border-top: 6px solid
 			border-bottom: 0
+			vertical-align: middle
 		.fa
 			font-size: 24px
 			color: #000
@@ -374,6 +439,13 @@ p
 	text-align: center
 	border-bottom: 1px solid #ccc
 	box-shadow: 0px 1px 11px 0px #ccc
+	position: fixed
+	z-index: 10
+	background: #fff
+	width: 100%
+	&.active
+
+		//top: -165px
 	.container
 		height: 100%
 		min-height: 100%
@@ -384,10 +456,12 @@ p
 		margin-bottom: 7px
 		a
 			color: #000
-			transition: .1s
+			transition: .3s
 			&:hover
 				text-decoration: none
 				color: #fb0018
+				.num
+					color: #000
 			&:active
 				text-decoration: none
 			&:focus
@@ -397,16 +471,19 @@ p
 			float: left
 			font-size: 14px
 			position: relative
+			&.email
+				.login
+					padding-bottom: 9px
 			.active
 				padding-left: 15px
 				padding-right: 16px
-				padding-bottom: 3px
+				padding-bottom: 9px
 				.fa
 					color: #fb0018
 					margin-right: 5px
 			.num
 				padding-left: 10px
-
+				color: #000
 			.select-list
 				display: none
 				font-size: 14px
@@ -418,7 +495,7 @@ p
 				padding: 6px 20px 0 16px
 				border: 1px solid #ccc
 				border-top: none
-				top: 25px
+				top: 29px
 				z-index: 1
 				background: #fff
 				li
@@ -433,7 +510,7 @@ p
 				margin-right: 5px
 			a
 				color: #000
-				transition: 0.1s
+				transition: 0.3s
 				&:hover
 					text-decoration: none
 					color: #fb0018

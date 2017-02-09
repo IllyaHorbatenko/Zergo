@@ -9,7 +9,7 @@
 	<meta name="viewport"
 		  content="width=device-width">
 	<meta property="og:image" content="path/to/image.jpg">
-	<link rel="shortcut icon" href="img/favicon/favicon.ico" type="image/x-icon">
+	<link rel="shortcut icon" href="img/favicon/favicon.png" type="image/x-icon">
 	<link rel="apple-touch-icon" href="img/favicon/apple-touch-icon.png">
 	<link rel="apple-touch-icon" sizes="72x72" href="img/favicon/apple-touch-icon-72x72.png">
 	<link rel="apple-touch-icon" sizes="114x114" href="img/favicon/apple-touch-icon-114x114.png">
@@ -1629,33 +1629,222 @@
 		}
 	</style>
 	<!-- Header CSS (First Sections of Website: paste after release from header.min.css here) -->
-	<style>
-		html .loader {
-			background: #fff;
-			bottom: 0;
+<style>
+		.loader{
+			background-color: rgba(255,255,255,1);
 			height: 100%;
-			left: 0;
-			position: fixed;
-			right: 0;
-			top: 0;
 			width: 100%;
+			position: fixed;
+			z-index: 1;
+			margin-top: 0px;
+			top: 0px;
 			z-index: 9999
 		}
-
-		html .loader .loader_inner {
-			/*background-image: url(../img/preloader.gif);*/
-			background-size: cover;
-			background-repeat: no-repeat;
-			background-position: center center;
-			background-color: #fff;
-			height: 60px;
-			width: 60px;
-			margin-top: -30px;
-			margin-left: -30px;
+		#loading-center{
+			width: 100%;
+			height: 100%;
+			position: relative;
+		}
+		#loading-center-absolute {
+			position: absolute;
 			left: 50%;
 			top: 50%;
-			position: absolute
+			height: 100px;
+			width: 100px;
+			margin-top: -50px;
+			margin-left: -50px;
 		}
+		.object{
+			width: 25px;
+			height: 25px;
+			background-color: rgba(255,255,255,0);
+			margin-right: auto;
+			margin-left: auto;
+			border: 4px solid rgba(239,74,74,1);
+			left: 37px;
+			top: 37px;
+			position: absolute;
+		}
+
+		#first_object{
+			-webkit-animation: first_object 1s infinite;
+			animation: first_object 1s infinite;
+			-webkit-animation-delay: 0.5s;
+			animation-delay: 0.5s;
+		}
+		#second_object{
+			-webkit-animation: second_object 1s infinite;
+			animation: second_object 1s infinite;
+		}
+		#third_object{
+			-webkit-animation: third_object 1s infinite;
+			animation: third_object 1s infinite;
+			-webkit-animation-delay: 0.5s;
+			animation-delay: 0.5s;
+		}
+		#forth_object{
+			-webkit-animation: forth_object 1s infinite;
+			animation: forth_object 1s infinite;
+		}
+
+
+
+
+
+
+		@-webkit-keyframes first_object {
+			0% {
+				-ms-transform: translate(1,1) scale(1,1);
+				-webkit-transform: translate(1,1) scale(1,1);
+				transform: translate(1,1) scale(1,1);
+			}
+			50% {
+				-ms-transform: translate(150%,150%) scale(2,2);
+				-webkit-transform: translate(150%,150%) scale(2,2);
+				transform: translate(150%,150%) scale(2,2);
+			}
+
+			100% {
+				-ms-transform: translate(1,1) scale(1,1);
+				-webkit-transform: translate(1,1) scale(1,1);
+				transform: translate(1,1) scale(1,1);
+			}
+		}
+		@keyframes first_object {
+			0% {
+				-ms-transform: translate(1,1) scale(1,1);
+				-webkit-transform: translate(1,1) scale(1,1);
+				transform: translate(1,1) scale(1,1);
+			}
+			50% {
+				-ms-transform: translate(150%,150%) scale(2,2);
+				-webkit-transform: translate(150%,150%) scale(2,2);
+				transform: translate(150%,150%) scale(2,2);
+			}
+
+			100% {
+				-ms-transform: translate(1,1) scale(1,1);
+				-webkit-transform: translate(1,1) scale(1,1);
+				transform: translate(1,1) scale(1,1);
+			}
+		}
+
+
+
+
+		@-webkit-keyframes second_object {
+			0% {
+				-ms-transform: translate(1,1) scale(1,1);
+				-webkit-transform: translate(1,1) scale(1,1);
+				transform: translate(1,1) scale(1,1);
+			}
+			50% {
+				-ms-transform: translate(-150%,150%) scale(2,2);
+				-webkit-transform: translate(-150%,150%) scale(2,2);
+				transform: translate(-150%,150%) scale(2,2);
+			}
+			100% {
+				-ms-transform: translate(1,1) scale(1,1);
+				-webkit-transform: translate(1,1) scale(1,1);
+				transform: translate(1,1) scale(1,1);
+			}
+		}
+		@keyframes second_object {
+			0% {
+				-ms-transform: translate(1,1) scale(1,1);
+				-webkit-transform: translate(1,1) scale(1,1);
+				transform: translate(1,1) scale(1,1);
+			}
+			50% {
+				-ms-transform: translate(-150%,150%) scale(2,2);
+				-webkit-transform: translate(-150%,150%) scale(2,2);
+				transform: translate(-150%,150%) scale(2,2);
+			}
+			100% {
+				-ms-transform: translate(1,1) scale(1,1);
+				-webkit-transform: translate(1,1) scale(1,1);
+				transform: translate(1,1) scale(1,1);
+			}
+		}
+
+
+
+
+		@-webkit-keyframes third_object {
+			0% {
+				-ms-transform: translate(1,1) scale(1,1);
+				-webkit-transform: translate(1,1) scale(1,1);
+				transform: translate(1,1) scale(1,1);
+			}
+			50% {
+				-ms-transform: translate(-150%,-150%) scale(2,2);
+				-webkit-transform: translate(-150%,-150%) scale(2,2);
+				transform: translate(-150%,-150%) scale(2,2);
+			}
+			100% {
+				-ms-transform: translate(1,1) scale(1,1);
+				-webkit-transform: translate(1,1) scale(1,1);
+				transform: translate(1,1) scale(1,1);
+			}
+		}
+		@keyframes third_object {
+			0% {
+				-ms-transform: translate(1,1) scale(1,1);
+				-webkit-transform: translate(1,1) scale(1,1);
+				transform: translate(1,1) scale(1,1);
+			}
+			50% {
+				-ms-transform: translate(-150%,-150%) scale(2,2);
+				-webkit-transform: translate(-150%,-150%) scale(2,2);
+				transform: translate(-150%,-150%) scale(2,2);
+			}
+			100% {
+				-ms-transform: translate(1,1) scale(1,1);
+				-webkit-transform: translate(1,1) scale(1,1);
+				transform: translate(1,1) scale(1,1);
+			}
+		}
+
+
+
+
+
+
+		@-webkit-keyframes forth_object {
+			0% {
+				-ms-transform: translate(1,1) scale(1,1);
+				-webkit-transform: translate(1,1) scale(1,1);
+				transform: translate(1,1) scale(1,1);
+			}
+			50% {
+				-ms-transform: translate(150%,-150%) scale(2,2);
+				-webkit-transform: translate(150%,-150%) scale(2,2);
+				transform: translate(150%,-150%) scale(2,2);
+			}
+			100% {
+				-ms-transform: translate(1,1) scale(1,1);
+				-webkit-transform: translate(1,1) scale(1,1);
+				transform: translate(1,1) scale(1,1);
+			}
+		}
+		@keyframes forth_object {
+			0% {
+				-ms-transform: translate(1,1) scale(1,1);
+				-webkit-transform: translate(1,1) scale(1,1);
+				transform: translate(1,1) scale(1,1);
+			}
+			50% {
+				-ms-transform: translate(150%,-150%) scale(2,2);
+				-webkit-transform: translate(150%,-150%) scale(2,2);
+				transform: translate(150%,-150%) scale(2,2);
+			}
+			100% {
+				-ms-transform: translate(1,1) scale(1,1);
+				-webkit-transform: translate(1,1) scale(1,1);
+				transform: translate(1,1) scale(1,1);
+			}
+		}
+
 	</style>
 	<!-- Load CSS, CSS Localstorage & WebFonts Main Function -->
 	<script>
@@ -1736,8 +1925,15 @@
 </head>
 
 <body>
-<div class="loader">
-	<div class="loader_inner"></div>
+<div class="loader" >
+	<div id="loading-center">
+		<div id="loading-center-absolute">
+			<div class="object" id="first_object"></div>
+			<div class="object" id="second_object"></div>
+			<div class="object" id="third_object"></div>
+			<div class="object" id="forth_object"></div>
+		</div>
+	</div>
 </div>
 <!-- Модальное окно -->
 <div class="popup" data-modal="modal-1">
@@ -1745,53 +1941,36 @@
 		<div class="dm-cell">
 			<div class="dm-modal">
 				<a href="#" class="close">
+					<span class="left"></span>
+					<span class="right"></span>
 				</a>
 				<p class='success_mail'>Спасибо! Ваша заявка уже обрабатывается менеджером и в ближайшее время он с вами
 					свяжется.</p>
+				<h3>Улучшить сайт</h3>
+				<p class="modal-text">Как и любой гарант-сервис, FunPay гарантирует лишь процесс
+					сделки. Вопросы блокировок покупателям следует обсуждать
+					с каждым продавцом отдельно - все продавцы разные.</p>
 				<form id="form">
 					<div>
-						<label>Введите своё имя</label>
 						<div class="modal_form_input_wrap">
 							<div class="modal_input_error">Заполните поле
 								<div class="modal_error_triangle"></div>
 								<div class="modal_error_chest_img"></div>
 							</div>
-							<input name="name" class="modal_form_input" type="text">
+							<input name="name" class="modal_form_input" type="text" placeholder="Имя">
 						</div>
 					</div>
 					<div>
-						<label>Введите свой телефон</label>
 						<div class="modal_form_input_wrap">
 							<div class="modal_input_error">Заполните поле
 								<div class="modal_error_triangle"></div>
 								<div class="modal_error_chest_img"></div>
 							</div>
-							<input name="phone" class="modal_form_phone" type="text">
+							<input name="phone" class="modal_form_phone" type="text" placeholder="E-mail">
 						</div>
 					</div>
 					<div>
-						<label>Введите свой e-mail</label>
-						<div class="modal_form_input_wrap">
-							<div class="modal_input_error">Заполните поле
-								<div class="modal_error_triangle"></div>
-								<div class="modal_error_chest_img"></div>
-							</div>
-							<input name="email" class="modal_form_email" type="text">
-						</div>
-					</div>
-					<div>
-						<div class="select">
-							<div class="slct_arrow">
-								<i class="fa fa-angle-down"></i>
-							</div>
-							<a href="#" class="slct">Выбор заголовков:</a>
-							<ul class="drop">
-								<li>Вы крутые</li>
-								<li>Я в Вас влюбился</li>
-								<li>Быстрей Вас только Флеш</li>
-							</ul>
-							<input type="hidden" id="select" name="services">
-						</div>
+						<textarea name="textarea" placeholder="Ввести сообщение"></textarea>
 					</div>
 					<input type="hidden" name="form_name" value="">
 					<input type="hidden" name="form_type" value="modal">
@@ -1832,7 +2011,10 @@
 					</ul>
 				</div>
 				<div class="api-nav">
-					<a href="#" class="wrap"><i class="fa fa-globe"></i>Улучшить сайт</a>
+					<div class="wrap">
+						<a href="" class="login"><i class="fa fa-question-circle "></i>Не нашел игру/сервер?</a>
+					</div>
+					<a href="#" class="wrap modal" data-modal="modal-1"><i class="fa fa-globe"></i>Улучшить сайт</a>
 					<div class="wrap">
 						<a href="" class="login"><i class="fa fa-user "></i>Войти</a> / <a href="" class="check">Регистация</a>
 					</div>
@@ -1886,12 +2068,12 @@
 										<h3 class="title">AION onlinne</h3>
 										<span class="lang">RU</span>
 									</div>
-									<p class="list">
-										Кинары,
-										Аккаунты,
-										Предметы,
-										Услуги
-									</p>
+									<div class="list">
+										<a href="#">Кинары,</a>
+										<a href="#">Аккаунты,</a>
+										<a href="#">Предметы,</a>
+										<a href="#">Услуги</a>
+									</div>
 									<button class="btn">
 										<span class="icon"></span>
 									</button>
@@ -1909,7 +2091,8 @@
 										<span class="lang">EU</span>
 									</div>
 									<p class="list">
-										Аккаунты, Услуги
+										<a href="#">Аккаунты,</a>
+										<a href="#">Услуги</a>
 									</p>
 									<button class="btn">
 										<span class="icon"></span>
@@ -1928,8 +2111,10 @@
 										<span class="lang">NA</span>
 									</div>
 									<p class="list">
-										Адена, Аккаунты, Предметы,
-										Услуги
+										<a href="#">Адена,</a>
+										<a href="#">Аккаунты,</a>
+										<a href="#">Предметы,</a>
+										<a href="#">Услуги</a>
 									</p>
 									<button class="btn">
 										<span class="icon"></span>
@@ -1948,8 +2133,10 @@
 										<span class="lang"></span>
 									</div>
 									<p class="list">
-										Золото, Аккаунты, Предметы,
-										Услуги
+										<a href="#">Золото,</a>
+										<a href="#">Аккаунты,</a>
+										<a href="#">Предметы,</a>
+										<a href="#">Услуги</a>
 									</p>
 									<button class="btn">
 										<span class="icon"></span>
@@ -1970,12 +2157,12 @@
 										<h3 class="title">AION onlinne</h3>
 										<span class="lang">RU</span>
 									</div>
-									<p class="list">
-										Кинары,
-										Аккаунты,
-										Предметы,
-										Услуги
-									</p>
+									<div class="list">
+										<a href="#">Кинары,</a>
+										<a href="#">Аккаунты,</a>
+										<a href="#">Предметы,</a>
+										<a href="#">Услуги</a>
+									</div>
 									<button class="btn">
 										<span class="icon"></span>
 									</button>
@@ -1993,7 +2180,8 @@
 										<span class="lang">EU</span>
 									</div>
 									<p class="list">
-										Аккаунты, Услуги
+										<a href="#">Аккаунты,</a>
+										<a href="#">Услуги</a>
 									</p>
 									<button class="btn">
 										<span class="icon"></span>
@@ -2012,8 +2200,10 @@
 										<span class="lang">NA</span>
 									</div>
 									<p class="list">
-										Адена, Аккаунты, Предметы,
-										Услуги
+										<a href="#">Адена,</a>
+										<a href="#">Аккаунты,</a>
+										<a href="#">Предметы,</a>
+										<a href="#">Услуги</a>
 									</p>
 									<button class="btn">
 										<span class="icon"></span>
@@ -2032,8 +2222,10 @@
 										<span class="lang"></span>
 									</div>
 									<p class="list">
-										Золото, Аккаунты, Предметы,
-										Услуги
+										<a href="#">Золото,</a>
+										<a href="#">Аккаунты,</a>
+										<a href="#">Предметы,</a>
+										<a href="#">Услуги</a>
 									</p>
 									<button class="btn">
 										<span class="icon"></span>
@@ -2054,12 +2246,12 @@
 										<h3 class="title">AION onlinne</h3>
 										<span class="lang">RU</span>
 									</div>
-									<p class="list">
-										Кинары,
-										Аккаунты,
-										Предметы,
-										Услуги
-									</p>
+									<div class="list">
+										<a href="#">Кинары,</a>
+										<a href="#">Аккаунты,</a>
+										<a href="#">Предметы,</a>
+										<a href="#">Услуги</a>
+									</div>
 									<button class="btn">
 										<span class="icon"></span>
 									</button>
@@ -2077,7 +2269,8 @@
 										<span class="lang">EU</span>
 									</div>
 									<p class="list">
-										Аккаунты, Услуги
+										<a href="#">Аккаунты,</a>
+										<a href="#">Услуги</a>
 									</p>
 									<button class="btn">
 										<span class="icon"></span>
@@ -2096,8 +2289,10 @@
 										<span class="lang">NA</span>
 									</div>
 									<p class="list">
-										Адена, Аккаунты, Предметы,
-										Услуги
+										<a href="#">Адена,</a>
+										<a href="#">Аккаунты,</a>
+										<a href="#">Предметы,</a>
+										<a href="#">Услуги</a>
 									</p>
 									<button class="btn">
 										<span class="icon"></span>
@@ -2116,8 +2311,10 @@
 										<span class="lang"></span>
 									</div>
 									<p class="list">
-										Золото, Аккаунты, Предметы,
-										Услуги
+										<a href="#">Золото,</a>
+										<a href="#">Аккаунты,</a>
+										<a href="#">Предметы,</a>
+										<a href="#">Услуги</a>
 									</p>
 									<button class="btn">
 										<span class="icon"></span>
@@ -2138,12 +2335,12 @@
 										<h3 class="title">AION onlinne</h3>
 										<span class="lang">RU</span>
 									</div>
-									<p class="list">
-										Кинары,
-										Аккаунты,
-										Предметы,
-										Услуги
-									</p>
+									<div class="list">
+										<a href="#">Кинары,</a>
+										<a href="#">Аккаунты,</a>
+										<a href="#">Предметы,</a>
+										<a href="#">Услуги</a>
+									</div>
 									<button class="btn">
 										<span class="icon"></span>
 									</button>
@@ -2161,7 +2358,8 @@
 										<span class="lang">EU</span>
 									</div>
 									<p class="list">
-										Аккаунты, Услуги
+										<a href="#">Аккаунты,</a>
+										<a href="#">Услуги</a>
 									</p>
 									<button class="btn">
 										<span class="icon"></span>
@@ -2180,8 +2378,10 @@
 										<span class="lang">NA</span>
 									</div>
 									<p class="list">
-										Адена, Аккаунты, Предметы,
-										Услуги
+										<a href="#">Адена,</a>
+										<a href="#">Аккаунты,</a>
+										<a href="#">Предметы,</a>
+										<a href="#">Услуги</a>
 									</p>
 									<button class="btn">
 										<span class="icon"></span>
@@ -2200,8 +2400,10 @@
 										<span class="lang"></span>
 									</div>
 									<p class="list">
-										Золото, Аккаунты, Предметы,
-										Услуги
+										<a href="#">Золото,</a>
+										<a href="#">Аккаунты,</a>
+										<a href="#">Предметы,</a>
+										<a href="#">Услуги</a>
 									</p>
 									<button class="btn">
 										<span class="icon"></span>
@@ -2222,12 +2424,12 @@
 										<h3 class="title">AION onlinne</h3>
 										<span class="lang">RU</span>
 									</div>
-									<p class="list">
-										Кинары,
-										Аккаунты,
-										Предметы,
-										Услуги
-									</p>
+									<div class="list">
+										<a href="#">Кинары,</a>
+										<a href="#">Аккаунты,</a>
+										<a href="#">Предметы,</a>
+										<a href="#">Услуги</a>
+									</div>
 									<button class="btn">
 										<span class="icon"></span>
 									</button>
@@ -2245,7 +2447,8 @@
 										<span class="lang">EU</span>
 									</div>
 									<p class="list">
-										Аккаунты, Услуги
+										<a href="#">Аккаунты,</a>
+										<a href="#">Услуги</a>
 									</p>
 									<button class="btn">
 										<span class="icon"></span>
@@ -2264,8 +2467,10 @@
 										<span class="lang">NA</span>
 									</div>
 									<p class="list">
-										Адена, Аккаунты, Предметы,
-										Услуги
+										<a href="#">Адена,</a>
+										<a href="#">Аккаунты,</a>
+										<a href="#">Предметы,</a>
+										<a href="#">Услуги</a>
 									</p>
 									<button class="btn">
 										<span class="icon"></span>
@@ -2284,8 +2489,10 @@
 										<span class="lang"></span>
 									</div>
 									<p class="list">
-										Золото, Аккаунты, Предметы,
-										Услуги
+										<a href="#">Золото,</a>
+										<a href="#">Аккаунты,</a>
+										<a href="#">Предметы,</a>
+										<a href="#">Услуги</a>
 									</p>
 									<button class="btn">
 										<span class="icon"></span>
@@ -2306,12 +2513,12 @@
 										<h3 class="title">AION onlinne</h3>
 										<span class="lang">RU</span>
 									</div>
-									<p class="list">
-										Кинары,
-										Аккаунты,
-										Предметы,
-										Услуги
-									</p>
+									<div class="list">
+										<a href="#">Кинары,</a>
+										<a href="#">Аккаунты,</a>
+										<a href="#">Предметы,</a>
+										<a href="#">Услуги</a>
+									</div>
 									<button class="btn">
 										<span class="icon"></span>
 									</button>
@@ -2329,7 +2536,8 @@
 										<span class="lang">EU</span>
 									</div>
 									<p class="list">
-										Аккаунты, Услуги
+										<a href="#">Аккаунты,</a>
+										<a href="#">Услуги</a>
 									</p>
 									<button class="btn">
 										<span class="icon"></span>
@@ -2348,8 +2556,10 @@
 										<span class="lang">NA</span>
 									</div>
 									<p class="list">
-										Адена, Аккаунты, Предметы,
-										Услуги
+										<a href="#">Адена,</a>
+										<a href="#">Аккаунты,</a>
+										<a href="#">Предметы,</a>
+										<a href="#">Услуги</a>
 									</p>
 									<button class="btn">
 										<span class="icon"></span>
@@ -2368,8 +2578,10 @@
 										<span class="lang"></span>
 									</div>
 									<p class="list">
-										Золото, Аккаунты, Предметы,
-										Услуги
+										<a href="#">Золото,</a>
+										<a href="#">Аккаунты,</a>
+										<a href="#">Предметы,</a>
+										<a href="#">Услуги</a>
 									</p>
 									<button class="btn">
 										<span class="icon"></span>
@@ -2390,12 +2602,12 @@
 										<h3 class="title">AION onlinne</h3>
 										<span class="lang">RU</span>
 									</div>
-									<p class="list">
-										Кинары,
-										Аккаунты,
-										Предметы,
-										Услуги
-									</p>
+									<div class="list">
+										<a href="#">Кинары,</a>
+										<a href="#">Аккаунты,</a>
+										<a href="#">Предметы,</a>
+										<a href="#">Услуги</a>
+									</div>
 									<button class="btn">
 										<span class="icon"></span>
 									</button>
@@ -2413,7 +2625,8 @@
 										<span class="lang">EU</span>
 									</div>
 									<p class="list">
-										Аккаунты, Услуги
+										<a href="#">Аккаунты,</a>
+										<a href="#">Услуги</a>
 									</p>
 									<button class="btn">
 										<span class="icon"></span>
@@ -2432,8 +2645,10 @@
 										<span class="lang">NA</span>
 									</div>
 									<p class="list">
-										Адена, Аккаунты, Предметы,
-										Услуги
+										<a href="#">Адена,</a>
+										<a href="#">Аккаунты,</a>
+										<a href="#">Предметы,</a>
+										<a href="#">Услуги</a>
 									</p>
 									<button class="btn">
 										<span class="icon"></span>
@@ -2452,428 +2667,10 @@
 										<span class="lang"></span>
 									</div>
 									<p class="list">
-										Золото, Аккаунты, Предметы,
-										Услуги
-									</p>
-									<button class="btn">
-										<span class="icon"></span>
-									</button>
-								</div>
-							</div>
-						</td>
-						</td>
-					</tr>
-					<tr>
-						<td>
-							<div class="wrap">
-								<div class="item image">
-									<img src="img/aion.jpg" alt="">
-								</div>
-								<div class="item">
-									<div class="title-wrap">
-										<h3 class="title">AION onlinne</h3>
-										<span class="lang">RU</span>
-									</div>
-									<p class="list">
-										Кинары,
-										Аккаунты,
-										Предметы,
-										Услуги
-									</p>
-									<button class="btn">
-										<span class="icon"></span>
-									</button>
-								</div>
-							</div>
-						</td>
-						<td>
-							<div class="wrap">
-								<div class="item image">
-									<img src="img/diablo.png" alt="">
-								</div>
-								<div class="item">
-									<div class="title-wrap">
-										<h3 class="title">Diablo 3</h3>
-										<span class="lang">EU</span>
-									</div>
-									<p class="list">
-										Аккаунты, Услуги
-									</p>
-									<button class="btn">
-										<span class="icon"></span>
-									</button>
-								</div>
-							</div>
-						</td>
-						<td>
-							<div class="wrap">
-								<div class="item image">
-									<img src="img/linage.png" alt="">
-								</div>
-								<div class="item">
-									<div class="title-wrap">
-										<h3 class="title">Lineage 2 Classic</h3>
-										<span class="lang">NA</span>
-									</div>
-									<p class="list">
-										Адена, Аккаунты, Предметы,
-										Услуги
-									</p>
-									<button class="btn">
-										<span class="icon"></span>
-									</button>
-								</div>
-							</div>
-						</td>
-						<td>
-							<div class="wrap">
-								<div class="item image">
-									<img src="img/tera.png" alt="">
-								</div>
-								<div class="item">
-									<div class="title-wrap">
-										<h3 class="title">TERA</h3>
-										<span class="lang"></span>
-									</div>
-									<p class="list">
-										Золото, Аккаунты, Предметы,
-										Услуги
-									</p>
-									<button class="btn">
-										<span class="icon"></span>
-									</button>
-								</div>
-							</div>
-						</td>
-						</td>
-					</tr>
-					<tr>
-						<td>
-							<div class="wrap">
-								<div class="item image">
-									<img src="img/aion.jpg" alt="">
-								</div>
-								<div class="item">
-									<div class="title-wrap">
-										<h3 class="title">AION onlinne</h3>
-										<span class="lang">RU</span>
-									</div>
-									<p class="list">
-										Кинары,
-										Аккаунты,
-										Предметы,
-										Услуги
-									</p>
-									<button class="btn">
-										<span class="icon"></span>
-									</button>
-								</div>
-							</div>
-						</td>
-						<td>
-							<div class="wrap">
-								<div class="item image">
-									<img src="img/diablo.png" alt="">
-								</div>
-								<div class="item">
-									<div class="title-wrap">
-										<h3 class="title">Diablo 3</h3>
-										<span class="lang">EU</span>
-									</div>
-									<p class="list">
-										Аккаунты, Услуги
-									</p>
-									<button class="btn">
-										<span class="icon"></span>
-									</button>
-								</div>
-							</div>
-						</td>
-						<td>
-							<div class="wrap">
-								<div class="item image">
-									<img src="img/linage.png" alt="">
-								</div>
-								<div class="item">
-									<div class="title-wrap">
-										<h3 class="title">Lineage 2 Classic</h3>
-										<span class="lang">NA</span>
-									</div>
-									<p class="list">
-										Адена, Аккаунты, Предметы,
-										Услуги
-									</p>
-									<button class="btn">
-										<span class="icon"></span>
-									</button>
-								</div>
-							</div>
-						</td>
-						<td>
-							<div class="wrap">
-								<div class="item image">
-									<img src="img/tera.png" alt="">
-								</div>
-								<div class="item">
-									<div class="title-wrap">
-										<h3 class="title">TERA</h3>
-										<span class="lang"></span>
-									</div>
-									<p class="list">
-										Золото, Аккаунты, Предметы,
-										Услуги
-									</p>
-									<button class="btn">
-										<span class="icon"></span>
-									</button>
-								</div>
-							</div>
-						</td>
-						</td>
-					</tr>
-					<tr>
-						<td>
-							<div class="wrap">
-								<div class="item image">
-									<img src="img/aion.jpg" alt="">
-								</div>
-								<div class="item">
-									<div class="title-wrap">
-										<h3 class="title">AION onlinne</h3>
-										<span class="lang">RU</span>
-									</div>
-									<p class="list">
-										Кинары,
-										Аккаунты,
-										Предметы,
-										Услуги
-									</p>
-									<button class="btn">
-										<span class="icon"></span>
-									</button>
-								</div>
-							</div>
-						</td>
-						<td>
-							<div class="wrap">
-								<div class="item image">
-									<img src="img/diablo.png" alt="">
-								</div>
-								<div class="item">
-									<div class="title-wrap">
-										<h3 class="title">Diablo 3</h3>
-										<span class="lang">EU</span>
-									</div>
-									<p class="list">
-										Аккаунты, Услуги
-									</p>
-									<button class="btn">
-										<span class="icon"></span>
-									</button>
-								</div>
-							</div>
-						</td>
-						<td>
-							<div class="wrap">
-								<div class="item image">
-									<img src="img/linage.png" alt="">
-								</div>
-								<div class="item">
-									<div class="title-wrap">
-										<h3 class="title">Lineage 2 Classic</h3>
-										<span class="lang">NA</span>
-									</div>
-									<p class="list">
-										Адена, Аккаунты, Предметы,
-										Услуги
-									</p>
-									<button class="btn">
-										<span class="icon"></span>
-									</button>
-								</div>
-							</div>
-						</td>
-						<td>
-							<div class="wrap">
-								<div class="item image">
-									<img src="img/tera.png" alt="">
-								</div>
-								<div class="item">
-									<div class="title-wrap">
-										<h3 class="title">TERA</h3>
-										<span class="lang"></span>
-									</div>
-									<p class="list">
-										Золото, Аккаунты, Предметы,
-										Услуги
-									</p>
-									<button class="btn">
-										<span class="icon"></span>
-									</button>
-								</div>
-							</div>
-						</td>
-						</td>
-					</tr>
-					<tr>
-						<td>
-							<div class="wrap">
-								<div class="item image">
-									<img src="img/aion.jpg" alt="">
-								</div>
-								<div class="item">
-									<div class="title-wrap">
-										<h3 class="title">AION onlinne</h3>
-										<span class="lang">RU</span>
-									</div>
-									<p class="list">
-										Кинары,
-										Аккаунты,
-										Предметы,
-										Услуги
-									</p>
-									<button class="btn">
-										<span class="icon"></span>
-									</button>
-								</div>
-							</div>
-						</td>
-						<td>
-							<div class="wrap">
-								<div class="item image">
-									<img src="img/diablo.png" alt="">
-								</div>
-								<div class="item">
-									<div class="title-wrap">
-										<h3 class="title">Diablo 3</h3>
-										<span class="lang">EU</span>
-									</div>
-									<p class="list">
-										Аккаунты, Услуги
-									</p>
-									<button class="btn">
-										<span class="icon"></span>
-									</button>
-								</div>
-							</div>
-						</td>
-						<td>
-							<div class="wrap">
-								<div class="item image">
-									<img src="img/linage.png" alt="">
-								</div>
-								<div class="item">
-									<div class="title-wrap">
-										<h3 class="title">Lineage 2 Classic</h3>
-										<span class="lang">NA</span>
-									</div>
-									<p class="list">
-										Адена, Аккаунты, Предметы,
-										Услуги
-									</p>
-									<button class="btn">
-										<span class="icon"></span>
-									</button>
-								</div>
-							</div>
-						</td>
-						<td>
-							<div class="wrap">
-								<div class="item image">
-									<img src="img/tera.png" alt="">
-								</div>
-								<div class="item">
-									<div class="title-wrap">
-										<h3 class="title">TERA</h3>
-										<span class="lang"></span>
-									</div>
-									<p class="list">
-										Золото, Аккаунты, Предметы,
-										Услуги
-									</p>
-									<button class="btn">
-										<span class="icon"></span>
-									</button>
-								</div>
-							</div>
-						</td>
-						</td>
-					</tr>
-					<tr>
-						<td>
-							<div class="wrap">
-								<div class="item image">
-									<img src="img/aion.jpg" alt="">
-								</div>
-								<div class="item">
-									<div class="title-wrap">
-										<h3 class="title">AION onlinne</h3>
-										<span class="lang">RU</span>
-									</div>
-									<p class="list">
-										Кинары,
-										Аккаунты,
-										Предметы,
-										Услуги
-									</p>
-									<button class="btn">
-										<span class="icon"></span>
-									</button>
-								</div>
-							</div>
-						</td>
-						<td>
-							<div class="wrap">
-								<div class="item image">
-									<img src="img/diablo.png" alt="">
-								</div>
-								<div class="item">
-									<div class="title-wrap">
-										<h3 class="title">Diablo 3</h3>
-										<span class="lang">EU</span>
-									</div>
-									<p class="list">
-										Аккаунты, Услуги
-									</p>
-									<button class="btn">
-										<span class="icon"></span>
-									</button>
-								</div>
-							</div>
-						</td>
-						<td>
-							<div class="wrap">
-								<div class="item image">
-									<img src="img/linage.png" alt="">
-								</div>
-								<div class="item">
-									<div class="title-wrap">
-										<h3 class="title">Lineage 2 Classic</h3>
-										<span class="lang">NA</span>
-									</div>
-									<p class="list">
-										Адена, Аккаунты, Предметы,
-										Услуги
-									</p>
-									<button class="btn">
-										<span class="icon"></span>
-									</button>
-								</div>
-							</div>
-						</td>
-						<td>
-							<div class="wrap">
-								<div class="item image">
-									<img src="img/tera.png" alt="">
-								</div>
-								<div class="item">
-									<div class="title-wrap">
-										<h3 class="title">TERA</h3>
-										<span class="lang"></span>
-									</div>
-									<p class="list">
-										Золото, Аккаунты, Предметы,
-										Услуги
+										<a href="#">Золото,</a>
+										<a href="#">Аккаунты,</a>
+										<a href="#">Предметы,</a>
+										<a href="#">Услуги</a>
 									</p>
 									<button class="btn">
 										<span class="icon"></span>

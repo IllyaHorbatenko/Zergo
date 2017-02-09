@@ -35,6 +35,10 @@ $(window).scroll(function() {
  * FastClick
  */
 
+
+
+    
+
 if ( 'addEventListener' in document ) {
     document.addEventListener('DOMContentLoaded', function () {
         FastClick.attach( document.body );
@@ -42,6 +46,30 @@ if ( 'addEventListener' in document ) {
 }
 
 $(document).ready(function() {
+
+  
+
+    $('.checkboxes').find('.check').click(function(){
+        // Пишем условие: если вложенный в див чекбокс отмечен
+        if ($(this).hasClass('active')) {
+            // то снимаем активность с дива
+            $(this).removeClass('active');
+          //$(this).find.('i').removeClass('active');
+            // и удаляем атрибут checked (делаем чекбокс не отмеченным)
+            $(this).find('input').removeAttr('checked');
+            $(this).find('.fa').removeClass('fa-check');
+
+
+            // если же чекбокс не отмечен, то
+        } else {
+            // добавляем класс активности диву
+            $(this).addClass('active');
+            $(this).find('.fa').addClass('fa-check');
+            // добавляем атрибут checked чекбоксу
+            $(this).find('input').attr('checked', true);
+        }
+    });
+    
    
     var md = new MobileDetect(window.navigator.userAgent);
     
@@ -125,6 +153,11 @@ $(document).ready(function() {
         $("body").css({ "overflow": "inherit", "padding-right": "0" });
     });
     // закрываем модальное окно на крестик
+    $(".popup .close-btn").click(function(e) {
+        e.preventDefault();
+        $(this).parents(".popup").hide("drop", { direction: "up" }, 200);
+        $("body").css({ "overflow": "inherit", "padding-right": "0" });
+    });
     $(".popup .close").click(function(e) {
         e.preventDefault();
         $(this).parents(".popup").hide("drop", { direction: "up" }, 200);
@@ -420,5 +453,9 @@ $(document).ready(function() {
 
 });
 
+
 $(".loader_inner").fadeOut();
 $(".loader").delay(400).fadeOut("slow");
+
+
+

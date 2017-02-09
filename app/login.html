@@ -1629,33 +1629,222 @@
 		}
 	</style>
 	<!-- Header CSS (First Sections of Website: paste after release from header.min.css here) -->
-	<style>
-		html .loader {
-			background: #fff;
-			bottom: 0;
+<style>
+		.loader{
+			background-color: rgba(255,255,255,1);
 			height: 100%;
-			left: 0;
-			position: fixed;
-			right: 0;
-			top: 0;
 			width: 100%;
+			position: fixed;
+			z-index: 1;
+			margin-top: 0px;
+			top: 0px;
 			z-index: 9999
 		}
-
-		html .loader .loader_inner {
-			/*background-image: url(../img/preloader.gif);*/
-			background-size: cover;
-			background-repeat: no-repeat;
-			background-position: center center;
-			background-color: #fff;
-			height: 60px;
-			width: 60px;
-			margin-top: -30px;
-			margin-left: -30px;
+		#loading-center{
+			width: 100%;
+			height: 100%;
+			position: relative;
+		}
+		#loading-center-absolute {
+			position: absolute;
 			left: 50%;
 			top: 50%;
-			position: absolute
+			height: 100px;
+			width: 100px;
+			margin-top: -50px;
+			margin-left: -50px;
 		}
+		.object{
+			width: 25px;
+			height: 25px;
+			background-color: rgba(255,255,255,0);
+			margin-right: auto;
+			margin-left: auto;
+			border: 4px solid rgba(239,74,74,1);
+			left: 37px;
+			top: 37px;
+			position: absolute;
+		}
+
+		#first_object{
+			-webkit-animation: first_object 1s infinite;
+			animation: first_object 1s infinite;
+			-webkit-animation-delay: 0.5s;
+			animation-delay: 0.5s;
+		}
+		#second_object{
+			-webkit-animation: second_object 1s infinite;
+			animation: second_object 1s infinite;
+		}
+		#third_object{
+			-webkit-animation: third_object 1s infinite;
+			animation: third_object 1s infinite;
+			-webkit-animation-delay: 0.5s;
+			animation-delay: 0.5s;
+		}
+		#forth_object{
+			-webkit-animation: forth_object 1s infinite;
+			animation: forth_object 1s infinite;
+		}
+
+
+
+
+
+
+		@-webkit-keyframes first_object {
+			0% {
+				-ms-transform: translate(1,1) scale(1,1);
+				-webkit-transform: translate(1,1) scale(1,1);
+				transform: translate(1,1) scale(1,1);
+			}
+			50% {
+				-ms-transform: translate(150%,150%) scale(2,2);
+				-webkit-transform: translate(150%,150%) scale(2,2);
+				transform: translate(150%,150%) scale(2,2);
+			}
+
+			100% {
+				-ms-transform: translate(1,1) scale(1,1);
+				-webkit-transform: translate(1,1) scale(1,1);
+				transform: translate(1,1) scale(1,1);
+			}
+		}
+		@keyframes first_object {
+			0% {
+				-ms-transform: translate(1,1) scale(1,1);
+				-webkit-transform: translate(1,1) scale(1,1);
+				transform: translate(1,1) scale(1,1);
+			}
+			50% {
+				-ms-transform: translate(150%,150%) scale(2,2);
+				-webkit-transform: translate(150%,150%) scale(2,2);
+				transform: translate(150%,150%) scale(2,2);
+			}
+
+			100% {
+				-ms-transform: translate(1,1) scale(1,1);
+				-webkit-transform: translate(1,1) scale(1,1);
+				transform: translate(1,1) scale(1,1);
+			}
+		}
+
+
+
+
+		@-webkit-keyframes second_object {
+			0% {
+				-ms-transform: translate(1,1) scale(1,1);
+				-webkit-transform: translate(1,1) scale(1,1);
+				transform: translate(1,1) scale(1,1);
+			}
+			50% {
+				-ms-transform: translate(-150%,150%) scale(2,2);
+				-webkit-transform: translate(-150%,150%) scale(2,2);
+				transform: translate(-150%,150%) scale(2,2);
+			}
+			100% {
+				-ms-transform: translate(1,1) scale(1,1);
+				-webkit-transform: translate(1,1) scale(1,1);
+				transform: translate(1,1) scale(1,1);
+			}
+		}
+		@keyframes second_object {
+			0% {
+				-ms-transform: translate(1,1) scale(1,1);
+				-webkit-transform: translate(1,1) scale(1,1);
+				transform: translate(1,1) scale(1,1);
+			}
+			50% {
+				-ms-transform: translate(-150%,150%) scale(2,2);
+				-webkit-transform: translate(-150%,150%) scale(2,2);
+				transform: translate(-150%,150%) scale(2,2);
+			}
+			100% {
+				-ms-transform: translate(1,1) scale(1,1);
+				-webkit-transform: translate(1,1) scale(1,1);
+				transform: translate(1,1) scale(1,1);
+			}
+		}
+
+
+
+
+		@-webkit-keyframes third_object {
+			0% {
+				-ms-transform: translate(1,1) scale(1,1);
+				-webkit-transform: translate(1,1) scale(1,1);
+				transform: translate(1,1) scale(1,1);
+			}
+			50% {
+				-ms-transform: translate(-150%,-150%) scale(2,2);
+				-webkit-transform: translate(-150%,-150%) scale(2,2);
+				transform: translate(-150%,-150%) scale(2,2);
+			}
+			100% {
+				-ms-transform: translate(1,1) scale(1,1);
+				-webkit-transform: translate(1,1) scale(1,1);
+				transform: translate(1,1) scale(1,1);
+			}
+		}
+		@keyframes third_object {
+			0% {
+				-ms-transform: translate(1,1) scale(1,1);
+				-webkit-transform: translate(1,1) scale(1,1);
+				transform: translate(1,1) scale(1,1);
+			}
+			50% {
+				-ms-transform: translate(-150%,-150%) scale(2,2);
+				-webkit-transform: translate(-150%,-150%) scale(2,2);
+				transform: translate(-150%,-150%) scale(2,2);
+			}
+			100% {
+				-ms-transform: translate(1,1) scale(1,1);
+				-webkit-transform: translate(1,1) scale(1,1);
+				transform: translate(1,1) scale(1,1);
+			}
+		}
+
+
+
+
+
+
+		@-webkit-keyframes forth_object {
+			0% {
+				-ms-transform: translate(1,1) scale(1,1);
+				-webkit-transform: translate(1,1) scale(1,1);
+				transform: translate(1,1) scale(1,1);
+			}
+			50% {
+				-ms-transform: translate(150%,-150%) scale(2,2);
+				-webkit-transform: translate(150%,-150%) scale(2,2);
+				transform: translate(150%,-150%) scale(2,2);
+			}
+			100% {
+				-ms-transform: translate(1,1) scale(1,1);
+				-webkit-transform: translate(1,1) scale(1,1);
+				transform: translate(1,1) scale(1,1);
+			}
+		}
+		@keyframes forth_object {
+			0% {
+				-ms-transform: translate(1,1) scale(1,1);
+				-webkit-transform: translate(1,1) scale(1,1);
+				transform: translate(1,1) scale(1,1);
+			}
+			50% {
+				-ms-transform: translate(150%,-150%) scale(2,2);
+				-webkit-transform: translate(150%,-150%) scale(2,2);
+				transform: translate(150%,-150%) scale(2,2);
+			}
+			100% {
+				-ms-transform: translate(1,1) scale(1,1);
+				-webkit-transform: translate(1,1) scale(1,1);
+				transform: translate(1,1) scale(1,1);
+			}
+		}
+
 	</style>
 	<!-- Load CSS, CSS Localstorage & WebFonts Main Function -->
 	<script>
@@ -1736,8 +1925,15 @@
 </head>
 
 <body>
-<div class="loader">
-	<div class="loader_inner"></div>
+<div class="loader" >
+	<div id="loading-center">
+		<div id="loading-center-absolute">
+			<div class="object" id="first_object"></div>
+			<div class="object" id="second_object"></div>
+			<div class="object" id="third_object"></div>
+			<div class="object" id="forth_object"></div>
+		</div>
+	</div>
 </div>
 <!-- Модальное окно -->
 <div class="popup" data-modal="modal-1">
@@ -1815,6 +2011,9 @@
 					</ul>
 				</div>
 				<div class="api-nav">
+					<div class="wrap">
+						<a href="" class="login"><i class="fa fa-question-circle "></i>Не нашел игру/сервер?</a>
+					</div>
 					<a href="#" class="wrap modal" data-modal="modal-1"><i class="fa fa-globe"></i>Улучшить сайт</a>
 					<div class="wrap">
 						<a href="" class="login"><i class="fa fa-user "></i>Войти</a> / <a href="" class="check">Регистация</a>
@@ -1835,13 +2034,13 @@
 					<div class="main_conten_form_wrap">
 						<form>
 							<div>
-								<input class="input-mask" name="email" type="text"
-									   placeholder="Ваш Email:">
+								<input name="email" type="text" placeholder="Ваш Email:">
+
 								<p>Введите корректный адрес электронной почты.</p>
 							</div>
 							<input type="submit" value="Зарегистрироваться">
 						</form>
-						<div class="back"><a href="#">Вернуться на главную</a></div>
+						<div class="back-link"><a href="#">Вернуться на главную</a></div>
 					</div>
 					<div class="txt_block">
 						<p>Уже регистрировались раньше?</p>
@@ -1861,8 +2060,22 @@
 						<form>
 							<h4>Остался 1 шаг</h4>
 							<div>
-								<input class="input-mask" name="phone" type="text"
-									   placeholder="+38 (___) __-__-___">
+								<div class="select">
+									<a href="#" class="slct"><i class="icon UA"></i><span>+38</span></a>
+									<ul class="drop ">
+										<li><i class="icon UA"></i><span>+832</span><span class="country">Америка</span></li>
+										<li><i class="icon US"></i><span>+832</span><span class="country">Америка</span></li>
+										<li><i class="icon UY"></i><span>+832</span><span class="country">Америка</span></li>
+										<li><i class="icon UZ"></i><span>+832</span><span class="country">Америка</span></li>
+										<li><i class="icon VA"></i><span>+832</span><span class="country">Америка</span></li>
+										<li><i class="icon VC"></i><span>+832</span><span class="country">Америка</span></li>
+										<li><i class="icon VE"></i><span>+832</span><span class="country">Америка</span></li>
+										<li><i class="icon VG"></i><span>+832</span><span class="country">Америка</span></li>
+										<li><i class="icon VI"></i><span>+832</span><span class="country">Америка</span></li>
+										<li><i class="icon VN"></i><span>+832</span><span class="country">Америка</span></li>
+									</ul>
+								</div>
+								<input class="input-mask whis-contry phone" name="phone" type="text" placeholder="(0) 95 123 55 88">
 								<p>Оставьте корректный номер телефона</p>
 							</div>
 							<div>
@@ -1870,7 +2083,7 @@
 							</div>
 							<input type="submit" value="Зарегистрироваться">
 						</form>
-						<div class="back"><a href="#">Вернуться на главную</a></div>
+						<div class="back-link"><a href="#">Вернуться на главную</a></div>
 					</div>
 
 				</div>

@@ -22,14 +22,53 @@ function accordion() {
         }
     });
 }
+function Loading() {
+    var level = 0;
+
+    setInterval(function () {
+        level += 0.1; // Скорость выполнения
+        if (level > 100) {
+            level = 0;
+        } else {
+            $('.level').css('width', level + '%');
+        }
+    }, 10); // Плавность
+}
+function fixedHeader() {
+
+    var s_top = $("body").scrollTop(),
+        logo = $(".logo-container").outerHeight(),
+        panel = $(".top-panel").outerHeight(),
+        step = logo - panel;
+
+    if (s_top > logo) {
+        var status = $('.header').css('top');
+        if (parseInt(status) * -1 < step) {
+
+            $('.header').css('top', "-" + step + 'px');
+        } else {
+            $('.header').css('top', "-" + logo + 'px');
+        }
+    } else {
+        $('.header').css('top', "-" + s_top + "px");
+    }
+}
+
+$(document).scroll(function () {
+    fixedHeader();
+});
 
 $(document).ready(function () {
+    Loading();
+    fixedHeader();
+
     accordion();
-    $('.select-2').click(function () {
+    $('.select-2').hover(function () {
         $(this).find('.select-list').toggle("drop", { direction: "up" }, 200);
     });
 
     $(".input-mask").mask("+38(999) 999-99-99");
+    $(".whis-contry").mask("(9) 99 999 99 99");
 
     var lg1 = new TimelineMax();
     var lg2 = new TimelineMax();
@@ -54,6 +93,19 @@ $(document).ready(function () {
         var data = $(this).data('tab'); //создаём переменную с датой
         $('.tabs-wrap').removeClass("active"); //убираем активные состояния у табов
         $('.tabs-wrap[data-tab=' + data + ']').addClass('active'); //если таб соответствует тому, какой data
+        //атрибут в ссылке то делаем его активным
+    });
+    $(".commets-links a").on('click', function (event) {
+        //ссылки которые будут переключать табы
+        event.preventDefault();
+
+        $(".commets-links a").removeClass('active'); //убираем активные состояния у ссылок
+
+        $(this).addClass('active'); //Добавляем активное состояние у той что нажали
+
+        var data = $(this).data('tab'); //создаём переменную с датой
+        $('.comments-item').removeClass("active"); //убираем активные состояния у табов
+        $('.comments-item[data-tab=' + data + ']').addClass('active'); //если таб соответствует тому, какой data
         //атрибут в ссылке то делаем его активным
     });
     $('.chat').scrollbar();
@@ -163,6 +215,26 @@ if ('addEventListener' in document) {
 
 $(document).ready(function () {
 
+    $('.checkboxes').find('.check').click(function () {
+        // Пишем условие: если вложенный в див чекбокс отмечен
+        if ($(this).hasClass('active')) {
+            // то снимаем активность с дива
+            $(this).removeClass('active');
+            //$(this).find.('i').removeClass('active');
+            // и удаляем атрибут checked (делаем чекбокс не отмеченным)
+            $(this).find('input').removeAttr('checked');
+            $(this).find('.fa').removeClass('fa-check');
+
+            // если же чекбокс не отмечен, то
+        } else {
+            // добавляем класс активности диву
+            $(this).addClass('active');
+            $(this).find('.fa').addClass('fa-check');
+            // добавляем атрибут checked чекбоксу
+            $(this).find('input').attr('checked', true);
+        }
+    });
+
     var md = new MobileDetect(window.navigator.userAgent);
 
     if (md.userAgent() == "Safari" && md.mobile() == "iPhone" || md.mobile() == "iPad") {
@@ -243,6 +315,11 @@ $(document).ready(function () {
         $("body").css({ "overflow": "inherit", "padding-right": "0" });
     });
     // закрываем модальное окно на крестик
+    $(".popup .close-btn").click(function (e) {
+        e.preventDefault();
+        $(this).parents(".popup").hide("drop", { direction: "up" }, 200);
+        $("body").css({ "overflow": "inherit", "padding-right": "0" });
+    });
     $(".popup .close").click(function (e) {
         e.preventDefault();
         $(this).parents(".popup").hide("drop", { direction: "up" }, 200);
