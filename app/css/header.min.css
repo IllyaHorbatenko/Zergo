@@ -241,7 +241,7 @@ p{margin:0}
 .modal_form_input_wrap .modal_input_error.form_error{display:block}
 .modal_form_input_wrap .modal_error_chest_img{width:9px;position:relative;background-image:url(../img/modal_error_chest_img.png);top:-33px;left:0;height:9px}
 .modal_form_input_wrap .modal_error_triangle{width:9px;position:relative;background-image:url(../img/modal_error_triangle.png);top:-43px;left:10px;height:8px}
-.header{border-bottom:1px solid #ccc;-webkit-box-shadow:0 1px 11px 0 #ccc;box-shadow:0 1px 11px 0 #ccc;position:fixed;z-index:10;background:#fff;width:100%}
+.header{border-bottom:1px solid #ccc;-webkit-box-shadow:0 1px 11px 0 #ccc;box-shadow:0 1px 11px 0 #ccc;position:fixed;z-index:100;background:#fff;width:100%}
 .header .container{height:100%;min-height:100%;position:relative}
 .header .logo-container{padding:56px 0 27px}
 .header .top-panel{margin-bottom:7px}
@@ -264,9 +264,9 @@ p{margin:0}
 .header .top-panel .api-nav .wrap .select-2{float:none}
 .header .top-panel .api-nav .wrap .select-2 .select-list{top:29px;left:-24px}
 .header .top-panel .api-nav .wrap .select-2 .select-list li{min-width:163px}
-.header .top-panel .api-nav .upgrade:before{background-position:-102px -43px;width:13px}
+.header .top-panel .api-nav .upgrade:before{background-position:-104px -43px;width:13px}
 .header .top-panel .api-nav .platen:before{background-position:-105px -23px;width:12px}
-.header .top-panel .api-nav .check-vk:before{content:"";display:inline-block;background-image:url(../img/sprite.png);background-position:-179px -59px;width:16px;height:10px;margin-right:10px}
+.header .top-panel .api-nav .check-vk:before{content:"";display:inline-block;background-image:url(../img/sprite.png);background-position:-117px -92px;width:16px;height:10px;margin-right:10px}
 .header_logo{display:inline-block;margin-top:49px;margin-left:15px}
 .header_logo a{color:#fff;font:34px ROBOTO-BLACK,Arial,sans-serif}
 .header_nav{display:inline-block;position:relative;margin-left:10px}
