@@ -3,158 +3,202 @@
 // подключение common.js
 
 function accordion() {
-    $(".accordion .accordion_title").click(function () {
-        var $content = $(this).next();
-        if ($content.is(":visible")) {
-            //если нажали на title аккордеона,
-            $content.slideUp(500, function () {//и если контент аккордеона видимый, то
-            }); //убираем его
-            $(this).children().removeClass("active"); //убираем активный класс у стрелки к примеру
-            $(this).removeClass("active");
-        } else {
-            $(".accordion .accordion_content").slideUp("slow"); //если невидимый, прячем все скрытые
-            $(".accordion .accordion_title").children() //убираем активный класс у стрелки к примеру
-            .removeClass("active");
-            $(".accordion_title").removeClass("active"); //убираем активный класс у стрелки к примеру
-            $content.slideToggle("slow"); //открываем скрытый блок у того что нажали
-            $(this).children().addClass("active"); //добавляем активный класс у стрекли к примеру
-            $(this).addClass("active");
-        }
-    });
+	$(".accordion .accordion_title").click(function () {
+		var $content = $(this).next();
+		if ($content.is(":visible")) {
+			//если нажали на title аккордеона,
+			$content.slideUp(500, function () {//и если контент аккордеона видимый, то
+			}); //убираем его
+			$(this).children().removeClass("active"); //убираем активный класс у стрелки к примеру
+			$(this).removeClass("active");
+		} else {
+			$(".accordion .accordion_content").slideUp("slow"); //если невидимый, прячем все скрытые
+			$(".accordion .accordion_title").children() //убираем активный класс у стрелки к примеру
+			.removeClass("active");
+			$(".accordion_title").removeClass("active"); //убираем активный класс у стрелки к примеру
+			$content.slideToggle("slow"); //открываем скрытый блок у того что нажали
+			$(this).children().addClass("active"); //добавляем активный класс у стрекли к примеру
+			$(this).addClass("active");
+		}
+	});
 }
 function Loading() {
-    var level = 0;
+	var level = 0;
 
-    setInterval(function () {
-        level += 0.1; // Скорость выполнения
-        if (level > 100) {
-            level = 0;
-        } else {
-            $('.level').css('width', level + '%');
-        }
-    }, 10); // Плавность
+	setInterval(function () {
+		level += 0.1; // Скорость выполнения
+		if (level > 100) {
+			level = 0;
+		} else {
+			$('.level').css('width', level + '%');
+		}
+	}, 10); // Плавность
 }
+
 function fixedHeader() {
 
-    var s_top = $("body").scrollTop(),
-        logo = $(".logo-container").outerHeight(),
-        panel = $(".top-panel").outerHeight(),
-        step = logo - panel;
+	var s_top = $("body").scrollTop(),
+	    logo = $(".logo-container").outerHeight(),
+	    panel = $(".top-panel").outerHeight(),
+	    step = logo - panel;
 
-    if (s_top > logo) {
-        var status = $('.header').css('top');
-        if (parseInt(status) * -1 < step) {
+	if (s_top > logo) {
+		var status = $('.header').css('top');
+		if (parseInt(status) * -1 < step) {
 
-            $('.header').css('top', "-" + step + 'px');
-        } else {
-            $('.header').css('top', "-" + logo + 'px');
-        }
-    } else {
-        $('.header').css('top', "-" + s_top + "px");
-    }
+			$('.header').css('top', "-" + step + 'px');
+		} else {
+			$('.header').css('top', "-" + logo + 'px');
+		}
+	} else {
+		$('.header').css('top', "-" + s_top + "px");
+	}
 }
 
 $(document).scroll(function () {
-    fixedHeader();
+	fixedHeader();
 });
 
+function setCursorPos(elem, pos) {
+	if (elem.setSelectionRange) {
+		elem.focus();
+		elem.setSelectionRange(pos, pos);
+	} else if (elem.createTextRange) {
+		var range = elem.createTextRange();
+
+		range.collapse(true);
+		range.moveEnd('character', pos);
+		range.moveStart('character', pos);
+		range.select();
+	}
+}
+
 $(document).ready(function () {
-    Loading();
-    fixedHeader();
+	Loading();
+	fixedHeader();
 
-    accordion();
-    $('.select-2').hover(function () {
-        $(this).find('.select-list').toggle("drop", { direction: "up" }, 200);
-    });
+	accordion();
+	$('.select-2').hover(function () {
+		$(this).find('.active').toggleClass("color");
+		$(this).find('.login').toggleClass("color");
+		$(this).find('.select-list').toggle("drop", { direction: "up" }, 200);
+	});
 
-    $(".input-mask").mask("+38(999) 999-99-99");
-    $(".whis-contry").mask("(9) 99 999 99 99");
+	$(".input-mask").mask("+38(999) 999-99-99");
+	$(".whis-contry").mask("(9) 99 999 99 99");
 
-    var lg1 = new TimelineMax();
-    var lg2 = new TimelineMax();
-    lg1.to('.login1', 1.5, { y: 1000, opacity: 0, ease: Power4.easeOut });
-    lg2.set('.login2', { y: -500, opacity: 0 }).to('.login2', 1, { y: 0, opacity: 1, ease: Elastic.easeOut.config(0.6, 0.4) });
-    lg1.pause();
-    lg2.pause();
-    $(".main_content .main_conten_form_wrap input[type = submit]").click(function (e) {
-        e.preventDefault();
-        lg1.play();
-        lg2.play();
-    });
+	$(".back-lote-input").click(function () {
+		var arr = $(this).val().split(' '),
+		    arrMain = $(this).val().split(" " + arr[arr.length - 1]);
+		if (arr[0] == "0") {
+			$(this).val(" " + arr[1]);
 
-    $(".tabs-item").on('click', function (event) {
-        //ссылки которые будут переключать табы
-        event.preventDefault();
+			setCursorPos(this, arrMain[0].length - 1);
+		} else {
+			setCursorPos(this, arrMain[0].length);
+		}
+	});
 
-        $(".tabs-item").removeClass('active'); //убираем активные состояния у ссылок
+	var lf1 = new TimelineMax();
+	var lf2 = new TimelineMax();
 
-        $(this).addClass('active'); //Добавляем активное состояние у той что нажали
+	lf1.to('#anim-form-main-1', 1.5, { y: -100, opacity: 0, ease: Power4.easeOut });
+	lf2.set('#anim-form-main-2', { y: -100, opacity: 0 }).to('#anim-form-main-2', 1, { y: 0, opacity: 1, ease: Power4.easeOut });
 
-        var data = $(this).data('tab'); //создаём переменную с датой
-        $('.tabs-wrap').removeClass("active"); //убираем активные состояния у табов
-        $('.tabs-wrap[data-tab=' + data + ']').addClass('active'); //если таб соответствует тому, какой data
-        //атрибут в ссылке то делаем его активным
-    });
-    $(".commets-links a").on('click', function (event) {
-        //ссылки которые будут переключать табы
-        event.preventDefault();
+	lf1.pause();
+	lf2.pause();
 
-        $(".commets-links a").removeClass('active'); //убираем активные состояния у ссылок
+	$('#find-game-or-server').click(function (e) {
+		e.preventDefault();
+		lf1.play();
+		lf2.play();
+	});
 
-        $(this).addClass('active'); //Добавляем активное состояние у той что нажали
+	var lg1 = new TimelineMax();
+	var lg2 = new TimelineMax();
+	lg1.to('.login1', 1.5, { y: 1000, opacity: 0, ease: Power4.easeOut });
+	lg2.set('.login2', { y: -500, opacity: 0 }).to('.login2', 1, { y: 0, opacity: 1, ease: Elastic.easeOut.config(0.6, 0.4) });
+	lg1.pause();
+	lg2.pause();
+	$(".main_content .main_conten_form_wrap input[type = submit]").click(function (e) {
+		e.preventDefault();
+		lg1.play();
+		lg2.play();
+	});
 
-        var data = $(this).data('tab'); //создаём переменную с датой
-        $('.comments-item').removeClass("active"); //убираем активные состояния у табов
-        $('.comments-item[data-tab=' + data + ']').addClass('active'); //если таб соответствует тому, какой data
-        //атрибут в ссылке то делаем его активным
-    });
-    $('.chat').scrollbar();
+	$(".tabs-item").on('click', function (event) {
+		//ссылки которые будут переключать табы
+		event.preventDefault();
 
-    // для инициализации tooltips
-    // $( document ).tooltip({
-    //   track: true
-    // }); 
+		$(".tabs-item").removeClass('active'); //убираем активные состояния у ссылок
 
-    // скролл по ссылке с атрибутом href 
-    // $(".header_nav a[href*='#']").on("click", function(e) {
-    //     e.preventDefault();
-    //     var anchor = $(this);
-    //     $('html, body').stop().animate({
-    //         scrollTop: $(anchor.attr('href')).offset().top
-    //     }, 500);
-    //     return false;
-    // });
+		$(this).addClass('active'); //Добавляем активное состояние у той что нажали
 
-    // Скролл по классу .scroll_to и атрибуту data-scroll у кнопки к примеру (data-scroll="куда скроллим" в элементе куда скроллим ставим id потом впишем в куда скроллим)
-    // $(".scroll_to").on("clcik", function(e) {
-    //     e.preventDefault();
-    //     var anchor = $(this);
-    //     $('html, body').stop().animate({
-    //         scrollTop: $("#" + anchor.data('scroll')).offset().top
-    //     }, 500);
-    //     return false;
-    // });
+		var data = $(this).data('tab'); //создаём переменную с датой
+		$('.tabs-wrap').removeClass("active"); //убираем активные состояния у табов
+		$('.tabs-wrap[data-tab=' + data + ']').addClass('active'); //если таб соответствует тому, какой data
+		//атрибут в ссылке то делаем его активным
+	});
+	$(".commets-links a").on('click', function (event) {
+		//ссылки которые будут переключать табы
+		event.preventDefault();
 
-    //  Активация слайдера
-    // $(".owl-carousel").owlCarousel({
-    //     loop: true,
-    //     items: 1,
-    //     dots: true
-    // });
+		$(".commets-links a").removeClass('active'); //убираем активные состояния у ссылок
 
-    // Кастомные кнопки управления слайдером
-    // var owl = $('.owl-carousel');
-    // owl.owlCarousel();
-    // // Go to the next item
-    // $('.customNextBtn').click(function() {
-    //     owl.trigger('next.owl.carousel', [700]);
-    // });
-    // // Go to the previous item
-    // $('.customPrevBtn').click(function() {
-    //     // With optional speed parameter
-    //     // Parameters has to be in square bracket '[]'
-    //     owl.trigger('prev.owl.carousel', [700]);
-    // });  
+		$(this).addClass('active'); //Добавляем активное состояние у той что нажали
+
+		var data = $(this).data('tab'); //создаём переменную с датой
+		$('.comments-item').removeClass("active"); //убираем активные состояния у табов
+		$('.comments-item[data-tab=' + data + ']').addClass('active'); //если таб соответствует тому, какой data
+		//атрибут в ссылке то делаем его активным
+	});
+	$('.chat').scrollbar();
+
+	// для инициализации tooltips
+	// $( document ).tooltip({
+	//   track: true
+	// });
+
+	// скролл по ссылке с атрибутом href
+	// $(".header_nav a[href*='#']").on("click", function(e) {
+	//     e.preventDefault();
+	//     var anchor = $(this);
+	//     $('html, body').stop().animate({
+	//         scrollTop: $(anchor.attr('href')).offset().top
+	//     }, 500);
+	//     return false;
+	// });
+
+	// Скролл по классу .scroll_to и атрибуту data-scroll у кнопки к примеру (data-scroll="куда скроллим" в элементе куда скроллим ставим id потом впишем в куда скроллим)
+	// $(".scroll_to").on("clcik", function(e) {
+	//     e.preventDefault();
+	//     var anchor = $(this);
+	//     $('html, body').stop().animate({
+	//         scrollTop: $("#" + anchor.data('scroll')).offset().top
+	//     }, 500);
+	//     return false;
+	// });
+
+	//  Активация слайдера
+	// $(".owl-carousel").owlCarousel({
+	//     loop: true,
+	//     items: 1,
+	//     dots: true
+	// });
+
+	// Кастомные кнопки управления слайдером
+	// var owl = $('.owl-carousel');
+	// owl.owlCarousel();
+	// // Go to the next item
+	// $('.customNextBtn').click(function() {
+	//     owl.trigger('next.owl.carousel', [700]);
+	// });
+	// // Go to the previous item
+	// $('.customPrevBtn').click(function() {
+	//     // With optional speed parameter
+	//     // Parameters has to be in square bracket '[]'
+	//     owl.trigger('prev.owl.carousel', [700]);
+	// });
 
 });
 
@@ -216,6 +260,7 @@ if ('addEventListener' in document) {
 $(document).ready(function () {
 
     $('.checkboxes').find('.check').click(function () {
+        $(this).parent().siblings('.radio-button-container').toggle('fade');
         // Пишем условие: если вложенный в див чекбокс отмечен
         if ($(this).hasClass('active')) {
             // то снимаем активность с дива
@@ -227,6 +272,7 @@ $(document).ready(function () {
 
             // если же чекбокс не отмечен, то
         } else {
+
             // добавляем класс активности диву
             $(this).addClass('active');
             $(this).find('.fa').addClass('fa-check');

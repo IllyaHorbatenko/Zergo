@@ -65,7 +65,7 @@ body textarea:required:valid
 // Секция main_content
 .main_content
 	text-align: center
-// Секция 
+// Секция
 .intermediate
 	text-align: center
 	min-height: 300px
@@ -114,11 +114,33 @@ body textarea:required:valid
 	.form-wrap
 		margin-top: 33px
 		margin-bottom: 30px
+		position: relative
+		height: 45px
+		#anim-form-main-2
+			.search
+				width: 885px
+			input[type=submit]
+				width: 215px
+				display: inline-block
+			.button
+				width: 46px
+				vertical-align: bottom
+				height: 44px
+				background: #cccccc
+				border: 0
+				margin-left: 20px
+				position: relative
+				transition: .3s
+				&:hover
+					background: #fb0018
+				.fa
+					color: #fff
 		.form
+			position: absolute
 			input,
 			select
 				width: 100%
-				min-height: 43px
+				min-height: 44px
 				display: block
 				padding-left: 40px
 				&:hover
@@ -140,7 +162,6 @@ body textarea:required:valid
 				padding: 0
 				&:hover
 					background: #fb0018
-					border: 1px solid #a2b6c9
 			input[type=text]
 				&::-webkit-input-placeholder
 					color: #000
@@ -155,6 +176,7 @@ body textarea:required:valid
 				width: 285px
 				float: left
 				margin-left: 15px
+
 			.select-container
 				width: 270px
 				float: left
@@ -185,6 +207,7 @@ body textarea:required:valid
 						display: inline-block
 						top: 13px
 						left: 20px
+						vertical-align: middle
 						@include sprite($search)
 	.main-content
 		margin-bottom: 30px
@@ -230,6 +253,20 @@ body textarea:required:valid
 					position: absolute
 					right: 0px
 					bottom: 0px
+					.warning
+						p
+							position: absolute
+							display: none
+							font-size: 12px
+							color: #000
+							width: 153px
+							background: #fff
+							right: 17px
+							top: 10px
+							border: 1px solid #fb0018
+							padding: 4px 6px
+							border-radius: 5px
+							z-index: 10
 					.icon
 						position: absolute
 						top: 4px
@@ -239,6 +276,9 @@ body textarea:required:valid
 					&:hover
 						text-decoration: none
 						background: #fb0018
+						.warning
+							p
+								display: block
 					&:active
 						text-decoration: none
 						outline: none
@@ -450,7 +490,7 @@ body textarea:required:valid
 				transition: 1s
 				&:focus
 					outline: none
-					border: 1px solid rgb(120, 196, 253)
+					border: 1px solid #fb0018
 				&::-webkit-input-placeholder
 					color: #000
 					font-size: 14px
@@ -544,58 +584,7 @@ body textarea:required:valid
 
 
 
-.footer
-	padding: 50px 0 30px
-	nav
-		float: left
-		width: 60%
-	.links-list
-		margin: 0px
-		padding: 0px
-		display: inline-block
-		li
-			display: inline-block
-			list-style-type: none
-			.fa
-				color: #fff
-				vertical-align: sub
-			a
-				color: #000
-				display: inline-block
-				transition: .1s
-				&:hover
-					text-decoration: none
-					color: #fb0018
-				&:active
-					text-decoration: none
-					color: #fff
-				&:focus
-					text-decoration: none
-					color: #fff
-	.nav
-		padding-left: 13px
-		li
-			margin-right: 8px
-			&:last-child
-				margin-right: 0
-	.links
-		float: left
-		width: 40%
-		text-align: right
-		display: inline-block
-		padding-right: 18px
-		li
-			margin-right: 12px
-			&:last-child
-				margin-right: 0
-		.icon
-			background: #818181
-			width: 33px
-			height: 34px
-			border-radius: 50%
-			text-align: center
-			&:hover
-				background: #fb0018
+
 
 .FAQ-content
 	padding: 80px 0
@@ -637,11 +626,23 @@ body textarea:required:valid
 			&.active
 				transform: rotate(180deg)
 
+.castom-button
+	width: 285px
+	background: #ccc
+	border: 0px
+	color: #fff
+	transition: .3s
+	height: 43px
+	&:hover
+		background: #fb0018
+
 .balance-container
 	.title
 		font-size: 24px
 		font-weight: 500
 		padding-left: 24px
+		margin: 40px 70px 40px 0
+		display: inline-block
 	.tabs-item
 		display: inline-block
 		padding: 10px
@@ -673,12 +674,19 @@ body textarea:required:valid
 	.tabs-item-conatiner
 		margin-bottom: 10px
 		border-bottom: 1px solid #000
+
 	.tabs-container
 		padding: 0 0px 0 14px
 	.tabs-wrap-container
 		padding: 10px 0 20px
 	.table
 		width: 100%
+		.static
+			width: 12%
+			text-align: center
+		&.sold
+			td
+				padding-bottom: 40px
 		tr
 			border: none
 			td
@@ -686,10 +694,53 @@ body textarea:required:valid
 				border: none
 				width: auto
 				padding: 15px
+				position: relative
 				&:last-child
 					padding-right: 0
 				&:hover
 					border: none
+				.all-money
+					position: absolute
+					bottom: 15px
+					left: 31px
+					color: #000000
+					border-bottom: 1px solid #ccc
+					line-height: 1
+				b
+					font-size: 19px
+				.info
+					top: 15px
+					right: 15px
+					position: absolute
+					width: 40px
+					height: 43px
+					background: #cccccc
+					transition: .3s
+					border: 0px
+					color: #fff
+					display: table
+					&:hover
+						background: #fb0018
+						.mass
+							display: block
+					.icon
+						display: table-cell
+						vertical-align: middle
+						text-align: center
+				.mass
+					position: absolute
+					display: none
+					font-size: 12px
+					color: #000
+					width: 315px
+					background: #fff
+					right: -276px
+					top: -54px
+					border: 1px solid #fb0018
+					padding: 4px 6px
+					-webkit-border-radius: 5px
+					border-radius: 5px
+					z-index: 10
 		.td-title
 			font-weight: 900
 		.td-number
@@ -704,15 +755,15 @@ body textarea:required:valid
 			height: 43px
 		input[type=text]
 			padding-left: 15px
-			width: 209px
+			width: 170px
 		input[type=submit]
 			width: 285px
-			background: #fb0018
+			background: #cccccc
 			border: 0px
 			color: #fff
 			transition: .3s
 			&:hover
-				background: #cccccc
+				background: #fb0018
 		.select
 			width: 170px
 			height: 43px
@@ -729,6 +780,17 @@ body textarea:required:valid
 				right: 15px
 	.table-state
 		width: 100%
+		td
+			padding: 14px
+
+			&:last-child
+				text-align: center
+				a
+					transition: .3s
+					color: #000000
+					&:hover
+						text-decoration: none
+						color: #fb0018
 		thead
 			font-weight: 900
 			font-size: 18px
@@ -741,8 +803,6 @@ body textarea:required:valid
 				border-bottom: 1px solid #cccccc
 				transition: .3s
 				cursor: pointer
-				td
-					padding: 14px
 				&:hover
 					background: #f8f8f8
 				.blue
@@ -767,24 +827,62 @@ body textarea:required:valid
 
 .back-lote-container
 	padding: 40px 0
+	.select
+		.slct
+			padding-left: 15px
 	.title
 		font-size: 24px
 		margin: 0
 		margin-bottom: 10px
+	.back-lote-personage-item
+		margin-bottom: 30px
 	.main-article
 		font-size: 18px
 		margin-bottom: 30px
 	.form-container
-		form
-			padding: 30px 0
-			margin-bottom: 30px
-			border-bottom: 1px solid #cccccc
-			border-top: 1px solid #cccccc
+		padding: 30px 0
+		margin-bottom: 30px
+		border-bottom: 1px solid #cccccc
+		border-top: 1px solid #cccccc
+		.back-lote-subjects
+			margin-bottom: 35px
+			label
+				position: relative
+				display: inline-block
+				.info
+					top: calc(50% - 12px)
+			input
+				width: 100%
+			.button-wrap
+				margin-top: 30px
+				input
+					width: 209px
+				.button
+					width: 44px
+					vertical-align: bottom
+					height: 46px
+					background: #cccccc
+					border: 0
+					margin-left: 20px
+					position: relative
+					transition: .3s
+					&:hover
+						background: #fb0018
+					span
+						width: 25px
+						height: 3px
+						background: #fff
+						position: absolute
+						left: 0
+						right: 0
+						margin: auto
+						&.f
+							transform: rotate(90deg)
 		input
 			height: 45px
 			font-size: 14px
 			width: 285px
-		lable
+		label
 			padding-left: 15px
 			display: block
 			font-size: 18px
@@ -797,15 +895,85 @@ body textarea:required:valid
 			transition: .3s
 			&:hover
 				background: #fb0018
+		.textarea-wrap
+			.button-wrap
+				text-align: right
+			.button
+				width: 44px
+				vertical-align: bottom
+				height: 46px
+				background: #cccccc
+				border: 0
+				margin-left: 20px
+				position: relative
+				transition: .3s
+				&:hover
+					background: #fb0018
+				span
+					width: 25px
+					height: 3px
+					background: #fff
+					position: absolute
+					left: 0
+					right: 0
+					margin: auto
+					&.f
+						transform: rotate(90deg)
+			textarea
+				padding: 10px 15px
+				width: 100%
+				resize: none
+				&::-webkit-input-placeholder
+					font-size: 16px
+				&:-moz-placeholder
+					font-size: 16px
+				&::-moz-placeholder
+					font-size: 16px
+				&:-ms-input-placeholder
+					font-size: 16px
+		.input
+			position: relative
+			span
+				position: absolute
+				top: 12px
+				left: 28px
+				font-size: 14px
 		.another-input
 			text-align: right
 			margin-bottom: 15px
 			input
 				width: 277px
+		.info
+			color: #cccccc
+			position: absolute
+			right: -30px
+			top: calc(50% + 3px)
+			cursor: pointer
+			transition: .3s
+			&:hover
+				color: #fb0018
+				p
+					display: block
+			p
+				position: absolute
+				display: none
+				font-size: 12px
+				color: #000
+				width: 327px
+				background: #fff
+				left: 19px
+				top: 3px
+				border: 1px solid #fb0018
+				padding: 4px 6px
+				-webkit-border-radius: 5px
+				border-radius: 5px
+				z-index: 10
 		.input-wrap
 			margin-bottom: 15px
 			margin-right: 30px
 			width: 277px
+			position: relative
+
 			&:last-child
 				margin-right: 0
 			&.item
@@ -839,13 +1007,13 @@ body textarea:required:valid
 		.auction-link
 			font-size: 14px
 			padding: 11px 63px
-			background: #cccccc
+			background: #fb0018
 			transition: .3s
 			display: inline-block
 			color: #fff
 			&:hover
 				text-decoration: none
-				background: #fb0018
+				background: #ccc
 			&:active
 				text-decoration: none
 			&:focus
@@ -881,10 +1049,36 @@ body textarea:required:valid
 					border-bottom: 1px solid #ccc
 					td
 						padding: 15px
+						&:first-child
+							width: 10px
 					&:hover
 						background: #f8f8f8
+
 				.color-num
 					color: #fb0018
+				.warning
+					color: #cccccc
+					transition: .3s
+					position: relative
+					display: block
+					height: 100%
+					p
+						position: absolute
+						display: none
+						font-size: 12px
+						color: #000
+						width: 108px
+						background: #fff
+						left: 23px
+						top: -8px
+						border: 1px solid #fb0018
+						padding: 4px 6px
+						border-radius: 5px
+						z-index: 10
+					&:hover
+						color: #fb0018
+						p
+							display: block
 		.chat-wrap
 			width: 785px
 			float: left
@@ -899,10 +1093,12 @@ body textarea:required:valid
 				.message
 					margin-bottom: 20px
 				.item
-					width: 470px
+					width: 440px
 					padding: 13px
 					border-radius: 15px
 					position: relative
+					p
+						font-size: 14px
 					&:before
 						content: ''
 						width: 0
@@ -944,7 +1140,7 @@ body textarea:required:valid
 						margin-left: 23px
 						&:before
 							left: -20px
-							top: 45px
+							top: calc(50% - 8px)
 						.warning
 							position: absolute
 							right: 12px
@@ -975,7 +1171,7 @@ body textarea:required:valid
 							margin-right: 3px
 						&:before
 							right: -20px
-							top: 45px
+							top: calc(50% - 8px)
 							transform: rotate(180deg)
 					&.important
 						&:before
@@ -1016,7 +1212,7 @@ body textarea:required:valid
 					resize: none
 .history-orders
 	.table-state
-		width: 1200px
+		width: 100%
 		thead
 			font-weight: 900
 			font-size: 18px
@@ -1031,81 +1227,93 @@ body textarea:required:valid
 				width: auto
 				td
 					padding: 15px
-				.blue
-					color: #6dcff6
-				.yellow
-					color: #fcb60f
-				.red
-					color: #fc384a
-				.green
-					color: #00be92
+					&:last-child
+						color: #fc384a
+	.blue
+		color: #6dcff6
+	.yellow
+		color: #fcb60f
+	.red
+		color: #fc384a
+	.green
+		color: #00be92
 	.title-state
-		width: 100%
 		padding: 15px
 		font-weight: 500
 		margin-bottom: 0
 		display: block
 		font-size: 24px
 		font-weight: 900
-	.pagination-wrap
-		text-align: center
-		margin-top: 20px
-		button
+		float: left
+	.checkbox-wrap
+		float: right
+		text-align: left
+		margin-top: 24px
+		padding: 15px
+.pagination-wrap
+	text-align: center
+	margin: 20px 0
+	button
+		display: inline-block
+		vertical-align: super
+		transition: .3s
+		padding: 0
+		border-radius: 8px
+		&:hover
+			text-decoration: none
+			outline: none
+		&:active
+			text-decoration: none
+			outline: none
+		&:focus
+			text-decoration: none
+			outline: none
+	.prev
+		width: 0
+		height: 0
+		background: transparent
+		border: 9px solid transparent
+		border-right: 9px solid #000
+		border-left: 0
+		&:hover
+			border-right-color: #fb0018
+	.next
+		width: 0
+		height: 0
+		background: transparent
+		border: 9px solid transparent
+		border-left: 9px solid #000
+		border-right: 0
+		&:hover
+			border-left-color: #fb0018
+	.pagination
+		display: inline-block
+		margin: 0 10px
+		transition: .3s
+		a
+			color: #000
 			display: inline-block
-			vertical-align: super
-			transition: .3s
-			padding: 0
-			border-radius: 8px
+			padding: 0 2px
+			&.active
+				background: #fb0018
+				color: #fff
+				&:hover
+					color: #fff
 			&:hover
 				text-decoration: none
-				outline: none
+				color: #fb0018
 			&:active
 				text-decoration: none
-				outline: none
 			&:focus
 				text-decoration: none
-				outline: none
-		.prev
-			width: 0
-			height: 0
-			background: transparent
-			border: 9px solid transparent
-			border-right: 9px solid #000
-			border-left: 0
-			&:hover
-				border-right-color: #fb0018
-		.next
-			width: 0
-			height: 0
-			background: transparent
-			border: 9px solid transparent
-			border-left: 9px solid #000
-			border-right: 0
-			&:hover
-				border-left-color: #fb0018
-		.pagination
-			display: inline-block
-			margin: 0 10px
-			transition: .3s
-			a
-				color: #000
-				display: inline-block
-				padding: 0 2px
-				&.active
-					background: #fb0018
-					color: #fff
-					&:hover
-						color: #fff
-				&:hover
-					text-decoration: none
-					color: #fb0018
-				&:active
-					text-decoration: none
-				&:focus
-					text-decoration: none
-			.points
-				margin-left: -6px
+		.points
+			margin-left: -6px
 .my-lots-container
+	.filter-wrap
+		margin-bottom: 50px
+		label
+			margin-left: 38px
+			margin-bottom: 15px
 	.tabs-item
 		display: inline-block
 		padding: 10px
@@ -1132,10 +1340,65 @@ body textarea:required:valid
 			display: block
 	.tabs-item-conatiner
 		border-bottom: 1px solid #ccc
+		.castom-button
+			margin-top: -10px
+			float: right
+			.fa
+				padding-right: 5px
 	.tabs-container
 		padding: 0 0px 0 14px
 	.tabs-wrap-container
 		padding: 0 0 20px
+		.redactor-wrap
+			padding: 30px 0
+			.right
+				float: right
+			label
+				margin-left: 18px
+				margin-bottom: 10px
+			input[type=text]
+				height: 42px
+				padding-left: 18px
+				width: 100%
+				&::-webkit-input-placeholder
+					font-size: 14px
+				&:-moz-placeholder
+					font-size: 14px
+				&::-moz-placeholder
+					font-size: 14px
+				&:-ms-input-placeholder
+					font-size: 14px
+			.info
+				top: -29px
+				left: 15px
+				position: absolute
+				transition: .3s
+				border: 0px
+				color: #ccc
+				display: table
+				cursor: pointer
+				&:hover
+					color: #fb0018
+					.mass
+						display: block
+				.icon
+					display: table-cell
+					vertical-align: middle
+					text-align: center
+				.mass
+					position: absolute
+					display: none
+					font-size: 12px
+					color: #000
+					width: 265px
+					background: #fff
+					left: 19px
+					top: -28px
+					border: 1px solid #fb0018
+					padding: 4px 6px
+					-webkit-border-radius: 5px
+					border-radius: 5px
+					z-index: 10
 	.inform-wrap
 		margin-bottom: 50px
 		margin-left: 14px
@@ -1204,6 +1467,10 @@ body textarea:required:valid
 					&:hover
 						background: #fb0018
 	.tabs-wrap-container
+		.checkbox
+			margin-right: 5px
+			width: 15px
+			height: 17px
 		.tabs-wrap
 			table
 				width: 100%
@@ -1351,6 +1618,47 @@ body textarea:required:valid
 		display: none
 		&.active
 			display: block
+	.setting-wrap
+		float: right
+		margin-top: 20px
+		.castom-button
+			display: flex
+			align-items: center
+			justify-content: center
+			float: right
+			height: 46px
+			margin-left: 20px
+			width: 200px
+			&:hover
+				color: #ffffff
+				text-decoration: none
+		.fa
+			color: #fff
+		.like
+			background: #cccccc
+			padding: 10px 15px
+			transition: .3s
+			cursor: pointer
+			position: relative
+			display: inline-block
+			margin-right: 10px
+			p
+				display: none
+				position: absolute
+				top: -40px
+				left: -1px
+				width: 273px
+				background: #ffffff
+				border: 1px solid #fb0018
+				border-radius: 5px
+				padding: 3px 10px
+			&:hover
+				background: #00be92
+				p
+					display: block
+			&.disLike
+				&:hover
+					background: #fb0018
 	.inform-wrap
 		margin-bottom: 50px
 		margin-left: 14px
@@ -1516,12 +1824,14 @@ body textarea:required:valid
 				padding: 20px 0 20px 105px
 				position: relative
 				min-height: 75px
-				cursor: pointer
 				border-bottom: 1px solid #cccccc
 				.commets-img
 					position: absolute
 					left: 0px
 					top: 35px
+				.border
+					border: 1px solid #ccc
+					padding: 10px 15px
 			.title-name
 				margin: 0
 				.name
@@ -1553,6 +1863,40 @@ input[type=submit]
 	&:hover
 		background: #fb0018
 .login-steps-container
+	.info
+		top: 0
+		right: 0
+		position: absolute
+		transition: .3s
+		border: 0px
+		color: #fff
+		display: table
+		cursor: pointer
+		.fa
+			color: #ccc
+		&:hover
+			.fa
+				color: #fb0018
+			.mass
+				display: block
+		.icon
+			display: table-cell
+			vertical-align: middle
+			text-align: center
+		.mass
+			position: absolute
+			display: none
+			font-size: 12px
+			color: #000
+			width: 315px
+			background: #fff
+			right: -276px
+			top: -54px
+			border: 1px solid #fb0018
+			padding: 4px 6px
+			-webkit-border-radius: 5px
+			border-radius: 5px
+			z-index: 10
 	.title
 		font-size: 24px
 		padding: 0 15px
@@ -1588,6 +1932,46 @@ input[type=submit]
 		min-height: 500px
 	.form-container
 		width: 388px
+		.radio-button-container
+			margin: 15px 0 0 27px
+			display: none
+			input[type='radio']
+				margin-right: 20px
+				min-height: 0px
+				height: 1px
+				width: 1px
+			.fa
+				color: #818181
+				transition: .3s
+				margin-left: 65px
+			input[type='radio']
+				&:after
+					content: ''
+					position: absolute
+					top: 1px
+					left: 0px
+					@include sprite($fa-circle-thin)
+					width: 12px
+					height: 12px
+					display: block
+			input[type='radio']:checked
+				outline: none
+				&:after
+					@include sprite($fa-dot-circle-o)
+					font-size: 24px
+			input[type='radio']:checked ~ .fa
+				color: #fb0018
+			label
+				font: 16px helvetica
+				line-height: 18px
+				position: relative
+				display: block
+				margin-bottom: 20px
+				cursor: pointer
+				-webkit-tap-highlight-color: rgba(0,0,0,0)
+				-webkit-user-select: none
+				-moz-user-select: none
+				-ms-user-select: none
 		input
 			width: 100%
 			height: 100%
@@ -1596,11 +1980,14 @@ input[type=submit]
 			display: inline-block
 			padding-left: 15px
 			padding-right: 42px
+
 		input[type=submit]
 			padding: 0
+			margin-top: 20px
 		.input-item
-			height: 44px
-			margin-bottom: 30px
+			//height: 44px
+			display: inline-block
+			margin-bottom: 15px
 			position: relative
 			.status
 				width: 42px
@@ -1929,10 +2316,37 @@ input[type=submit]
 			display: inline-block
 			width: 285px
 			margin-right: 30px
+			margin-bottom: 30px
+		.checkboxes
+			&.inline-block
+				display: inline-block
 		.checkbox
 			display: inline-block
 			vertical-align: top
-			margin-top: 10px
+			margin-top: -7px
+			.fa-castom
+				color: #cccccc
+				transition: .3s
+				cursor: pointer
+				position: relative
+				top: 2px
+				p
+					display: none
+					border: 1px solid #fb0018
+					padding: 10px 15px
+					position: absolute
+					top: 10px
+					border-radius: 5px
+					width: 255px
+					font-size: 14px
+					font-family: RobotoRegular,Arial,sans-serif
+					left: 24px
+					color: #000000
+					background: #fff
+				&:hover
+					color: #fb0018
+					p
+						display: block
 			.check
 				padding-left: 25px
 				cursor: pointer
@@ -1964,7 +2378,7 @@ input[type=submit]
 			padding: 10px 59px
 			background: #fb0018
 			vertical-align: top
-			margin-left: 97px
+			margin-left: 57px
 			transition: .3s
 			&:hover
 				text-decoration: none
@@ -1995,6 +2409,20 @@ input[type=submit]
 		width: 100%
 		border-collapse: collapse
 		border-spacing: 0
+		&.table-2
+			tr
+				td
+					&:last-child
+						width: 12%
+					&:nth-child(3)
+						width: 36%
+		&.table-3
+			tr
+				td
+					&:last-child
+						width: 12%
+					&:nth-child(2)
+						width: 36%
 		thead
 			font-weight: 900
 			border-bottom: 1px solid #ccc
@@ -2137,6 +2565,8 @@ input[type=submit]
 			border: 1px solid #fb0018
 		.text
 			padding-left: 30px
+			a
+				color: #000
 	.intermediate-wrap
 		padding: 45px 0
 		text-align: center
@@ -2288,10 +2718,12 @@ input[type=submit]
 				.message
 					margin-bottom: 20px
 				.item
-					width: 470px
+					width: 440px
 					padding: 13px
 					border-radius: 15px
 					position: relative
+					p
+						font-size: 14px
 					&:before
 						content: ''
 						width: 0
@@ -2333,7 +2765,7 @@ input[type=submit]
 						margin-left: 23px
 						&:before
 							left: -20px
-							top: 45px
+							top: calc(50% - 8px)
 						.warning
 							position: absolute
 							right: 12px
@@ -2364,7 +2796,7 @@ input[type=submit]
 							margin-right: 3px
 						&:before
 							right: -20px
-							top: 45px
+							top: calc(50% - 8px)
 							transform: rotate(180deg)
 					&.important
 						&:before
@@ -2381,9 +2813,19 @@ input[type=submit]
 						.date
 							font-weight: 300
 			.text-message
+				.checkbox
+					float: left
+					text-align: left
+					width: 290px
+					font-size: 14px
+					margin: 0
+					padding-left: 22px
+					position: relative
+					.check
+						position: static
 				.input
 					text-align: right
-					margin-top: 20px
+					margin-top: 10px
 				input
 					height: 45px
 					font-size: 14px
@@ -2456,38 +2898,39 @@ input[type=submit]
 				input[type=submit]
 					width: 170px
 					margin-left: 11px
-				.checkbox
-					display: inline-block
-					margin-right: 30px
-					.check
-						padding-left: 15px
-						cursor: pointer
-						position: relative
-						font-size: 14px
-						.green
-							color: #00be92
-						.red
-							color: #fb0018
-						.fa
-							display: inline-block
-							width: 9px
-							height: 9px
-							position: absolute
-							top: 7px
-							left: 0
-							border: 1px solid #000
-							border-radius: 1px
-						.fa-check
-							&:before
-								position: absolute
-								top: -4px
-								font-size: 12px
-						&.active
-							.fa
-								display: block
-					input[type=checkbox]
-						position: absolute
-						left: -10000px
+.checkbox
+	display: inline-block
+	margin-right: 30px
+	.check
+		padding-left: 25px
+		cursor: pointer
+		position: relative
+		font-size: 14px
+		.green
+			color: #00be92
+		.red
+			color: #fb0018
+		.fa
+			color: #000
+			display: inline-block
+			width: 14px
+			height: 14px
+			position: absolute
+			top: 4px
+			left: 0
+			border: 1px solid #000
+			border-radius: 1px
+		.fa-check
+			&:before
+				position: absolute
+				top: -4px
+				font-size: 15px
+		&.active
+			.fa
+				display: block
+	input[type=checkbox]
+		position: absolute
+		left: -10000px
 .game-currency-container
 	padding: 30px 0px
 	.form-wrap
@@ -2513,10 +2956,141 @@ input[type=submit]
 				&:hover
 					.list
 						color: #fb0018
+
+
+.article-container
+	min-height: 600px
+	article
+		padding: 30px 0
+		h2
+			font-size: 24px
+		p
+			font-size: 18px
+			margin-bottom: 30px
+	.social-rows
+		margin-bottom: 50px
+		.item
+			display: inline-block
+			margin-right: 24px
+
+.all-article-container
+	min-height: 600px
+	padding: 50px 0
+	h2
+		margin: 0
+		margin-bottom: 5px
+	.social-rows
+		margin-top: 30px
+		.item
+			display: inline-block
+			margin-right: 15px
+	.wrap
+		margin-bottom: 20px
+		.item
+			display: inline-block
+			width: 545px
+			margin-bottom: 30px
+			&:nth-child(2n - 1)
+				margin-right: 30px
+			article
+				background: #f8f8f8
+				padding: 15px
+				margin-bottom: 15px
+				h3
+					margin: 0 0 5px
+					font-size: 20px
+				p
+					line-height: 1.5
+			.date
+				text-align: right
+				margin-bottom: 10px
+				.fa
+					margin-right: 10px
+			.button
+				text-align: left
+				a
+					color: #fff
+					background: #cccccc
+					display: inline-block
+					padding: 10px 30px
+					transition: .3s
+					&:hover
+						color: #fff
+						text-decoration: none
+						background: #fb0018
+					&:active
+						text-decoration: none
+					&:focus
+						text-decoration: none
+
+
+.footer
+	padding: 50px 0 30px
+	nav
+		float: left
+		width: 25%
+	.vk-social-link
+		float: left
+		a
+			padding: 10px 25px
+			background: #fb0018
+			color: #fff
+			transition: .3s
+			&:hover
+				background: #cccccc
+				text-decoration: none
+			&:active
+				text-decoration: none
+			&:focus
+				text-decoration: none
+
+			.fa
+				margin-right: 5px
+	.links-list
+		margin: 0px
+		padding: 0px
+		display: inline-block
+		li
+			display: inline-block
+			list-style-type: none
+			.fa
+				color: #fff
+				vertical-align: sub
+			a
+				color: #000
+				display: inline-block
+				transition: .1s
+				&:hover
+					text-decoration: none
+					color: #fb0018
+				&:active
+					text-decoration: none
+					color: #fff
+				&:focus
+					text-decoration: none
+					color: #fff
+	.nav
+		padding-left: 13px
+		li
+			margin-right: 8px
+			&:last-child
+				margin-right: 0
+	.links
+		float: left
+		width: 57%
+		text-align: right
+		display: inline-block
+		padding-right: 18px
+		li
+			margin-right: 12px
+			&:last-child
+				margin-right: 0
+		.icon
+			text-align: center
 //	Секция
 //	Секция
-//	Секция 
-//	Секция 
+//	Секция
+//	Секция
 //	Секция
 //	Секция
 .modal-container
@@ -2526,7 +3100,7 @@ input[type=submit]
 		display: block
 		margin: 10px
 
-// Секия footer 
+// Секия footer
 
 
 

@@ -2000,6 +2000,7 @@
 		<div class="row">
 			<div class="logo-container">
 				<img src="img/logo.png" alt="">
+				<h2>Закупайся в правильном месте!</h2>
 			</div>
 			<div class="top-panel clearfix">
 				<div class="select-2">
@@ -2012,13 +2013,16 @@
 				</div>
 				<div class="api-nav">
 					<div class="wrap">
-						<a href="" class="login"><i class="fa fa-question-circle "></i>Не нашел игру/сервер?</a>
+						<a href="#" id="find-game-or-server" class="login"><i class="fa fa-question-circle "></i>Не нашел игру/сервер?</a>
 					</div>
 					<a href="#" class="wrap modal" data-modal="modal-1"><i class="fa fa-globe"></i>Улучшить сайт</a>
 					<div class="wrap">
 						<a href="" class="login"><i class="fa fa-user "></i>Войти</a> / <a href="" class="check">Регистация</a>
 					</div>
-					<a href="#" class="wrap"><i class="fa fa-vk"></i>Регистрация через ВК</a>
+					<a href="#" class="wrap"><i class="fa fa-sign-in"></i>Вход:</a>
+					<a href="#" class="wrap"><i class="fa link-icon fa-vk"></i></a>
+					<a href="#" class="wrap"><i class="fa link-icon fa-facebook"></i></a>
+					<a href="#" class="wrap"><i class="fa link-icon fa-google-plus"></i></a>
 				</div>
 			</div>
 		</div>
@@ -2029,29 +2033,39 @@
 	<div class="container">
 		<div class="row">
 			<div class="form-wrap clearfix">
-				<form class="form clearfix">
+				<form id="anim-form-main-1" class="form clearfix">
 					<div class="search">
-						<button class="search-btn"><span class="icon"></span></button>
+						<button class="search-btn"><span class="fa fa-search"></span></button>
 						<input type="text" placeholder="Поиск...">
 					</div>
 					<div class="select-container">
-						<!--<select name="" id="">-->
-						<!--<option value="">Выберите локализатора</option>-->
-						<!--</select>-->
 						<div class="select">
 							<div class="arrow">
 							</div>
 							<a href="#" class="slct">Выберите локализатора</a>
 							<ul class="drop">
-								<li>1</li>
-								<li>2</li>
-								<li>3</li>
+								<li>Lineage 2</li>
+								<li>Tera</li>
+								<li>Diablo 3</li>
+								<li>Diablo 2</li>
 							</ul>
 							<input type="hidden" id="select" name="services">
 						</div>
 					</div>
 					<div class="submit-container">
 						<input type="submit" value="Любимые игры">
+					</div>
+				</form>
+				<form id="anim-form-main-2" class="form clearfix">
+					<div class="search">
+						<button class="search-btn"><span class="fa fa-search"></span></button>
+						<input type="text" placeholder="Поиск...">
+					</div>
+					<div class="submit-container">
+						<input type="submit" value="Отправить">
+						<button class="button">
+							<i class="fa fa-close"></i>
+						</button>
 					</div>
 				</form>
 			</div>
@@ -2075,6 +2089,9 @@
 										<a href="#">Услуги</a>
 									</div>
 									<button class="btn">
+										<a href="#" class="warning">
+											<p>Добавить в Избранное</p>
+										</a>
 										<span class="icon"></span>
 									</button>
 								</div>
@@ -2095,6 +2112,9 @@
 										<a href="#">Услуги</a>
 									</p>
 									<button class="btn">
+										<a href="#" class="warning">
+											<p>Добавить в Избранное</p>
+										</a>
 										<span class="icon"></span>
 									</button>
 								</div>
@@ -2117,6 +2137,9 @@
 										<a href="#">Услуги</a>
 									</p>
 									<button class="btn">
+										<a href="#" class="warning">
+											<p>Добавить в Избранное</p>
+										</a>
 										<span class="icon"></span>
 									</button>
 								</div>
@@ -2139,6 +2162,9 @@
 										<a href="#">Услуги</a>
 									</p>
 									<button class="btn">
+										<a href="#" class="warning">
+											<p>Добавить в Избранное</p>
+										</a>
 										<span class="icon"></span>
 									</button>
 								</div>

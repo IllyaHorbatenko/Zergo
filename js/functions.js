@@ -50,6 +50,7 @@ $(document).ready(function() {
   
 
     $('.checkboxes').find('.check').click(function(){
+        $(this).parent().siblings('.radio-button-container').toggle('fade');
         // Пишем условие: если вложенный в див чекбокс отмечен
         if ($(this).hasClass('active')) {
             // то снимаем активность с дива
@@ -62,6 +63,7 @@ $(document).ready(function() {
 
             // если же чекбокс не отмечен, то
         } else {
+
             // добавляем класс активности диву
             $(this).addClass('active');
             $(this).find('.fa').addClass('fa-check');

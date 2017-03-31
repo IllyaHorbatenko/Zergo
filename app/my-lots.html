@@ -2074,7 +2074,38 @@
 							<a href="#">Продать игровую валюту</a>
 						</div>
 					</div>
-					<div class="tabs-container">
+					<div class="filter-wrap">
+						<label for="">Фильтр:</label>
+						<div class=" clearfix">
+							<div class="col-lg-2">
+								<div class="select">
+									<div class="arrow">
+									</div>
+									<a href="#" class="slct">По играм</a>
+									<ul class="drop">
+										<li>Выбор заголовков:</li>
+										<li>Выбор заголовков:</li>
+										<li>Выбор заголовков:</li>
+									</ul>
+									<input type="hidden" id="select" name="services">
+								</div>
+							</div>
+							<div class="col-lg-2">
+								<div class="select">
+									<div class="arrow">
+									</div>
+									<a href="#" class="slct">По серверам</a>
+									<ul class="drop">
+										<li>Выбор заголовков:</li>
+										<li>Выбор заголовков:</li>
+										<li>Выбор заголовков:</li>
+									</ul>
+									<input type="hidden" id="select" name="services">
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="tabs-container clearfix">
 						<div class="tabs-item-conatiner">
 							<a href="/" data-tab="1" class="tabs-item active">
 								<p>Список валют</p>
@@ -2082,9 +2113,39 @@
 							<a href="/" data-tab="2" class="tabs-item">
 								<p>Отзывы</p>
 							</a>
+							<button type="submit" class="castom-button">
+								<i class="fa fa-pencil"></i>
+								Редактировать все лоты
+							</button>
 						</div>
 						<div class="tabs-wrap-container">
 							<div class="tabs-wrap active" data-tab="1">
+								<div class="redactor-wrap">
+									<label for="">Редактировать лоты</label>
+									<div class=" clearfix">
+										<div class="col-lg-2">
+											<input type="text" placeholder="Цена за 1 кк. (в руб.) ">
+										</div>
+										<div class="col-lg-2">
+											<input type="text" placeholder="Кол-во валюты">
+										</div>
+										<div class="col-lg-3">
+											<button type="submit" class="castom-button">
+												Применить
+											</button>
+										</div>
+										<div class="col-lg-3 right">
+											<div class="info">
+												<i class="fa fa-info-circle"></i>
+												<p class="mass">Вы можете поднять свои предложения
+													вверх общего списка 1 раз в 24 часа</p>
+											</div>
+											<button type="submit" class="castom-button">
+												Поднять предложения в топ
+											</button>
+										</div>
+									</div>
+								</div>
 								<table>
 									<thead>
 									<tr>
@@ -2100,7 +2161,17 @@
 									</thead>
 									<tbody>
 									<tr>
-										<td><span>Aion Free</span></td>
+										<td>
+											<div class="checkbox">
+												<div class="checkboxes">
+													<div class="check blue">
+														<input type="checkbox" value="jQuery"/>
+														<span class="fa"></span>
+													</div>
+												</div>
+											</div>
+											<span>Aion Free</span>
+										</td>
 										<td><span>Церера</span></td>
 										<td><span>Асмодиане</span></td>
 										<td><span>324 кк</span></td>
@@ -2112,7 +2183,16 @@
 										</td>
 									</tr>
 									<tr>
-										<td><span>Aion Free</span></td>
+										<td>
+											<div class="checkbox">
+												<div class="checkboxes">
+													<div class="check blue">
+														<input type="checkbox" value="jQuery"/>
+														<span class="fa"></span>
+													</div>
+												</div>
+											</div>
+											<span>Aion Free</span></td>
 										<td><span>Церера</span></td>
 										<td><span>Асмодиане</span></td>
 										<td><span>324 кк</span></td>
@@ -2124,7 +2204,16 @@
 										</td>
 									</tr>
 									<tr>
-										<td><span>Aion Free</span></td>
+										<td>
+											<div class="checkbox">
+												<div class="checkboxes">
+													<div class="check blue">
+														<input type="checkbox" value="jQuery"/>
+														<span class="fa"></span>
+													</div>
+												</div>
+											</div>
+											<span>Aion Free</span></td>
 										<td><span>Церера</span></td>
 										<td><span>Асмодиане</span></td>
 										<td><span>324 кк</span></td>
@@ -2136,7 +2225,16 @@
 										</td>
 									</tr>
 									<tr>
-										<td><span>Aion Free</span></td>
+										<td>
+											<div class="checkbox">
+												<div class="checkboxes">
+													<div class="check blue">
+														<input type="checkbox" value="jQuery"/>
+														<span class="fa"></span>
+													</div>
+												</div>
+											</div>
+											<span>Aion Free</span></td>
 										<td><span>Церера</span></td>
 										<td><span>Асмодиане</span></td>
 										<td><span>324 кк</span></td>
@@ -2148,7 +2246,16 @@
 										</td>
 									</tr>
 									<tr>
-										<td><span>Aion Free</span></td>
+										<td>
+											<div class="checkbox">
+												<div class="checkboxes">
+													<div class="check blue">
+														<input type="checkbox" value="jQuery"/>
+														<span class="fa"></span>
+													</div>
+												</div>
+											</div>
+											<span>Aion Free</span></td>
 										<td><span>Церера</span></td>
 										<td><span>Асмодиане</span></td>
 										<td><span>324 кк</span></td>
@@ -2160,7 +2267,16 @@
 										</td>
 									</tr>
 									<tr>
-										<td><span>Aion Free</span></td>
+										<td>
+											<div class="checkbox">
+												<div class="checkboxes">
+													<div class="check blue">
+														<input type="checkbox" value="jQuery"/>
+														<span class="fa"></span>
+													</div>
+												</div>
+											</div>
+											<span>Aion Free</span></td>
 										<td><span>Церера</span></td>
 										<td><span>Асмодиане</span></td>
 										<td><span>324 кк</span></td>
@@ -2176,7 +2292,8 @@
 							</div>
 							<div class="tabs-wrap commets-container" data-tab="2">
 								<div class="commets-links">
-									<a href="#" data-tab="1" class="positiv active"><span>+(4)</span> Положительных отзывов</a>
+									<a href="#" data-tab="1" class="positiv active"><span>+(4)</span> Положительных
+										отзывов</a>
 									<a href="#" data-tab="2" class="negative"><span>-(0)</span> Положительных</a>
 								</div>
 								<div class="comments-item active" data-tab="1">
